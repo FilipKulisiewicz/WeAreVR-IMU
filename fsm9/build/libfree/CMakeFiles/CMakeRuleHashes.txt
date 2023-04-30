@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+288ed2f5baf60ae5c0f3c30520358b74 doc/CMakeFiles/libfreespace-docs
+9ac4498b6656771be7c25bf1c7f46298 gen_src/freespace_codecs.c

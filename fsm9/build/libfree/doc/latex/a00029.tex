@@ -1,0 +1,126 @@
+\doxysection{Synchronous A\+PI}
+\label{a00029}\index{Synchronous API@{Synchronous API}}
+
+
+This page describes the synchronous A\+PI for communicating with Freespace(r) devices.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+private\+\_\+send} (\textbf{ Freespace\+Device\+Id} id, const uint8\+\_\+t $\ast$message, int length)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+send\+Message} (\textbf{ Freespace\+Device\+Id} id, struct \textbf{ freespace\+\_\+message} $\ast$message)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+private\+\_\+read} (\textbf{ Freespace\+Device\+Id} id, uint8\+\_\+t $\ast$message, int max\+Length, unsigned int timeout\+Ms, int $\ast$actual\+Length)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+read\+Message} (\textbf{ Freespace\+Device\+Id} id, struct \textbf{ freespace\+\_\+message} $\ast$message, unsigned int timeout\+Ms)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+flush} (\textbf{ Freespace\+Device\+Id} id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This page describes the synchronous A\+PI for communicating with Freespace(r) devices. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{a00029_gaf0e199a62f77749d77b886897eb10e7c}} 
+\index{Synchronous API@{Synchronous API}!freespace\_flush@{freespace\_flush}}
+\index{freespace\_flush@{freespace\_flush}!Synchronous API@{Synchronous API}}
+\doxysubsubsection{freespace\_flush()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+flush (\begin{DoxyParamCaption}\item[{\textbf{ Freespace\+Device\+Id}}]{id }\end{DoxyParamCaption})}
+
+Flush all of the messages out of any receive queues. libfreespace doesn\textquotesingle{}t have a receive queue, but some of the lower levels do and messages can queue up. If enough queue up, messages can be dropped. This is only a problem for the first messages assuming that the application regularly calls freespace\+\_\+read or has a receive callback.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the Freespace\+Device\+Id of the device whose messages should be flushed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00029_gaaf02cb111342f6cc17bf826f694d4239}} 
+\index{Synchronous API@{Synchronous API}!freespace\_private\_read@{freespace\_private\_read}}
+\index{freespace\_private\_read@{freespace\_private\_read}!Synchronous API@{Synchronous API}}
+\doxysubsubsection{freespace\_private\_read()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+private\+\_\+read (\begin{DoxyParamCaption}\item[{\textbf{ Freespace\+Device\+Id}}]{id,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{max\+Length,  }\item[{unsigned int}]{timeout\+Ms,  }\item[{int $\ast$}]{actual\+Length }\end{DoxyParamCaption})}
+
+Read a message from the specified device. This function blocks until a message is received, there\textquotesingle{}s a timeout or an error. Deprecated for external use. For use with other language bindings, such as Python and Java, only.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the Freespace\+Device\+Id of the device to read from \\
+\hline
+{\em message} & where to put the received message \\
+\hline
+{\em max\+Length} & the max length of the message \\
+\hline
+{\em timeout\+Ms} & the timeout in milliseconds or 0 to wait forever \\
+\hline
+{\em actual\+Length} & the number of bytes received \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00029_gaf58f262a2b8fe8e239ca05f74dffd410}} 
+\index{Synchronous API@{Synchronous API}!freespace\_private\_send@{freespace\_private\_send}}
+\index{freespace\_private\_send@{freespace\_private\_send}!Synchronous API@{Synchronous API}}
+\doxysubsubsection{freespace\_private\_send()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+private\+\_\+send (\begin{DoxyParamCaption}\item[{\textbf{ Freespace\+Device\+Id}}]{id,  }\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+Send a message to the specified Freespace device synchronously. Deprecated for external use. For use with other language bindings, such as Python and Java, only.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the Freespace\+Device\+Id of the device to send message to \\
+\hline
+{\em message} & the message to send \\
+\hline
+{\em length} & the length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00029_gabd41041546dcbe3734baa722b95769c3}} 
+\index{Synchronous API@{Synchronous API}!freespace\_readMessage@{freespace\_readMessage}}
+\index{freespace\_readMessage@{freespace\_readMessage}!Synchronous API@{Synchronous API}}
+\doxysubsubsection{freespace\_readMessage()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+read\+Message (\begin{DoxyParamCaption}\item[{\textbf{ Freespace\+Device\+Id}}]{id,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{message,  }\item[{unsigned int}]{timeout\+Ms }\end{DoxyParamCaption})}
+
+Read a message struct from the specified device. This function blocks until a message is received, there\textquotesingle{}s a timeout or an error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the Freespace\+Device\+Id of the device to read from \\
+\hline
+{\em message} & where to put the received message \\
+\hline
+{\em timeout\+Ms} & the timeout in milliseconds or 0 to wait forever \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00029_gaa09c9afbee92994a124a405b3c7827f9}} 
+\index{Synchronous API@{Synchronous API}!freespace\_sendMessage@{freespace\_sendMessage}}
+\index{freespace\_sendMessage@{freespace\_sendMessage}!Synchronous API@{Synchronous API}}
+\doxysubsubsection{freespace\_sendMessage()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+send\+Message (\begin{DoxyParamCaption}\item[{\textbf{ Freespace\+Device\+Id}}]{id,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{message }\end{DoxyParamCaption})}
+
+Send a message to the specified Freespace device synchronously.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the Freespace\+Device\+Id of the device to send message to \\
+\hline
+{\em message} & the message to send \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}

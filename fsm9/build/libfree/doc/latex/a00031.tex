@@ -1,0 +1,214 @@
+\doxysection{Utility Functions A\+PI}
+\label{a00031}\index{Utility Functions API@{Utility Functions API}}
+
+
+This page describes the utility functions A\+PI for supporting communications and operations with Freespace(r) devices.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+util\+\_\+get\+Acceleration} (struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$me\+Out\+Pkt, struct \textbf{ Multi\+Axis\+Sensor} $\ast$sensor)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+util\+\_\+get\+Acc\+No\+Gravity} (struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$me\+Out\+Pkt, struct \textbf{ Multi\+Axis\+Sensor} $\ast$sensor)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+util\+\_\+get\+Angular\+Velocity} (struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$me\+Out\+Pkt, struct \textbf{ Multi\+Axis\+Sensor} $\ast$sensor)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+util\+\_\+get\+Magnetometer} (struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$me\+Out\+Pkt, struct \textbf{ Multi\+Axis\+Sensor} $\ast$sensor)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+util\+\_\+get\+Temperature} (struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$me\+Out\+Pkt, struct \textbf{ Multi\+Axis\+Sensor} $\ast$sensor)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+util\+\_\+get\+Inclination} (struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$me\+Out\+Pkt, struct \textbf{ Multi\+Axis\+Sensor} $\ast$sensor)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+util\+\_\+get\+Compass\+Heading} (struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$me\+Out\+Pkt, struct \textbf{ Multi\+Axis\+Sensor} $\ast$sensor)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+util\+\_\+get\+Ang\+Pos} (struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$me\+Out\+Pkt, struct \textbf{ Multi\+Axis\+Sensor} $\ast$sensor)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+util\+\_\+get\+Act\+Class} (struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$me\+Out\+Pkt, struct \textbf{ Multi\+Axis\+Sensor} $\ast$sensor)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This page describes the utility functions A\+PI for supporting communications and operations with Freespace(r) devices. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{a00031_gab9b6cc79056d4ed518de3b56312d277b}} 
+\index{Utility Functions API@{Utility Functions API}!freespace\_util\_getAcceleration@{freespace\_util\_getAcceleration}}
+\index{freespace\_util\_getAcceleration@{freespace\_util\_getAcceleration}!Utility Functions API@{Utility Functions API}}
+\doxysubsubsection{freespace\_util\_getAcceleration()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+util\+\_\+get\+Acceleration (\begin{DoxyParamCaption}\item[{struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$}]{me\+Out\+Pkt,  }\item[{struct \textbf{ Multi\+Axis\+Sensor} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+Get the acceleration values from a M\+E\+Out packet.
+
+For M\+E\+Out Format 0 and 3 units are m/s$^\wedge$2. For M\+E\+Out Format 1 units are g.
+
+
+\begin{DoxyParams}{Parameters}
+{\em me\+Out\+Pkt} & A pointer to the M\+E\+Out packet to extract the acceleration from. \\
+\hline
+{\em sensor} & A pointer to where to store the extracted values. Uses X, Y, Z coordinates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful -\/1 if the format flag was not set for the acceleration field -\/2 if the me\+Out\+Pkt does not contain acceleration at all -\/3 if the format select number is unrecognized 
+\end{DoxyReturn}
+\mbox{\label{a00031_ga01ef5dce1e1169e3ee5cf9444894f50e}} 
+\index{Utility Functions API@{Utility Functions API}!freespace\_util\_getAccNoGravity@{freespace\_util\_getAccNoGravity}}
+\index{freespace\_util\_getAccNoGravity@{freespace\_util\_getAccNoGravity}!Utility Functions API@{Utility Functions API}}
+\doxysubsubsection{freespace\_util\_getAccNoGravity()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+util\+\_\+get\+Acc\+No\+Gravity (\begin{DoxyParamCaption}\item[{struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$}]{me\+Out\+Pkt,  }\item[{struct \textbf{ Multi\+Axis\+Sensor} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+Get the acceleration without gravity values from a M\+E\+Out packet.
+
+For M\+E\+Out Format 0 and 3 units are m/s$^\wedge$2. For M\+E\+Out Format 1 units are g.
+
+
+\begin{DoxyParams}{Parameters}
+{\em me\+Out\+Pkt} & A pointer to the M\+E\+Out packet to extract the acceleration no grav from. \\
+\hline
+{\em sensor} & A pointer to where to store the extracted values. Uses X, Y, Z coordinates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful. -\/1 if the format flag was not set for the acceleration field. -\/2 if the me\+Out\+Pkt does not contain acceleration at all. -\/3 if the format select number is unrecognized. 
+\end{DoxyReturn}
+\mbox{\label{a00031_ga05d49cc1a455be6bf1de098a22d690ea}} 
+\index{Utility Functions API@{Utility Functions API}!freespace\_util\_getActClass@{freespace\_util\_getActClass}}
+\index{freespace\_util\_getActClass@{freespace\_util\_getActClass}!Utility Functions API@{Utility Functions API}}
+\doxysubsubsection{freespace\_util\_getActClass()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+util\+\_\+get\+Act\+Class (\begin{DoxyParamCaption}\item[{struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$}]{me\+Out\+Pkt,  }\item[{struct \textbf{ Multi\+Axis\+Sensor} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+Get the activity classification from a M\+E\+Out packet.
+
+For M\+E\+Out Format 1 values are unitless -\/ they indicate system states.
+
+
+\begin{DoxyParams}{Parameters}
+{\em me\+Out\+Pkt} & A pointer to the M\+E\+Out packet to extract the activity classification from. \\
+\hline
+{\em sensor} & A pointer to where to store the extracted values. The Activity Classification is stored in the X coordinate and the Power Management Flags are stored in the Y coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful. -\/1 if the format flag was not set for the activity classification field. -\/2 if the me\+Out\+Pkt does not contain activity classification at all. -\/3 if the format select number is unrecognized. 
+\end{DoxyReturn}
+\mbox{\label{a00031_gafc213e1fd2a83a6c4ab94ce8c94ec5b9}} 
+\index{Utility Functions API@{Utility Functions API}!freespace\_util\_getAngPos@{freespace\_util\_getAngPos}}
+\index{freespace\_util\_getAngPos@{freespace\_util\_getAngPos}!Utility Functions API@{Utility Functions API}}
+\doxysubsubsection{freespace\_util\_getAngPos()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+util\+\_\+get\+Ang\+Pos (\begin{DoxyParamCaption}\item[{struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$}]{me\+Out\+Pkt,  }\item[{struct \textbf{ Multi\+Axis\+Sensor} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+Get the angular position values from a M\+E\+Out packet.
+
+
+\begin{DoxyParams}{Parameters}
+{\em me\+Out\+Pkt} & A pointer to the M\+E\+Out packet to extract the angular position from. \\
+\hline
+{\em sensor} & A pointer to where to store the extracted values. Uses W, X, Y, Z coordinates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful. -\/1 if the format flag was not set for the angular position field. -\/2 if the me\+Out\+Pkt does not contain angular position at all. -\/3 if the format select number is unrecognized. 
+\end{DoxyReturn}
+\mbox{\label{a00031_ga44402f4ed9378cd249ab65d67919e258}} 
+\index{Utility Functions API@{Utility Functions API}!freespace\_util\_getAngularVelocity@{freespace\_util\_getAngularVelocity}}
+\index{freespace\_util\_getAngularVelocity@{freespace\_util\_getAngularVelocity}!Utility Functions API@{Utility Functions API}}
+\doxysubsubsection{freespace\_util\_getAngularVelocity()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+util\+\_\+get\+Angular\+Velocity (\begin{DoxyParamCaption}\item[{struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$}]{me\+Out\+Pkt,  }\item[{struct \textbf{ Multi\+Axis\+Sensor} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+Get the angular velocity values from a M\+E\+Out packet.
+
+For M\+E\+Out Format 0 and 3 units are rads/s. For M\+E\+Out Format 1 units are deg/s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em me\+Out\+Pkt} & A pointer to the M\+E\+Out packet to extract the angular velocity from. \\
+\hline
+{\em sensor} & A pointer to where to store the extracted values. Uses X, Y, Z coordinates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful. -\/1 if the format flag was not set for the ang\+Vel field. -\/2 if the me\+Out\+Pkt does not contain ang\+Vel at all. -\/3 if the format select number is unrecognized. 
+\end{DoxyReturn}
+\mbox{\label{a00031_gaf6a890a1729b8ac39f84c50123ed10a9}} 
+\index{Utility Functions API@{Utility Functions API}!freespace\_util\_getCompassHeading@{freespace\_util\_getCompassHeading}}
+\index{freespace\_util\_getCompassHeading@{freespace\_util\_getCompassHeading}!Utility Functions API@{Utility Functions API}}
+\doxysubsubsection{freespace\_util\_getCompassHeading()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+util\+\_\+get\+Compass\+Heading (\begin{DoxyParamCaption}\item[{struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$}]{me\+Out\+Pkt,  }\item[{struct \textbf{ Multi\+Axis\+Sensor} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+Get the compass heading from a M\+E\+Out packet.
+
+For M\+E\+Out Format 1 units are degrees.
+
+
+\begin{DoxyParams}{Parameters}
+{\em me\+Out\+Pkt} & a pointer to the M\+E\+Out packet to extract the compass heading from. \\
+\hline
+{\em sensor} & a pointer to where to store the extracted values. Uses X coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful. -\/1 if the format flag was not set for the compass heading field. -\/2 if the me\+Out\+Pkt does not contain compass heading at all. -\/3 if the format select number is unrecognized. 
+\end{DoxyReturn}
+\mbox{\label{a00031_ga5a70df3322ac8266d20dbef930b6f502}} 
+\index{Utility Functions API@{Utility Functions API}!freespace\_util\_getInclination@{freespace\_util\_getInclination}}
+\index{freespace\_util\_getInclination@{freespace\_util\_getInclination}!Utility Functions API@{Utility Functions API}}
+\doxysubsubsection{freespace\_util\_getInclination()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+util\+\_\+get\+Inclination (\begin{DoxyParamCaption}\item[{struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$}]{me\+Out\+Pkt,  }\item[{struct \textbf{ Multi\+Axis\+Sensor} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+Get the inclination values from a M\+E\+Out packet.
+
+For M\+E\+Out Format 1 units are degrees.
+
+
+\begin{DoxyParams}{Parameters}
+{\em me\+Out\+Pkt} & A pointer to the M\+E\+Out packet to extract the inclination from. \\
+\hline
+{\em sensor} & A pointer to where to store the extracted values. Uses X, Y, Z coordinates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful. -\/1 if the format flag was not set for the inclination field. -\/2 if the me\+Out\+Pkt does not contain inclination at all. -\/3 if the format select number is unrecognized. 
+\end{DoxyReturn}
+\mbox{\label{a00031_ga2dbb5d49a60ead06acb516b1e0756a12}} 
+\index{Utility Functions API@{Utility Functions API}!freespace\_util\_getMagnetometer@{freespace\_util\_getMagnetometer}}
+\index{freespace\_util\_getMagnetometer@{freespace\_util\_getMagnetometer}!Utility Functions API@{Utility Functions API}}
+\doxysubsubsection{freespace\_util\_getMagnetometer()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+util\+\_\+get\+Magnetometer (\begin{DoxyParamCaption}\item[{struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$}]{me\+Out\+Pkt,  }\item[{struct \textbf{ Multi\+Axis\+Sensor} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+Get the magnetometer values from a M\+E\+Out packet.
+
+For M\+E\+Out Format 0 and 1 units are gauss. For M\+E\+Out Format 3 units are u\+Tesla.
+
+
+\begin{DoxyParams}{Parameters}
+{\em me\+Out\+Pkt} & A pointer to the M\+E\+Out packet to extract the magnetometer from. \\
+\hline
+{\em sensor} & A pointer to where to store the extracted values. Uses X, Y, Z coordinates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful. -\/1 if the format flag was not set for the mag field. -\/2 if the me\+Out\+Pkt does not contain mag at all. -\/3 if the format select number is unrecognized. 
+\end{DoxyReturn}
+\mbox{\label{a00031_ga481d8543173af0b9ff596cb7e6c53402}} 
+\index{Utility Functions API@{Utility Functions API}!freespace\_util\_getTemperature@{freespace\_util\_getTemperature}}
+\index{freespace\_util\_getTemperature@{freespace\_util\_getTemperature}!Utility Functions API@{Utility Functions API}}
+\doxysubsubsection{freespace\_util\_getTemperature()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+util\+\_\+get\+Temperature (\begin{DoxyParamCaption}\item[{struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} const $\ast$}]{me\+Out\+Pkt,  }\item[{struct \textbf{ Multi\+Axis\+Sensor} $\ast$}]{sensor }\end{DoxyParamCaption})}
+
+Get the temperature values from a M\+E\+Out packet.
+
+For M\+E\+Out Format 0 and 3 units are degrees C.
+
+
+\begin{DoxyParams}{Parameters}
+{\em me\+Out\+Pkt} & A pointer to the M\+E\+Out packet to extract the magnetometer from. \\
+\hline
+{\em sensor} & A pointer to where to store the extracted values. Uses W coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if successful. -\/1 if the format flag was not set for the temperature field. -\/2 if the me\+Out\+Pkt does not contain temperature at all. -\/3 if the format select number is unrecognized. 
+\end{DoxyReturn}

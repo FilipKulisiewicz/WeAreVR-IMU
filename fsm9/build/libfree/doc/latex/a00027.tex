@@ -1,0 +1,113 @@
+\doxysection{Discovery A\+PI}
+\label{a00027}\index{Discovery API@{Discovery API}}
+
+
+This page documents the functions to discover the attached Freespace(r) devices.  
+
+
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \textbf{ freespace\+\_\+hotplug\+Callback}) (enum \textbf{ freespace\+\_\+hotplug\+Event} event, \textbf{ Freespace\+Device\+Id} id, void $\ast$cookie)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ freespace\+\_\+hotplug\+Event} \{ \textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+H\+O\+T\+P\+L\+U\+G\+\_\+\+I\+N\+S\+E\+R\+T\+I\+ON}, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+H\+O\+T\+P\+L\+U\+G\+\_\+\+R\+E\+M\+O\+V\+AL}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+set\+Device\+Hotplug\+Callback} (\textbf{ freespace\+\_\+hotplug\+Callback} callback, void $\ast$cookie)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+get\+Device\+List} (\textbf{ Freespace\+Device\+Id} $\ast$list, int list\+Size, int $\ast$list\+Size\+Out)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This page documents the functions to discover the attached Freespace(r) devices. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{a00027_ga6e681c7d8c302c99547e79543d7d2c20}} 
+\index{Discovery API@{Discovery API}!freespace\_hotplugCallback@{freespace\_hotplugCallback}}
+\index{freespace\_hotplugCallback@{freespace\_hotplugCallback}!Discovery API@{Discovery API}}
+\doxysubsubsection{freespace\_hotplugCallback}
+{\footnotesize\ttfamily typedef void($\ast$ freespace\+\_\+hotplug\+Callback) (enum \textbf{ freespace\+\_\+hotplug\+Event} event, \textbf{ Freespace\+Device\+Id} id, void $\ast$cookie)}
+
+Callback for getting notified when a Freespace devices are added or removed from the system.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & whether a device was inserted or removed \\
+\hline
+{\em id} & the device that changed status \\
+\hline
+{\em cookie} & the data passed to \doxyref{freespace\+\_\+set\+Device\+Hotplug\+Callback()}{p.}{a00027_ga80ea20ff3e35958bd7eeb1f77e598ace}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\label{a00027_gad310b938b3f111d7ae1104ebe7dafb61}} 
+\index{Discovery API@{Discovery API}!freespace\_hotplugEvent@{freespace\_hotplugEvent}}
+\index{freespace\_hotplugEvent@{freespace\_hotplugEvent}!Discovery API@{Discovery API}}
+\doxysubsubsection{freespace\_hotplugEvent}
+{\footnotesize\ttfamily enum \textbf{ freespace\+\_\+hotplug\+Event}}
+
+Enumeration for the type of hotplug event. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_HOTPLUG\_INSERTION@{FREESPACE\_HOTPLUG\_INSERTION}!Discovery API@{Discovery API}}\index{Discovery API@{Discovery API}!FREESPACE\_HOTPLUG\_INSERTION@{FREESPACE\_HOTPLUG\_INSERTION}}}\mbox{\label{a00027_ggad310b938b3f111d7ae1104ebe7dafb61a1474eb655e5095e37f85579cd2cb8e29}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+H\+O\+T\+P\+L\+U\+G\+\_\+\+I\+N\+S\+E\+R\+T\+I\+ON&The specified Freespace device was inserted. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_HOTPLUG\_REMOVAL@{FREESPACE\_HOTPLUG\_REMOVAL}!Discovery API@{Discovery API}}\index{Discovery API@{Discovery API}!FREESPACE\_HOTPLUG\_REMOVAL@{FREESPACE\_HOTPLUG\_REMOVAL}}}\mbox{\label{a00027_ggad310b938b3f111d7ae1104ebe7dafb61ae43734cd0672d9474e21abe40f1fee63}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+H\+O\+T\+P\+L\+U\+G\+\_\+\+R\+E\+M\+O\+V\+AL&The specified Freespace device was removed. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{a00027_ga26caacd97f63dc21e21fb2a38b020f1b}} 
+\index{Discovery API@{Discovery API}!freespace\_getDeviceList@{freespace\_getDeviceList}}
+\index{freespace\_getDeviceList@{freespace\_getDeviceList}!Discovery API@{Discovery API}}
+\doxysubsubsection{freespace\_getDeviceList()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+get\+Device\+List (\begin{DoxyParamCaption}\item[{\textbf{ Freespace\+Device\+Id} $\ast$}]{list,  }\item[{int}]{list\+Size,  }\item[{int $\ast$}]{list\+Size\+Out }\end{DoxyParamCaption})}
+
+Get the list of attached devices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & where to store the list of inserted devices \\
+\hline
+{\em list\+Size} & the max number of ids that the list can hold \\
+\hline
+{\em list\+Size\+Out} & the number of ids returned in the list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS if no errors. 
+\end{DoxyReturn}
+\mbox{\label{a00027_ga80ea20ff3e35958bd7eeb1f77e598ace}} 
+\index{Discovery API@{Discovery API}!freespace\_setDeviceHotplugCallback@{freespace\_setDeviceHotplugCallback}}
+\index{freespace\_setDeviceHotplugCallback@{freespace\_setDeviceHotplugCallback}!Discovery API@{Discovery API}}
+\doxysubsubsection{freespace\_setDeviceHotplugCallback()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+set\+Device\+Hotplug\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ freespace\+\_\+hotplug\+Callback}}]{callback,  }\item[{void $\ast$}]{cookie }\end{DoxyParamCaption})}
+
+Set a callback for whenever a Freespace device gets added or removed from the system. This is only called when using the asynchronous A\+PI functions. Synchronous A\+PI users can call \doxyref{freespace\+\_\+get\+Device\+List()}{p.}{a00027_ga26caacd97f63dc21e21fb2a38b020f1b} periodically to discover device insertions or \doxyref{freespace\+\_\+perform()}{p.}{a00030_ga64a014bed4756444227571bd42aa9d30} if they want hotplug event callbacks.
+
+Note\+: The device list is only rescanned on calls to \doxyref{freespace\+\_\+get\+Device\+List()}{p.}{a00027_ga26caacd97f63dc21e21fb2a38b020f1b} and \doxyref{freespace\+\_\+perform()}{p.}{a00030_ga64a014bed4756444227571bd42aa9d30}, so registering a callback between \doxyref{freespace\+\_\+init()}{p.}{a00026_ga9e950995776c2942e6192a1327e33d55} and either of those calls will cause the callback to be called for all existing devices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & the hotplug callback or N\+U\+LL to stop callbacks. \\
+\hline
+{\em cookie} & user data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}

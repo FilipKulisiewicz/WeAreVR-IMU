@@ -1,0 +1,77 @@
+\doxysection{freespace\+\_\+\+Data\+Mode\+Response Struct Reference}
+\label{a00180}\index{freespace\_DataModeResponse@{freespace\_DataModeResponse}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \textbf{ enable\+Body\+Motion}
+\item 
+uint8\+\_\+t \textbf{ enable\+User\+Position}
+\item 
+uint8\+\_\+t \textbf{ inhibit\+Power\+Manager}
+\item 
+uint8\+\_\+t \textbf{ enable\+Mouse\+Movement}
+\item 
+uint8\+\_\+t \textbf{ disable\+Freespace}
+\item 
+uint8\+\_\+t \textbf{ S\+DA}
+\item 
+uint8\+\_\+t \textbf{ aggregate}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This report acknowledges the last Data\+Mode\+Request received by the dongle. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00180_ac64257d33f4ad966e9c5cd53264ecc80}} 
+\index{freespace\_DataModeResponse@{freespace\_DataModeResponse}!aggregate@{aggregate}}
+\index{aggregate@{aggregate}!freespace\_DataModeResponse@{freespace\_DataModeResponse}}
+\doxysubsubsection{aggregate}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Mode\+Response\+::aggregate}
+
+Aggregate\+: when set, if both Body Frame and User frame are enabled, send them as a Body\+User message, which combines the two. ~\newline
+ \mbox{\label{a00180_a4f1ae756be3bf22de535ee0680dd0b1e}} 
+\index{freespace\_DataModeResponse@{freespace\_DataModeResponse}!disableFreespace@{disableFreespace}}
+\index{disableFreespace@{disableFreespace}!freespace\_DataModeResponse@{freespace\_DataModeResponse}}
+\doxysubsubsection{disableFreespace}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Mode\+Response\+::disable\+Freespace}
+
+Disable Freespace\+: when set to 1 the Freespace motion sensing system disabled. \mbox{\label{a00180_aa51abbe7207096b12f32e25ab268be55}} 
+\index{freespace\_DataModeResponse@{freespace\_DataModeResponse}!enableBodyMotion@{enableBodyMotion}}
+\index{enableBodyMotion@{enableBodyMotion}!freespace\_DataModeResponse@{freespace\_DataModeResponse}}
+\doxysubsubsection{enableBodyMotion}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Mode\+Response\+::enable\+Body\+Motion}
+
+Enable Body Motion\+: when set to 1 Body Frame Motion reports are enabled. \mbox{\label{a00180_a65d4c28b3a869ee40770f4427ac7e492}} 
+\index{freespace\_DataModeResponse@{freespace\_DataModeResponse}!enableMouseMovement@{enableMouseMovement}}
+\index{enableMouseMovement@{enableMouseMovement}!freespace\_DataModeResponse@{freespace\_DataModeResponse}}
+\doxysubsubsection{enableMouseMovement}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Mode\+Response\+::enable\+Mouse\+Movement}
+
+Enable Mouse Movement\+: when set to 1 Mouse Movement reports are enabled. \mbox{\label{a00180_a90beacd0a305fdbf7fb5179ecafbe94e}} 
+\index{freespace\_DataModeResponse@{freespace\_DataModeResponse}!enableUserPosition@{enableUserPosition}}
+\index{enableUserPosition@{enableUserPosition}!freespace\_DataModeResponse@{freespace\_DataModeResponse}}
+\doxysubsubsection{enableUserPosition}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Mode\+Response\+::enable\+User\+Position}
+
+Enable User Position\+: when set to 1 User Frame Position reports are enabled \mbox{\label{a00180_add04e2e4b5776c8355dee4bde8d848ca}} 
+\index{freespace\_DataModeResponse@{freespace\_DataModeResponse}!inhibitPowerManager@{inhibitPowerManager}}
+\index{inhibitPowerManager@{inhibitPowerManager}!freespace\_DataModeResponse@{freespace\_DataModeResponse}}
+\doxysubsubsection{inhibitPowerManager}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Mode\+Response\+::inhibit\+Power\+Manager}
+
+Inhibit Power Manager\+: when set to 1 the power management feature isinhibited. \mbox{\label{a00180_abedf30653d8a2ed5664c4f3c2c829dd8}} 
+\index{freespace\_DataModeResponse@{freespace\_DataModeResponse}!SDA@{SDA}}
+\index{SDA@{SDA}!freespace\_DataModeResponse@{freespace\_DataModeResponse}}
+\doxysubsubsection{SDA}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Mode\+Response\+::\+S\+DA}
+
+Reserved for testing, 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

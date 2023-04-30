@@ -1,0 +1,506 @@
+\doxysection{freespace\+\_\+message Struct Reference}
+\label{a00296}\index{freespace\_message@{freespace\_message}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+
+
+Collaboration diagram for freespace\+\_\+message\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{a00294}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ message\+Type}
+\item 
+uint8\+\_\+t \textbf{ ver}
+\item 
+uint8\+\_\+t \textbf{ len}
+\item 
+uint8\+\_\+t \textbf{ dest}
+\item 
+uint8\+\_\+t \textbf{ src}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \textbf{ freespace\_PairingMessage} \textbf{ pairingMessage}\\
+\>struct \textbf{ freespace\_ProductIDRequest} \textbf{ productIDRequest}\\
+\>struct \textbf{ freespace\_LEDSetRequest} \textbf{ lEDSetRequest}\\
+\>struct \textbf{ freespace\_LinkQualityRequest} \textbf{ linkQualityRequest}\\
+\>struct \textbf{ freespace\_AlwaysOnRequest} \textbf{ alwaysOnRequest}\\
+\>struct \textbf{ freespace\_FrequencyFixRequest} \textbf{ frequencyFixRequest}\\
+\>struct \textbf{ freespace\_SoftwareResetMessage} \textbf{ softwareResetMessage}\\
+\>struct \textbf{ freespace\_DongleRFDisableMessage} \textbf{ dongleRFDisableMessage}\\
+\>struct \textbf{ freespace\_TxDisableMessage} \textbf{ txDisableMessage}\\
+\>struct \textbf{ freespace\_DongleRFSupressHomeFrequencyMessage} \textbf{ dongleRFSupressHomeFrequencyMessage}\\
+\>struct \textbf{ freespace\_FRSHandheldReadRequest} \textbf{ fRSHandheldReadRequest}\\
+\>struct \textbf{ freespace\_FRSHandheldWriteRequest} \textbf{ fRSHandheldWriteRequest}\\
+\>struct \textbf{ freespace\_FRSHandheldWriteData} \textbf{ fRSHandheldWriteData}\\
+\>struct \textbf{ freespace\_FRSDongleReadRequest} \textbf{ fRSDongleReadRequest}\\
+\>struct \textbf{ freespace\_FRSDongleWriteRequest} \textbf{ fRSDongleWriteRequest}\\
+\>struct \textbf{ freespace\_FRSDongleWriteData} \textbf{ fRSDongleWriteData}\\
+\>struct \textbf{ freespace\_FRSEFlashReadRequest} \textbf{ fRSEFlashReadRequest}\\
+\>struct \textbf{ freespace\_FRSEFlashWriteRequest} \textbf{ fRSEFlashWriteRequest}\\
+\>struct \textbf{ freespace\_FRSEFlashWriteData} \textbf{ fRSEFlashWriteData}\\
+\>struct \textbf{ freespace\_DongleRFEnableMessage} \textbf{ dongleRFEnableMessage}\\
+\>struct \textbf{ freespace\_DataModeRequest} \textbf{ dataModeRequest}\\
+\>struct \textbf{ freespace\_ButtonTestModeRequest} \textbf{ buttonTestModeRequest}\\
+\>struct \textbf{ freespace\_PairingResponse} \textbf{ pairingResponse}\\
+\>struct \textbf{ freespace\_ProductIDResponse} \textbf{ productIDResponse}\\
+\>struct \textbf{ freespace\_LinkStatus} \textbf{ linkStatus}\\
+\>struct \textbf{ freespace\_AlwaysOnResponse} \textbf{ alwaysOnResponse}\\
+\>struct \textbf{ freespace\_FRSHandheldReadResponse} \textbf{ fRSHandheldReadResponse}\\
+\>struct \textbf{ freespace\_FRSHandheldWriteResponse} \textbf{ fRSHandheldWriteResponse}\\
+\>struct \textbf{ freespace\_FRSDongleReadResponse} \textbf{ fRSDongleReadResponse}\\
+\>struct \textbf{ freespace\_FRSDongleWriteResponse} \textbf{ fRSDongleWriteResponse}\\
+\>struct \textbf{ freespace\_FRSEFlashReadResponse} \textbf{ fRSEFlashReadResponse}\\
+\>struct \textbf{ freespace\_FRSEFlashWriteResponse} \textbf{ fRSEFlashWriteResponse}\\
+\>struct \textbf{ freespace\_DataModeResponse} \textbf{ dataModeResponse}\\
+\>struct \textbf{ freespace\_ButtonTestModeResponse} \textbf{ buttonTestModeResponse}\\
+\>struct \textbf{ freespace\_BatteryLevelRequest} \textbf{ batteryLevelRequest}\\
+\>struct \textbf{ freespace\_BatteryLevel} \textbf{ batteryLevel}\\
+\>struct \textbf{ freespace\_BodyFrame} \textbf{ bodyFrame}\\
+\>struct \textbf{ freespace\_UserFrame} \textbf{ userFrame}\\
+\>struct \textbf{ freespace\_DataMotionControl} \textbf{ dataMotionControl}\\
+\>struct \textbf{ freespace\_FRSWriteResponse} \textbf{ fRSWriteResponse}\\
+\>struct \textbf{ freespace\_DataModeControlV2Response} \textbf{ dataModeControlV2Response}\\
+\>struct \textbf{ freespace\_SensorPeriodResponse} \textbf{ sensorPeriodResponse}\\
+\>struct \textbf{ freespace\_FRSReadResponse} \textbf{ fRSReadResponse}\\
+\>struct \textbf{ freespace\_PerResponse} \textbf{ perResponse}\\
+\>struct \textbf{ freespace\_FRSWriteRequest} \textbf{ fRSWriteRequest}\\
+\>struct \textbf{ freespace\_FRSWriteData} \textbf{ fRSWriteData}\\
+\>struct \textbf{ freespace\_FRSReadRequest} \textbf{ fRSReadRequest}\\
+\>struct \textbf{ freespace\_PerRequest} \textbf{ perRequest}\\
+\>struct \textbf{ freespace\_ActivityClassificationNotification} \textbf{ activityClassificationNotification}\\
+\>struct \textbf{ freespace\_DataModeControlV2Request} \textbf{ dataModeControlV2Request}\\
+\>struct \textbf{ freespace\_ReorientationRequest} \textbf{ reorientationRequest}\\
+\>struct \textbf{ freespace\_SensorPeriodRequest} \textbf{ sensorPeriodRequest}\\
+\>struct \textbf{ freespace\_BmsRequest} \textbf{ bmsRequest}\\
+\>struct \textbf{ freespace\_ProductIDResponseBLE} \textbf{ productIDResponseBLE}\\
+\>struct \textbf{ freespace\_FRSReadResponseBLE} \textbf{ fRSReadResponseBLE}\\
+\>struct \textbf{ freespace\_BodyUserFrame} \textbf{ bodyUserFrame}\\
+\>struct \textbf{ freespace\_MotionEngineOutput} \textbf{ motionEngineOutput}\\
+\>struct \textbf{ freespace\_DceOutV2} \textbf{ dceOutV2}\\
+\>struct \textbf{ freespace\_DceOutV3} \textbf{ dceOutV3}\\
+\>struct \textbf{ freespace\_DceOutV4T0} \textbf{ dceOutV4T0}\\
+\>struct \textbf{ freespace\_DceOutV4T1} \textbf{ dceOutV4T1}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxyref{freespace\+\_\+message}{p.}{a00296} has an enum which defines the type of the message contained and a union of all the possible message structs. When these structs are allocated, they must be memset to all 0 before assigning any fields. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00296_a21ee1c612df2b4c53223e840194b2a9b}} 
+\doxysubsubsection{"@1}
+{\footnotesize\ttfamily union \{ ... \} }
+
+\mbox{\label{a00296_a674897c440082c435a2ba8319e1037a6}} 
+\index{freespace\_message@{freespace\_message}!activityClassificationNotification@{activityClassificationNotification}}
+\index{activityClassificationNotification@{activityClassificationNotification}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{activityClassificationNotification}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Activity\+Classification\+Notification} freespace\+\_\+message\+::activity\+Classification\+Notification}
+
+\mbox{\label{a00296_a6d6b13d89a7786c009dfa648850cd906}} 
+\index{freespace\_message@{freespace\_message}!alwaysOnRequest@{alwaysOnRequest}}
+\index{alwaysOnRequest@{alwaysOnRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{alwaysOnRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Always\+On\+Request} freespace\+\_\+message\+::always\+On\+Request}
+
+\mbox{\label{a00296_a89e0c412a5736a7e0585e9e42baf1f75}} 
+\index{freespace\_message@{freespace\_message}!alwaysOnResponse@{alwaysOnResponse}}
+\index{alwaysOnResponse@{alwaysOnResponse}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{alwaysOnResponse}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Always\+On\+Response} freespace\+\_\+message\+::always\+On\+Response}
+
+\mbox{\label{a00296_a574cf0e732e6b2d7103d1cbe0c119905}} 
+\index{freespace\_message@{freespace\_message}!batteryLevel@{batteryLevel}}
+\index{batteryLevel@{batteryLevel}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{batteryLevel}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Battery\+Level} freespace\+\_\+message\+::battery\+Level}
+
+\mbox{\label{a00296_aa86a6e62261976c534cbc173d3f5382e}} 
+\index{freespace\_message@{freespace\_message}!batteryLevelRequest@{batteryLevelRequest}}
+\index{batteryLevelRequest@{batteryLevelRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{batteryLevelRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Battery\+Level\+Request} freespace\+\_\+message\+::battery\+Level\+Request}
+
+\mbox{\label{a00296_a4892b5375b0e4153e0d7f5eeab3c423d}} 
+\index{freespace\_message@{freespace\_message}!bmsRequest@{bmsRequest}}
+\index{bmsRequest@{bmsRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{bmsRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Bms\+Request} freespace\+\_\+message\+::bms\+Request}
+
+\mbox{\label{a00296_a8e5096fc7a55dab7f2ad86fbb759b7df}} 
+\index{freespace\_message@{freespace\_message}!bodyFrame@{bodyFrame}}
+\index{bodyFrame@{bodyFrame}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{bodyFrame}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Body\+Frame} freespace\+\_\+message\+::body\+Frame}
+
+\mbox{\label{a00296_a045ae0578f5d04f3f4540fc76541d087}} 
+\index{freespace\_message@{freespace\_message}!bodyUserFrame@{bodyUserFrame}}
+\index{bodyUserFrame@{bodyUserFrame}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{bodyUserFrame}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Body\+User\+Frame} freespace\+\_\+message\+::body\+User\+Frame}
+
+\mbox{\label{a00296_aa54b15894431443b2b1bd8800d5a96dd}} 
+\index{freespace\_message@{freespace\_message}!buttonTestModeRequest@{buttonTestModeRequest}}
+\index{buttonTestModeRequest@{buttonTestModeRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{buttonTestModeRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Button\+Test\+Mode\+Request} freespace\+\_\+message\+::button\+Test\+Mode\+Request}
+
+\mbox{\label{a00296_a2d744f55293fd414f9c67e7af175586a}} 
+\index{freespace\_message@{freespace\_message}!buttonTestModeResponse@{buttonTestModeResponse}}
+\index{buttonTestModeResponse@{buttonTestModeResponse}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{buttonTestModeResponse}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Button\+Test\+Mode\+Response} freespace\+\_\+message\+::button\+Test\+Mode\+Response}
+
+\mbox{\label{a00296_a0313af16ae4dbb56e02cf63f5441c824}} 
+\index{freespace\_message@{freespace\_message}!dataModeControlV2Request@{dataModeControlV2Request}}
+\index{dataModeControlV2Request@{dataModeControlV2Request}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{dataModeControlV2Request}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Data\+Mode\+Control\+V2\+Request} freespace\+\_\+message\+::data\+Mode\+Control\+V2\+Request}
+
+\mbox{\label{a00296_a4a5fc08d174285713890ab8fe6c2fa7c}} 
+\index{freespace\_message@{freespace\_message}!dataModeControlV2Response@{dataModeControlV2Response}}
+\index{dataModeControlV2Response@{dataModeControlV2Response}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{dataModeControlV2Response}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Data\+Mode\+Control\+V2\+Response} freespace\+\_\+message\+::data\+Mode\+Control\+V2\+Response}
+
+\mbox{\label{a00296_a4ab5d402c7e503c1abc964f5d40d4368}} 
+\index{freespace\_message@{freespace\_message}!dataModeRequest@{dataModeRequest}}
+\index{dataModeRequest@{dataModeRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{dataModeRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Data\+Mode\+Request} freespace\+\_\+message\+::data\+Mode\+Request}
+
+\mbox{\label{a00296_a2076fa702973c98117759c8f2002093d}} 
+\index{freespace\_message@{freespace\_message}!dataModeResponse@{dataModeResponse}}
+\index{dataModeResponse@{dataModeResponse}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{dataModeResponse}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Data\+Mode\+Response} freespace\+\_\+message\+::data\+Mode\+Response}
+
+\mbox{\label{a00296_a484eacc757e8b605e3209a88195878a0}} 
+\index{freespace\_message@{freespace\_message}!dataMotionControl@{dataMotionControl}}
+\index{dataMotionControl@{dataMotionControl}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{dataMotionControl}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Data\+Motion\+Control} freespace\+\_\+message\+::data\+Motion\+Control}
+
+\mbox{\label{a00296_adff192388c53f0fd7a218ea1061d1a7f}} 
+\index{freespace\_message@{freespace\_message}!dceOutV2@{dceOutV2}}
+\index{dceOutV2@{dceOutV2}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{dceOutV2}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Dce\+Out\+V2} freespace\+\_\+message\+::dce\+Out\+V2}
+
+\mbox{\label{a00296_a591b0e90727f3aac6470928d9cee69c5}} 
+\index{freespace\_message@{freespace\_message}!dceOutV3@{dceOutV3}}
+\index{dceOutV3@{dceOutV3}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{dceOutV3}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Dce\+Out\+V3} freespace\+\_\+message\+::dce\+Out\+V3}
+
+\mbox{\label{a00296_a52542a754bc6bfa9d2cd2e2402af061f}} 
+\index{freespace\_message@{freespace\_message}!dceOutV4T0@{dceOutV4T0}}
+\index{dceOutV4T0@{dceOutV4T0}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{dceOutV4T0}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Dce\+Out\+V4\+T0} freespace\+\_\+message\+::dce\+Out\+V4\+T0}
+
+\mbox{\label{a00296_abcdf33d88f695b9cf666a7f6ce73c5d7}} 
+\index{freespace\_message@{freespace\_message}!dceOutV4T1@{dceOutV4T1}}
+\index{dceOutV4T1@{dceOutV4T1}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{dceOutV4T1}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Dce\+Out\+V4\+T1} freespace\+\_\+message\+::dce\+Out\+V4\+T1}
+
+\mbox{\label{a00296_a6ead8569033fa938bf9975e0a09d5f9c}} 
+\index{freespace\_message@{freespace\_message}!dest@{dest}}
+\index{dest@{dest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{dest}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+message\+::dest}
+
+Destination, used in version 2 only \mbox{\label{a00296_a3a9647b7b94356d637d63722f25b13b8}} 
+\index{freespace\_message@{freespace\_message}!dongleRFDisableMessage@{dongleRFDisableMessage}}
+\index{dongleRFDisableMessage@{dongleRFDisableMessage}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{dongleRFDisableMessage}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Disable\+Message} freespace\+\_\+message\+::dongle\+R\+F\+Disable\+Message}
+
+\mbox{\label{a00296_add413a065923d29fd874eead63dfb09f}} 
+\index{freespace\_message@{freespace\_message}!dongleRFEnableMessage@{dongleRFEnableMessage}}
+\index{dongleRFEnableMessage@{dongleRFEnableMessage}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{dongleRFEnableMessage}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Enable\+Message} freespace\+\_\+message\+::dongle\+R\+F\+Enable\+Message}
+
+\mbox{\label{a00296_af34bfb6834e266bdaec537d14e60721b}} 
+\index{freespace\_message@{freespace\_message}!dongleRFSupressHomeFrequencyMessage@{dongleRFSupressHomeFrequencyMessage}}
+\index{dongleRFSupressHomeFrequencyMessage@{dongleRFSupressHomeFrequencyMessage}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{dongleRFSupressHomeFrequencyMessage}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Supress\+Home\+Frequency\+Message} freespace\+\_\+message\+::dongle\+R\+F\+Supress\+Home\+Frequency\+Message}
+
+\mbox{\label{a00296_afeedb4916b37ff42696c482c0511bd1d}} 
+\index{freespace\_message@{freespace\_message}!frequencyFixRequest@{frequencyFixRequest}}
+\index{frequencyFixRequest@{frequencyFixRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{frequencyFixRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Frequency\+Fix\+Request} freespace\+\_\+message\+::frequency\+Fix\+Request}
+
+\mbox{\label{a00296_a380e7f66ab2aa5eba921616948c90d09}} 
+\index{freespace\_message@{freespace\_message}!fRSDongleReadRequest@{fRSDongleReadRequest}}
+\index{fRSDongleReadRequest@{fRSDongleReadRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSDongleReadRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Request} freespace\+\_\+message\+::f\+R\+S\+Dongle\+Read\+Request}
+
+\mbox{\label{a00296_a482eedfce814c2c52dff3ca1177e7010}} 
+\index{freespace\_message@{freespace\_message}!fRSDongleReadResponse@{fRSDongleReadResponse}}
+\index{fRSDongleReadResponse@{fRSDongleReadResponse}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSDongleReadResponse}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Response} freespace\+\_\+message\+::f\+R\+S\+Dongle\+Read\+Response}
+
+\mbox{\label{a00296_ab986febaa22278448a2b216fc0d6d6e3}} 
+\index{freespace\_message@{freespace\_message}!fRSDongleWriteData@{fRSDongleWriteData}}
+\index{fRSDongleWriteData@{fRSDongleWriteData}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSDongleWriteData}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Data} freespace\+\_\+message\+::f\+R\+S\+Dongle\+Write\+Data}
+
+\mbox{\label{a00296_a67b8deff696a611cd8bbfe6f7d9ddaaf}} 
+\index{freespace\_message@{freespace\_message}!fRSDongleWriteRequest@{fRSDongleWriteRequest}}
+\index{fRSDongleWriteRequest@{fRSDongleWriteRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSDongleWriteRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Request} freespace\+\_\+message\+::f\+R\+S\+Dongle\+Write\+Request}
+
+\mbox{\label{a00296_a2bcc9dd986d0ba9b81a3bc39b4cd896a}} 
+\index{freespace\_message@{freespace\_message}!fRSDongleWriteResponse@{fRSDongleWriteResponse}}
+\index{fRSDongleWriteResponse@{fRSDongleWriteResponse}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSDongleWriteResponse}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Response} freespace\+\_\+message\+::f\+R\+S\+Dongle\+Write\+Response}
+
+\mbox{\label{a00296_a9b9d5e504ea6db67ba1e30b0e378bc25}} 
+\index{freespace\_message@{freespace\_message}!fRSEFlashReadRequest@{fRSEFlashReadRequest}}
+\index{fRSEFlashReadRequest@{fRSEFlashReadRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSEFlashReadRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Read\+Request} freespace\+\_\+message\+::f\+R\+S\+E\+Flash\+Read\+Request}
+
+\mbox{\label{a00296_aadfa2421f98da4e316be98566eb11be5}} 
+\index{freespace\_message@{freespace\_message}!fRSEFlashReadResponse@{fRSEFlashReadResponse}}
+\index{fRSEFlashReadResponse@{fRSEFlashReadResponse}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSEFlashReadResponse}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Read\+Response} freespace\+\_\+message\+::f\+R\+S\+E\+Flash\+Read\+Response}
+
+\mbox{\label{a00296_a4baf25e5adeaffd0215120cb4af1001c}} 
+\index{freespace\_message@{freespace\_message}!fRSEFlashWriteData@{fRSEFlashWriteData}}
+\index{fRSEFlashWriteData@{fRSEFlashWriteData}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSEFlashWriteData}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Data} freespace\+\_\+message\+::f\+R\+S\+E\+Flash\+Write\+Data}
+
+\mbox{\label{a00296_a3c7ed7b84259fd9149808876c5cd6b98}} 
+\index{freespace\_message@{freespace\_message}!fRSEFlashWriteRequest@{fRSEFlashWriteRequest}}
+\index{fRSEFlashWriteRequest@{fRSEFlashWriteRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSEFlashWriteRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Request} freespace\+\_\+message\+::f\+R\+S\+E\+Flash\+Write\+Request}
+
+\mbox{\label{a00296_af42008408a1026645e1d25e6ccdab01e}} 
+\index{freespace\_message@{freespace\_message}!fRSEFlashWriteResponse@{fRSEFlashWriteResponse}}
+\index{fRSEFlashWriteResponse@{fRSEFlashWriteResponse}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSEFlashWriteResponse}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Response} freespace\+\_\+message\+::f\+R\+S\+E\+Flash\+Write\+Response}
+
+\mbox{\label{a00296_ad964d9d4a2bccfcd47e57c6efe72623e}} 
+\index{freespace\_message@{freespace\_message}!fRSHandheldReadRequest@{fRSHandheldReadRequest}}
+\index{fRSHandheldReadRequest@{fRSHandheldReadRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSHandheldReadRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Read\+Request} freespace\+\_\+message\+::f\+R\+S\+Handheld\+Read\+Request}
+
+\mbox{\label{a00296_a8acae743545ebbc7eb89c32753e7afc2}} 
+\index{freespace\_message@{freespace\_message}!fRSHandheldReadResponse@{fRSHandheldReadResponse}}
+\index{fRSHandheldReadResponse@{fRSHandheldReadResponse}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSHandheldReadResponse}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Read\+Response} freespace\+\_\+message\+::f\+R\+S\+Handheld\+Read\+Response}
+
+\mbox{\label{a00296_a57f3b79d8cc9659dfdb65978e95c6f3c}} 
+\index{freespace\_message@{freespace\_message}!fRSHandheldWriteData@{fRSHandheldWriteData}}
+\index{fRSHandheldWriteData@{fRSHandheldWriteData}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSHandheldWriteData}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Data} freespace\+\_\+message\+::f\+R\+S\+Handheld\+Write\+Data}
+
+\mbox{\label{a00296_ad61a119478caae0aba4e34002ae6da57}} 
+\index{freespace\_message@{freespace\_message}!fRSHandheldWriteRequest@{fRSHandheldWriteRequest}}
+\index{fRSHandheldWriteRequest@{fRSHandheldWriteRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSHandheldWriteRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Request} freespace\+\_\+message\+::f\+R\+S\+Handheld\+Write\+Request}
+
+\mbox{\label{a00296_a180e3e4304a5ee6e20d13d2911ca25f0}} 
+\index{freespace\_message@{freespace\_message}!fRSHandheldWriteResponse@{fRSHandheldWriteResponse}}
+\index{fRSHandheldWriteResponse@{fRSHandheldWriteResponse}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSHandheldWriteResponse}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Response} freespace\+\_\+message\+::f\+R\+S\+Handheld\+Write\+Response}
+
+\mbox{\label{a00296_ade1526fbfbf29f1675460cc1bf5c25f6}} 
+\index{freespace\_message@{freespace\_message}!fRSReadRequest@{fRSReadRequest}}
+\index{fRSReadRequest@{fRSReadRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSReadRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Request} freespace\+\_\+message\+::f\+R\+S\+Read\+Request}
+
+\mbox{\label{a00296_a59971e77d402ae85183a5adf0bf2ac91}} 
+\index{freespace\_message@{freespace\_message}!fRSReadResponse@{fRSReadResponse}}
+\index{fRSReadResponse@{fRSReadResponse}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSReadResponse}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Response} freespace\+\_\+message\+::f\+R\+S\+Read\+Response}
+
+\mbox{\label{a00296_aa79ccaeccc135ecfbfd33730123f4ce6}} 
+\index{freespace\_message@{freespace\_message}!fRSReadResponseBLE@{fRSReadResponseBLE}}
+\index{fRSReadResponseBLE@{fRSReadResponseBLE}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSReadResponseBLE}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Response\+B\+LE} freespace\+\_\+message\+::f\+R\+S\+Read\+Response\+B\+LE}
+
+\mbox{\label{a00296_a4f94278c3927c453d8f348cec3d42929}} 
+\index{freespace\_message@{freespace\_message}!fRSWriteData@{fRSWriteData}}
+\index{fRSWriteData@{fRSWriteData}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSWriteData}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Data} freespace\+\_\+message\+::f\+R\+S\+Write\+Data}
+
+\mbox{\label{a00296_a7d12db831bba2883c5ba855a77d506d1}} 
+\index{freespace\_message@{freespace\_message}!fRSWriteRequest@{fRSWriteRequest}}
+\index{fRSWriteRequest@{fRSWriteRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSWriteRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Request} freespace\+\_\+message\+::f\+R\+S\+Write\+Request}
+
+\mbox{\label{a00296_a2e499f0400ccd42d46cb99a276a07da3}} 
+\index{freespace\_message@{freespace\_message}!fRSWriteResponse@{fRSWriteResponse}}
+\index{fRSWriteResponse@{fRSWriteResponse}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{fRSWriteResponse}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Response} freespace\+\_\+message\+::f\+R\+S\+Write\+Response}
+
+\mbox{\label{a00296_aaffe384bc4b2d5d15dcc6e2d47783208}} 
+\index{freespace\_message@{freespace\_message}!lEDSetRequest@{lEDSetRequest}}
+\index{lEDSetRequest@{lEDSetRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{lEDSetRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+L\+E\+D\+Set\+Request} freespace\+\_\+message\+::l\+E\+D\+Set\+Request}
+
+\mbox{\label{a00296_ac1c979516e2f25a5ebac14efed6e6749}} 
+\index{freespace\_message@{freespace\_message}!len@{len}}
+\index{len@{len}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{len}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+message\+::len}
+
+Length, used in version 2 only \mbox{\label{a00296_aeea09d9b2476506c9319cb680c61f329}} 
+\index{freespace\_message@{freespace\_message}!linkQualityRequest@{linkQualityRequest}}
+\index{linkQualityRequest@{linkQualityRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{linkQualityRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Link\+Quality\+Request} freespace\+\_\+message\+::link\+Quality\+Request}
+
+\mbox{\label{a00296_a7fc942b76eefc338647a36d1b8ae75e9}} 
+\index{freespace\_message@{freespace\_message}!linkStatus@{linkStatus}}
+\index{linkStatus@{linkStatus}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{linkStatus}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Link\+Status} freespace\+\_\+message\+::link\+Status}
+
+\mbox{\label{a00296_ac15e422d1a3b86843c25edaf4f0c47bc}} 
+\index{freespace\_message@{freespace\_message}!messageType@{messageType}}
+\index{messageType@{messageType}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{messageType}
+{\footnotesize\ttfamily int freespace\+\_\+message\+::message\+Type}
+
+\mbox{\label{a00296_a9207b02160864cd1dadc80179e90e82a}} 
+\index{freespace\_message@{freespace\_message}!motionEngineOutput@{motionEngineOutput}}
+\index{motionEngineOutput@{motionEngineOutput}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{motionEngineOutput}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} freespace\+\_\+message\+::motion\+Engine\+Output}
+
+\mbox{\label{a00296_a7fb3dc3d892cdb586644e42caa9d08b1}} 
+\index{freespace\_message@{freespace\_message}!pairingMessage@{pairingMessage}}
+\index{pairingMessage@{pairingMessage}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{pairingMessage}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Pairing\+Message} freespace\+\_\+message\+::pairing\+Message}
+
+\mbox{\label{a00296_afe6afcdb4ccc096260871011861312ce}} 
+\index{freespace\_message@{freespace\_message}!pairingResponse@{pairingResponse}}
+\index{pairingResponse@{pairingResponse}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{pairingResponse}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Pairing\+Response} freespace\+\_\+message\+::pairing\+Response}
+
+\mbox{\label{a00296_ae88d7b7dbfa720762fb1a4ef1cf03f97}} 
+\index{freespace\_message@{freespace\_message}!perRequest@{perRequest}}
+\index{perRequest@{perRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{perRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Per\+Request} freespace\+\_\+message\+::per\+Request}
+
+\mbox{\label{a00296_a48008b8553e18b5b51dd4ea08bc99452}} 
+\index{freespace\_message@{freespace\_message}!perResponse@{perResponse}}
+\index{perResponse@{perResponse}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{perResponse}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Per\+Response} freespace\+\_\+message\+::per\+Response}
+
+\mbox{\label{a00296_a77cdda171ad8970377b58bf6ead2f0fe}} 
+\index{freespace\_message@{freespace\_message}!productIDRequest@{productIDRequest}}
+\index{productIDRequest@{productIDRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{productIDRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Request} freespace\+\_\+message\+::product\+I\+D\+Request}
+
+\mbox{\label{a00296_a2f54b3644418963ee58bfc7213cd043a}} 
+\index{freespace\_message@{freespace\_message}!productIDResponse@{productIDResponse}}
+\index{productIDResponse@{productIDResponse}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{productIDResponse}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Response} freespace\+\_\+message\+::product\+I\+D\+Response}
+
+\mbox{\label{a00296_a2a28fc690cef667d7891f0888189e6f9}} 
+\index{freespace\_message@{freespace\_message}!productIDResponseBLE@{productIDResponseBLE}}
+\index{productIDResponseBLE@{productIDResponseBLE}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{productIDResponseBLE}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Response\+B\+LE} freespace\+\_\+message\+::product\+I\+D\+Response\+B\+LE}
+
+\mbox{\label{a00296_a9beed1c5e42d456b0f2648917a32eed9}} 
+\index{freespace\_message@{freespace\_message}!reorientationRequest@{reorientationRequest}}
+\index{reorientationRequest@{reorientationRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{reorientationRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Reorientation\+Request} freespace\+\_\+message\+::reorientation\+Request}
+
+\mbox{\label{a00296_a4ca8eb235b0098c1c2731580465a1314}} 
+\index{freespace\_message@{freespace\_message}!sensorPeriodRequest@{sensorPeriodRequest}}
+\index{sensorPeriodRequest@{sensorPeriodRequest}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{sensorPeriodRequest}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Sensor\+Period\+Request} freespace\+\_\+message\+::sensor\+Period\+Request}
+
+\mbox{\label{a00296_adae02214564d636b76d85945b766e8d5}} 
+\index{freespace\_message@{freespace\_message}!sensorPeriodResponse@{sensorPeriodResponse}}
+\index{sensorPeriodResponse@{sensorPeriodResponse}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{sensorPeriodResponse}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Sensor\+Period\+Response} freespace\+\_\+message\+::sensor\+Period\+Response}
+
+\mbox{\label{a00296_ae5e40821c6ec93868c66f7898bb0508e}} 
+\index{freespace\_message@{freespace\_message}!softwareResetMessage@{softwareResetMessage}}
+\index{softwareResetMessage@{softwareResetMessage}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{softwareResetMessage}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Software\+Reset\+Message} freespace\+\_\+message\+::software\+Reset\+Message}
+
+\mbox{\label{a00296_a6f337f72dd0480b1fa26f553b61c6753}} 
+\index{freespace\_message@{freespace\_message}!src@{src}}
+\index{src@{src}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{src}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+message\+::src}
+
+Source, used in version 2 only \mbox{\label{a00296_a97189214ddc2e89ffbd13f1dcf612694}} 
+\index{freespace\_message@{freespace\_message}!txDisableMessage@{txDisableMessage}}
+\index{txDisableMessage@{txDisableMessage}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{txDisableMessage}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+Tx\+Disable\+Message} freespace\+\_\+message\+::tx\+Disable\+Message}
+
+\mbox{\label{a00296_a3e9390088b9cf839b4e1d707ff1e9631}} 
+\index{freespace\_message@{freespace\_message}!userFrame@{userFrame}}
+\index{userFrame@{userFrame}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{userFrame}
+{\footnotesize\ttfamily struct \textbf{ freespace\+\_\+\+User\+Frame} freespace\+\_\+message\+::user\+Frame}
+
+\mbox{\label{a00296_af51dbd867a69e4391cd2ca24769d8cbf}} 
+\index{freespace\_message@{freespace\_message}!ver@{ver}}
+\index{ver@{ver}!freespace\_message@{freespace\_message}}
+\doxysubsubsection{ver}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+message\+::ver}
+
+H\+ID protocol version 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,41 @@
+\doxysection{freespace\+\_\+\+Dongle\+R\+F\+Supress\+Home\+Frequency\+Message Struct Reference}
+\label{a00088}\index{freespace\_DongleRFSupressHomeFrequencyMessage@{freespace\_DongleRFSupressHomeFrequencyMessage}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \textbf{ low}
+\item 
+uint8\+\_\+t \textbf{ high}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This message is for RF Home frequency supression on the dongle. \begin{DoxyVerb} 802.11 defines the peak of a channel to cover the range +-11MHz from the center frequency of the channel.
+ Hillcrest adds an extra 1MHz to this boundary, so Low and High should be -12MHz from the center channel of the 802.11
+ and +12MHz from the center channel of 802.11 respectively. These values must be in the range [1,82].
+ To disable home frequency suppression, set either Low or High to be out-of-range. 0xFF is the preferred value for disabling suppression.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00088_ac1fa64ad22502e7b3a6b163f399b8d71}} 
+\index{freespace\_DongleRFSupressHomeFrequencyMessage@{freespace\_DongleRFSupressHomeFrequencyMessage}!high@{high}}
+\index{high@{high}!freespace\_DongleRFSupressHomeFrequencyMessage@{freespace\_DongleRFSupressHomeFrequencyMessage}}
+\doxysubsubsection{high}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Dongle\+R\+F\+Supress\+Home\+Frequency\+Message\+::high}
+
+\mbox{\label{a00088_aa418ba1ef69e6c38fed99a4958bec631}} 
+\index{freespace\_DongleRFSupressHomeFrequencyMessage@{freespace\_DongleRFSupressHomeFrequencyMessage}!low@{low}}
+\index{low@{low}!freespace\_DongleRFSupressHomeFrequencyMessage@{freespace\_DongleRFSupressHomeFrequencyMessage}}
+\doxysubsubsection{low}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Dongle\+R\+F\+Supress\+Home\+Frequency\+Message\+::low}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,36 @@
+\doxysection{freespace\+\_\+\+L\+E\+D\+Set\+Request Struct Reference}
+\label{a00060}\index{freespace\_LEDSetRequest@{freespace\_LEDSetRequest}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \textbf{ on\+Off}
+\item 
+uint8\+\_\+t \textbf{ select\+L\+ED}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This request causes the handheld or dongle to set a status L\+ED to a particular value 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00060_ac540135a3b545fe11215522197865723}} 
+\index{freespace\_LEDSetRequest@{freespace\_LEDSetRequest}!onOff@{onOff}}
+\index{onOff@{onOff}!freespace\_LEDSetRequest@{freespace\_LEDSetRequest}}
+\doxysubsubsection{onOff}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+L\+E\+D\+Set\+Request\+::on\+Off}
+
+W\+P160\+: 0-\/Off, 1-\/On, 2-\/Release, F\+S\+A\+P160\+: 0-\/cause0, 1-\/cause1, 2-\/cause2 \mbox{\label{a00060_a81333528f3577926aaebd17f895e1313}} 
+\index{freespace\_LEDSetRequest@{freespace\_LEDSetRequest}!selectLED@{selectLED}}
+\index{selectLED@{selectLED}!freespace\_LEDSetRequest@{freespace\_LEDSetRequest}}
+\doxysubsubsection{selectLED}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+L\+E\+D\+Set\+Request\+::select\+L\+ED}
+
+L\+ED Select\+: 0-\/green(all devices) 1-\/red(all devices) 2-\/yellow(all devices) 3-\/blue(all devices) 4-\/F\+TA green 5-\/F\+TA red 6-\/S2U yellow 7-\/S2U blue 8-\/Dominion L\+ED P\+WM 9-\/Dominion L\+E\+D1 10-\/Dominion L\+E\+D2 11-\/R\+FT L\+ED A 12-\/R\+FT L\+ED B 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

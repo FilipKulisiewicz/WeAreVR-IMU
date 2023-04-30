@@ -1,0 +1,220 @@
+\doxysection{freespace\+\_\+\+Body\+User\+Frame Struct Reference}
+\label{a00272}\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \textbf{ button1}
+\item 
+uint8\+\_\+t \textbf{ button2}
+\item 
+uint8\+\_\+t \textbf{ button3}
+\item 
+uint8\+\_\+t \textbf{ button4}
+\item 
+uint8\+\_\+t \textbf{ button5}
+\item 
+uint8\+\_\+t \textbf{ button6}
+\item 
+uint8\+\_\+t \textbf{ button7}
+\item 
+uint8\+\_\+t \textbf{ button8}
+\item 
+int8\+\_\+t \textbf{ deltaX}
+\item 
+int8\+\_\+t \textbf{ deltaY}
+\item 
+int8\+\_\+t \textbf{ delta\+Wheel}
+\item 
+uint16\+\_\+t \textbf{ sequence\+Number}
+\item 
+int16\+\_\+t \textbf{ linear\+AccelX}
+\item 
+int16\+\_\+t \textbf{ linear\+AccelY}
+\item 
+int16\+\_\+t \textbf{ linear\+AccelZ}
+\item 
+int16\+\_\+t \textbf{ angular\+VelX}
+\item 
+int16\+\_\+t \textbf{ angular\+VelY}
+\item 
+int16\+\_\+t \textbf{ angular\+VelZ}
+\item 
+int16\+\_\+t \textbf{ linear\+PosX}
+\item 
+int16\+\_\+t \textbf{ linear\+PosY}
+\item 
+int16\+\_\+t \textbf{ linear\+PosZ}
+\item 
+int16\+\_\+t \textbf{ angular\+PosB}
+\item 
+int16\+\_\+t \textbf{ angular\+PosC}
+\item 
+int16\+\_\+t \textbf{ angular\+PosD}
+\item 
+int16\+\_\+t \textbf{ angular\+PosA}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Conveys the handheld device body and user frame motion. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00272_a53b6f5be8e5683692830f3a354406d37}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!angularPosA@{angularPosA}}
+\index{angularPosA@{angularPosA}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{angularPosA}
+{\footnotesize\ttfamily int16\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::angular\+PosA}
+
+\mbox{\label{a00272_a63139583754cff25a62e74817980ad95}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!angularPosB@{angularPosB}}
+\index{angularPosB@{angularPosB}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{angularPosB}
+{\footnotesize\ttfamily int16\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::angular\+PosB}
+
+Angular Position is in dimensionless units. The axes are given in quaternion form where A, B, C, D represent the real, i, j, and k coefficients. \mbox{\label{a00272_a6cce983be366210ad36e1328845a1034}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!angularPosC@{angularPosC}}
+\index{angularPosC@{angularPosC}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{angularPosC}
+{\footnotesize\ttfamily int16\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::angular\+PosC}
+
+\mbox{\label{a00272_a1b31d0e3282b72f6405b600f65da8d4b}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!angularPosD@{angularPosD}}
+\index{angularPosD@{angularPosD}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{angularPosD}
+{\footnotesize\ttfamily int16\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::angular\+PosD}
+
+\mbox{\label{a00272_add473e1be9912eca42106ff905226bbc}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!angularVelX@{angularVelX}}
+\index{angularVelX@{angularVelX}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{angularVelX}
+{\footnotesize\ttfamily int16\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::angular\+VelX}
+
+Angular Velocity is reported in units of rad/s with an exponent of -\/3. X positive is tilt right(roll). Y positive it tilt up(pitch). Z positive is turn right(yaw) wrt the handheld device frame of reference. \mbox{\label{a00272_ac7731dc0ed58ebccbbf1613e806b0ecf}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!angularVelY@{angularVelY}}
+\index{angularVelY@{angularVelY}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{angularVelY}
+{\footnotesize\ttfamily int16\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::angular\+VelY}
+
+\mbox{\label{a00272_a75f65a0ddb2721be233f9afae84be586}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!angularVelZ@{angularVelZ}}
+\index{angularVelZ@{angularVelZ}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{angularVelZ}
+{\footnotesize\ttfamily int16\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::angular\+VelZ}
+
+\mbox{\label{a00272_a3d347d61757cf1ddc8dbaf5e7c084b47}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!button1@{button1}}
+\index{button1@{button1}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{button1}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::button1}
+
+Button bits. \mbox{\label{a00272_ab116351160c189eb6abb5da32e90bde7}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!button2@{button2}}
+\index{button2@{button2}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{button2}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::button2}
+
+\mbox{\label{a00272_a76b82b9298286cfdb936fd878dede452}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!button3@{button3}}
+\index{button3@{button3}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{button3}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::button3}
+
+\mbox{\label{a00272_a2a347168db95aec872f376164f148111}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!button4@{button4}}
+\index{button4@{button4}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{button4}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::button4}
+
+\mbox{\label{a00272_a853c57ea8b7e681e202039282ccd7bbc}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!button5@{button5}}
+\index{button5@{button5}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{button5}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::button5}
+
+\mbox{\label{a00272_ac1f6afd94110e0221592336fbaa96aa0}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!button6@{button6}}
+\index{button6@{button6}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{button6}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::button6}
+
+\mbox{\label{a00272_a1e5b65023a7657e6d2d15cf7af6d09aa}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!button7@{button7}}
+\index{button7@{button7}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{button7}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::button7}
+
+\mbox{\label{a00272_a51170cb85ffed7e00737464551d7a72e}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!button8@{button8}}
+\index{button8@{button8}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{button8}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::button8}
+
+\mbox{\label{a00272_a12b43353a1dc464be48e0356ac816acb}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!deltaWheel@{deltaWheel}}
+\index{deltaWheel@{deltaWheel}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{deltaWheel}
+{\footnotesize\ttfamily int8\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::delta\+Wheel}
+
+Scroll wheel movement. \mbox{\label{a00272_a0f9443fbb5153e064df5e2d5b786d8e6}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!deltaX@{deltaX}}
+\index{deltaX@{deltaX}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{deltaX}
+{\footnotesize\ttfamily int8\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::deltaX}
+
+X pointer movement. \mbox{\label{a00272_a5a3edb0381e3c18a2b6b721f599916fa}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!deltaY@{deltaY}}
+\index{deltaY@{deltaY}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{deltaY}
+{\footnotesize\ttfamily int8\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::deltaY}
+
+Y pointer movement. \mbox{\label{a00272_aa2e0b631f6ff0ac73c33ab6e333ba7b7}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!linearAccelX@{linearAccelX}}
+\index{linearAccelX@{linearAccelX}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{linearAccelX}
+{\footnotesize\ttfamily int16\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::linear\+AccelX}
+
+Linear Acceleration is reported in SI units (cm/s$^\wedge$2) with an exponent of -\/1. X is positive forward. Y is positive right. Z is positive down wrt handheld frame of reference. \mbox{\label{a00272_aac9db1159dd2af808cc495dd80b49418}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!linearAccelY@{linearAccelY}}
+\index{linearAccelY@{linearAccelY}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{linearAccelY}
+{\footnotesize\ttfamily int16\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::linear\+AccelY}
+
+\mbox{\label{a00272_a93d3f098e0741cd48aea2c8b93c904ac}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!linearAccelZ@{linearAccelZ}}
+\index{linearAccelZ@{linearAccelZ}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{linearAccelZ}
+{\footnotesize\ttfamily int16\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::linear\+AccelZ}
+
+\mbox{\label{a00272_a0cf87a48b2cf68f4962602cfbf3d954c}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!linearPosX@{linearPosX}}
+\index{linearPosX@{linearPosX}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{linearPosX}
+{\footnotesize\ttfamily int16\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::linear\+PosX}
+
+Linear Offset is in units of meters. X positive is right. Y positive is near. Z positive is down wrt the user frame of reference. \mbox{\label{a00272_a5eb3b5020aa0cd0fd0ced6403acf1790}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!linearPosY@{linearPosY}}
+\index{linearPosY@{linearPosY}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{linearPosY}
+{\footnotesize\ttfamily int16\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::linear\+PosY}
+
+\mbox{\label{a00272_a3972566640b270fdf418b741f95e4cbc}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!linearPosZ@{linearPosZ}}
+\index{linearPosZ@{linearPosZ}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{linearPosZ}
+{\footnotesize\ttfamily int16\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::linear\+PosZ}
+
+\mbox{\label{a00272_a64fa7a655a564429ba19c450e482d51f}} 
+\index{freespace\_BodyUserFrame@{freespace\_BodyUserFrame}!sequenceNumber@{sequenceNumber}}
+\index{sequenceNumber@{sequenceNumber}!freespace\_BodyUserFrame@{freespace\_BodyUserFrame}}
+\doxysubsubsection{sequenceNumber}
+{\footnotesize\ttfamily uint16\+\_\+t freespace\+\_\+\+Body\+User\+Frame\+::sequence\+Number}
+
+Correlates the position report with the Body Frame Motion Report 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

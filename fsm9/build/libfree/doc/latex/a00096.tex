@@ -1,0 +1,36 @@
+\doxysection{freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Request Struct Reference}
+\label{a00096}\index{freespace\_FRSHandheldWriteRequest@{freespace\_FRSHandheldWriteRequest}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \textbf{ length}
+\item 
+uint16\+\_\+t \textbf{ F\+R\+Stype}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is sent from the host towards the handheld to initiate a flash record write. A length of 0 will cause the record to be invalidated. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00096_adf23a272ebf134addccb8a254230e4d1}} 
+\index{freespace\_FRSHandheldWriteRequest@{freespace\_FRSHandheldWriteRequest}!FRStype@{FRStype}}
+\index{FRStype@{FRStype}!freespace\_FRSHandheldWriteRequest@{freespace\_FRSHandheldWriteRequest}}
+\doxysubsubsection{FRStype}
+{\footnotesize\ttfamily uint16\+\_\+t freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Request\+::\+F\+R\+Stype}
+
+F\+RS record type to read. \mbox{\label{a00096_affcd657169e00b0e2e1db698c015eba9}} 
+\index{freespace\_FRSHandheldWriteRequest@{freespace\_FRSHandheldWriteRequest}!length@{length}}
+\index{length@{length}!freespace\_FRSHandheldWriteRequest@{freespace\_FRSHandheldWriteRequest}}
+\doxysubsubsection{length}
+{\footnotesize\ttfamily uint16\+\_\+t freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Request\+::length}
+
+Length in 32-\/bit words of record to be written. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

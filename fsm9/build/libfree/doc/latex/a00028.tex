@@ -1,0 +1,93 @@
+\doxysection{Device A\+PI}
+\label{a00028}\index{Device API@{Device API}}
+
+
+This page documents the functions to access Freespace(r) devices.  
+
+
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ Freespace\+Device\+Usage\+A\+PI}
+\item 
+struct \textbf{ Freespace\+Device\+A\+PI}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+get\+Device\+Info} (\textbf{ Freespace\+Device\+Id} id, struct \textbf{ Freespace\+Device\+Info} $\ast$info)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+open\+Device} (\textbf{ Freespace\+Device\+Id} id)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} void \textbf{ freespace\+\_\+close\+Device} (\textbf{ Freespace\+Device\+Id} id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const struct \textbf{ Freespace\+Device\+A\+PI} \textbf{ freespace\+\_\+device\+A\+P\+I\+Table} [$\,$]
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This page documents the functions to access Freespace(r) devices. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{a00028_ga527a949cb1aeb1244a566add6f691bc4}} 
+\index{Device API@{Device API}!freespace\_closeDevice@{freespace\_closeDevice}}
+\index{freespace\_closeDevice@{freespace\_closeDevice}!Device API@{Device API}}
+\doxysubsubsection{freespace\_closeDevice()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} void freespace\+\_\+close\+Device (\begin{DoxyParamCaption}\item[{\textbf{ Freespace\+Device\+Id}}]{id }\end{DoxyParamCaption})}
+
+Close a Freespace device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the Freespace device id to close \\
+\hline
+\end{DoxyParams}
+\mbox{\label{a00028_ga7fbc758aa5bab12c9b38d2046397f5b8}} 
+\index{Device API@{Device API}!freespace\_getDeviceInfo@{freespace\_getDeviceInfo}}
+\index{freespace\_getDeviceInfo@{freespace\_getDeviceInfo}!Device API@{Device API}}
+\doxysubsubsection{freespace\_getDeviceInfo()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+get\+Device\+Info (\begin{DoxyParamCaption}\item[{\textbf{ Freespace\+Device\+Id}}]{id,  }\item[{struct \textbf{ Freespace\+Device\+Info} $\ast$}]{info }\end{DoxyParamCaption})}
+
+Return information about the Freespace device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & which device \\
+\hline
+{\em info} & where to store the information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS if no errors. 
+\end{DoxyReturn}
+\mbox{\label{a00028_gaf9b222599d0f99c32390b22ac5ad4555}} 
+\index{Device API@{Device API}!freespace\_openDevice@{freespace\_openDevice}}
+\index{freespace\_openDevice@{freespace\_openDevice}!Device API@{Device API}}
+\doxysubsubsection{freespace\_openDevice()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+open\+Device (\begin{DoxyParamCaption}\item[{\textbf{ Freespace\+Device\+Id}}]{id }\end{DoxyParamCaption})}
+
+Open a Freespace device for use. A device must be in the opened state before most other commands in this A\+PI can be called. This internally allocates the resources needed to communicate with the device. freespace\+\_\+close\+Device frees those resources.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The Freespace\+Device\+ID of an attached device to open \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS if no errors 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{a00028_gaa48e5f4b18429acea803ff99b83801cf}} 
+\index{Device API@{Device API}!freespace\_deviceAPITable@{freespace\_deviceAPITable}}
+\index{freespace\_deviceAPITable@{freespace\_deviceAPITable}!Device API@{Device API}}
+\doxysubsubsection{freespace\_deviceAPITable}
+{\footnotesize\ttfamily const struct \textbf{ Freespace\+Device\+A\+PI} freespace\+\_\+device\+A\+P\+I\+Table[$\,$]}
+
+Stores information for all Freespace devices. 

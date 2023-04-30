@@ -1,0 +1,2373 @@
+\doxysection{freespace\+\_\+printers.\+h File Reference}
+\label{a00020}\index{freespace\_printers.h@{freespace\_printers.h}}
+{\ttfamily \#include \char`\"{}freespace/freespace\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}freespace\+\_\+codecs.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for freespace\+\_\+printers.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{a00021}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} void \textbf{ freespace\+\_\+print\+Message} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+message} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Message\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+message} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Pairing\+Message\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Pairing\+Message} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Pairing\+Message} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Pairing\+Message} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Product\+I\+D\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Product\+I\+D\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+L\+E\+D\+Set\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+L\+E\+D\+Set\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+L\+E\+D\+Set\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+L\+E\+D\+Set\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Link\+Quality\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Link\+Quality\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Link\+Quality\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Link\+Quality\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Always\+On\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Always\+On\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Always\+On\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Always\+On\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Frequency\+Fix\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Frequency\+Fix\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Frequency\+Fix\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Frequency\+Fix\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Software\+Reset\+Message\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Software\+Reset\+Message} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Software\+Reset\+Message} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Software\+Reset\+Message} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Dongle\+R\+F\+Disable\+Message\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Disable\+Message} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Dongle\+R\+F\+Disable\+Message} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Disable\+Message} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Tx\+Disable\+Message\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Tx\+Disable\+Message} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Tx\+Disable\+Message} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Tx\+Disable\+Message} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Dongle\+R\+F\+Supress\+Home\+Frequency\+Message\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Supress\+Home\+Frequency\+Message} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Dongle\+R\+F\+Supress\+Home\+Frequency\+Message} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Supress\+Home\+Frequency\+Message} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Handheld\+Read\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Read\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Handheld\+Read\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Read\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Handheld\+Write\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Handheld\+Write\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Handheld\+Write\+Data\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Data} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Handheld\+Write\+Data} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Data} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Dongle\+Read\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Dongle\+Read\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Dongle\+Write\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Dongle\+Write\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Dongle\+Write\+Data\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Data} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Dongle\+Write\+Data} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Data} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Read\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Read\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Read\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Read\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Write\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Write\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Write\+Data\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Data} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Write\+Data} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Data} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Dongle\+R\+F\+Enable\+Message\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Enable\+Message} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Dongle\+R\+F\+Enable\+Message} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Enable\+Message} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Data\+Mode\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Data\+Mode\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Data\+Mode\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Data\+Mode\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Button\+Test\+Mode\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Button\+Test\+Mode\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Button\+Test\+Mode\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Button\+Test\+Mode\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Pairing\+Response\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Pairing\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Pairing\+Response} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Pairing\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Product\+I\+D\+Response\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Product\+I\+D\+Response} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Link\+Status\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Link\+Status} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Link\+Status} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Link\+Status} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Always\+On\+Response\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Always\+On\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Always\+On\+Response} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Always\+On\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Handheld\+Read\+Response\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Read\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Handheld\+Read\+Response} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Read\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Handheld\+Write\+Response\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Handheld\+Write\+Response} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Dongle\+Read\+Response\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Dongle\+Read\+Response} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Dongle\+Write\+Response\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Dongle\+Write\+Response} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Read\+Response\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Read\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Read\+Response} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Read\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Write\+Response\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Write\+Response} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Data\+Mode\+Response\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Data\+Mode\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Data\+Mode\+Response} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Data\+Mode\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Button\+Test\+Mode\+Response\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Button\+Test\+Mode\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Button\+Test\+Mode\+Response} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Button\+Test\+Mode\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Battery\+Level\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Battery\+Level\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Battery\+Level\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Battery\+Level\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Battery\+Level\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Battery\+Level} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Battery\+Level} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Battery\+Level} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Body\+Frame\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Body\+Frame} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Body\+Frame} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Body\+Frame} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+User\+Frame\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+User\+Frame} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+User\+Frame} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+User\+Frame} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Data\+Motion\+Control\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Data\+Motion\+Control} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Data\+Motion\+Control} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Data\+Motion\+Control} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Write\+Response\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Write\+Response} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Data\+Mode\+Control\+V2\+Response\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Data\+Mode\+Control\+V2\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Data\+Mode\+Control\+V2\+Response} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Data\+Mode\+Control\+V2\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Sensor\+Period\+Response\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Sensor\+Period\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Sensor\+Period\+Response} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Sensor\+Period\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Read\+Response\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Read\+Response} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Per\+Response\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Per\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Per\+Response} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Per\+Response} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Write\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Write\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Write\+Data\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Data} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Write\+Data} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Data} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Read\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Read\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Per\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Per\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Per\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Per\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Activity\+Classification\+Notification\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Activity\+Classification\+Notification} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Activity\+Classification\+Notification} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Activity\+Classification\+Notification} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Data\+Mode\+Control\+V2\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Data\+Mode\+Control\+V2\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Data\+Mode\+Control\+V2\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Data\+Mode\+Control\+V2\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Reorientation\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Reorientation\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Reorientation\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Reorientation\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Sensor\+Period\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Sensor\+Period\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Sensor\+Period\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Sensor\+Period\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Bms\+Request\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Bms\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Bms\+Request} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Bms\+Request} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Product\+I\+D\+Response\+B\+L\+E\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Response\+B\+LE} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Product\+I\+D\+Response\+B\+LE} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Response\+B\+LE} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Read\+Response\+B\+L\+E\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Response\+B\+LE} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+F\+R\+S\+Read\+Response\+B\+LE} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Response\+B\+LE} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Body\+User\+Frame\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Body\+User\+Frame} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Body\+User\+Frame} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Body\+User\+Frame} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Motion\+Engine\+Output\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Motion\+Engine\+Output} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Dce\+Out\+V2\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Dce\+Out\+V2} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Dce\+Out\+V2} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Dce\+Out\+V2} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Dce\+Out\+V3\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Dce\+Out\+V3} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Dce\+Out\+V3} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Dce\+Out\+V3} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Dce\+Out\+V4\+T0\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Dce\+Out\+V4\+T0} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Dce\+Out\+V4\+T0} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Dce\+Out\+V4\+T0} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Dce\+Out\+V4\+T1\+Str} (char $\ast$dest, int maxlen, const struct \textbf{ freespace\+\_\+\+Dce\+Out\+V4\+T1} $\ast$s)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+print\+Dce\+Out\+V4\+T1} (F\+I\+LE $\ast$fp, const struct \textbf{ freespace\+\_\+\+Dce\+Out\+V4\+T1} $\ast$s)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{a00020_ac578f45b828a9a43eeacf58bf73c85bf}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printActivityClassificationNotification@{freespace\_printActivityClassificationNotification}}
+\index{freespace\_printActivityClassificationNotification@{freespace\_printActivityClassificationNotification}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printActivityClassificationNotification()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Activity\+Classification\+Notification (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Activity\+Classification\+Notification} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a5db7408f3154692e5abe623c112f29b8}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printActivityClassificationNotificationStr@{freespace\_printActivityClassificationNotificationStr}}
+\index{freespace\_printActivityClassificationNotificationStr@{freespace\_printActivityClassificationNotificationStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printActivityClassificationNotificationStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Activity\+Classification\+Notification\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Activity\+Classification\+Notification} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a1ff50fa392a82518e562ae66f943c075}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printAlwaysOnRequest@{freespace\_printAlwaysOnRequest}}
+\index{freespace\_printAlwaysOnRequest@{freespace\_printAlwaysOnRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printAlwaysOnRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Always\+On\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Always\+On\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_aed1f884c4fc43aaac10166847c83b22e}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printAlwaysOnRequestStr@{freespace\_printAlwaysOnRequestStr}}
+\index{freespace\_printAlwaysOnRequestStr@{freespace\_printAlwaysOnRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printAlwaysOnRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Always\+On\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Always\+On\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a358cc6582eac8d849ce23887e3b63566}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printAlwaysOnResponse@{freespace\_printAlwaysOnResponse}}
+\index{freespace\_printAlwaysOnResponse@{freespace\_printAlwaysOnResponse}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printAlwaysOnResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Always\+On\+Response (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Always\+On\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_af4402ba8b2f11da5b4954289774879fa}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printAlwaysOnResponseStr@{freespace\_printAlwaysOnResponseStr}}
+\index{freespace\_printAlwaysOnResponseStr@{freespace\_printAlwaysOnResponseStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printAlwaysOnResponseStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Always\+On\+Response\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Always\+On\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_adc0fb741698d3851c3e4cd364cd126da}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printBatteryLevel@{freespace\_printBatteryLevel}}
+\index{freespace\_printBatteryLevel@{freespace\_printBatteryLevel}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printBatteryLevel()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Battery\+Level (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Battery\+Level} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_aae8cbd6467012623f6e6c52ee48acbb7}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printBatteryLevelRequest@{freespace\_printBatteryLevelRequest}}
+\index{freespace\_printBatteryLevelRequest@{freespace\_printBatteryLevelRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printBatteryLevelRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Battery\+Level\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Battery\+Level\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a98337f81dcc8d72dd4897677860138e1}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printBatteryLevelRequestStr@{freespace\_printBatteryLevelRequestStr}}
+\index{freespace\_printBatteryLevelRequestStr@{freespace\_printBatteryLevelRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printBatteryLevelRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Battery\+Level\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Battery\+Level\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_ab912ee6e008713b1053ad082faafa691}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printBatteryLevelStr@{freespace\_printBatteryLevelStr}}
+\index{freespace\_printBatteryLevelStr@{freespace\_printBatteryLevelStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printBatteryLevelStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Battery\+Level\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Battery\+Level} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a65d47d8783df0ec0f95ece3fb5d8b134}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printBmsRequest@{freespace\_printBmsRequest}}
+\index{freespace\_printBmsRequest@{freespace\_printBmsRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printBmsRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Bms\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Bms\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a613f6d6d9da9d03152c4624fcaa7f90c}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printBmsRequestStr@{freespace\_printBmsRequestStr}}
+\index{freespace\_printBmsRequestStr@{freespace\_printBmsRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printBmsRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Bms\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Bms\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a7c1418ae7a171790cd7f3b322208298b}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printBodyFrame@{freespace\_printBodyFrame}}
+\index{freespace\_printBodyFrame@{freespace\_printBodyFrame}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printBodyFrame()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Body\+Frame (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Body\+Frame} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a397e46e78b2c2d49088c6e1c73b2510e}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printBodyFrameStr@{freespace\_printBodyFrameStr}}
+\index{freespace\_printBodyFrameStr@{freespace\_printBodyFrameStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printBodyFrameStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Body\+Frame\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Body\+Frame} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a60dd26e441001edbd5ec1d9cb2f4abb0}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printBodyUserFrame@{freespace\_printBodyUserFrame}}
+\index{freespace\_printBodyUserFrame@{freespace\_printBodyUserFrame}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printBodyUserFrame()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Body\+User\+Frame (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Body\+User\+Frame} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a3988cf9895e1af93832a554c11dfc54b}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printBodyUserFrameStr@{freespace\_printBodyUserFrameStr}}
+\index{freespace\_printBodyUserFrameStr@{freespace\_printBodyUserFrameStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printBodyUserFrameStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Body\+User\+Frame\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Body\+User\+Frame} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a23f347085fb1d627012d8200e47d53ed}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printButtonTestModeRequest@{freespace\_printButtonTestModeRequest}}
+\index{freespace\_printButtonTestModeRequest@{freespace\_printButtonTestModeRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printButtonTestModeRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Button\+Test\+Mode\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Button\+Test\+Mode\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_aed48855909f830717a6bfabe3a511235}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printButtonTestModeRequestStr@{freespace\_printButtonTestModeRequestStr}}
+\index{freespace\_printButtonTestModeRequestStr@{freespace\_printButtonTestModeRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printButtonTestModeRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Button\+Test\+Mode\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Button\+Test\+Mode\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a91b8020ad56265eeee08d15794f119be}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printButtonTestModeResponse@{freespace\_printButtonTestModeResponse}}
+\index{freespace\_printButtonTestModeResponse@{freespace\_printButtonTestModeResponse}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printButtonTestModeResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Button\+Test\+Mode\+Response (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Button\+Test\+Mode\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_ac9d577f3ea6ea7735a048f8a3879ec88}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printButtonTestModeResponseStr@{freespace\_printButtonTestModeResponseStr}}
+\index{freespace\_printButtonTestModeResponseStr@{freespace\_printButtonTestModeResponseStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printButtonTestModeResponseStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Button\+Test\+Mode\+Response\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Button\+Test\+Mode\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_af367321d16b32cde804eed379a72275c}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDataModeControlV2Request@{freespace\_printDataModeControlV2Request}}
+\index{freespace\_printDataModeControlV2Request@{freespace\_printDataModeControlV2Request}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDataModeControlV2Request()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Data\+Mode\+Control\+V2\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Data\+Mode\+Control\+V2\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_aaa30d47f4bf4f1ca3cae00ae70553b70}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDataModeControlV2RequestStr@{freespace\_printDataModeControlV2RequestStr}}
+\index{freespace\_printDataModeControlV2RequestStr@{freespace\_printDataModeControlV2RequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDataModeControlV2RequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Data\+Mode\+Control\+V2\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Data\+Mode\+Control\+V2\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a7c6ee9efb76a6dbdc1f800241ef16a5a}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDataModeControlV2Response@{freespace\_printDataModeControlV2Response}}
+\index{freespace\_printDataModeControlV2Response@{freespace\_printDataModeControlV2Response}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDataModeControlV2Response()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Data\+Mode\+Control\+V2\+Response (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Data\+Mode\+Control\+V2\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a4e6f51b8e793ee6f32df0d250f1e9d18}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDataModeControlV2ResponseStr@{freespace\_printDataModeControlV2ResponseStr}}
+\index{freespace\_printDataModeControlV2ResponseStr@{freespace\_printDataModeControlV2ResponseStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDataModeControlV2ResponseStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Data\+Mode\+Control\+V2\+Response\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Data\+Mode\+Control\+V2\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_aa579f06935613e5167cc1bb22800f7e3}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDataModeRequest@{freespace\_printDataModeRequest}}
+\index{freespace\_printDataModeRequest@{freespace\_printDataModeRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDataModeRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Data\+Mode\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Data\+Mode\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a2200568f9e8c9efe8b9893f61949fb51}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDataModeRequestStr@{freespace\_printDataModeRequestStr}}
+\index{freespace\_printDataModeRequestStr@{freespace\_printDataModeRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDataModeRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Data\+Mode\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Data\+Mode\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a72ec6938c05a7cee1a8c36993d02cfe4}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDataModeResponse@{freespace\_printDataModeResponse}}
+\index{freespace\_printDataModeResponse@{freespace\_printDataModeResponse}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDataModeResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Data\+Mode\+Response (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Data\+Mode\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a3dc856890444adac5b5487e5972ced33}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDataModeResponseStr@{freespace\_printDataModeResponseStr}}
+\index{freespace\_printDataModeResponseStr@{freespace\_printDataModeResponseStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDataModeResponseStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Data\+Mode\+Response\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Data\+Mode\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a3c0ce024d790422b6a824de1033f3ab6}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDataMotionControl@{freespace\_printDataMotionControl}}
+\index{freespace\_printDataMotionControl@{freespace\_printDataMotionControl}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDataMotionControl()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Data\+Motion\+Control (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Data\+Motion\+Control} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_adf3bf8c671f3900d22dca8068e9f2cfa}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDataMotionControlStr@{freespace\_printDataMotionControlStr}}
+\index{freespace\_printDataMotionControlStr@{freespace\_printDataMotionControlStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDataMotionControlStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Data\+Motion\+Control\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Data\+Motion\+Control} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_ace71914746c4a14f0112320269b08087}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDceOutV2@{freespace\_printDceOutV2}}
+\index{freespace\_printDceOutV2@{freespace\_printDceOutV2}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDceOutV2()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Dce\+Out\+V2 (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Dce\+Out\+V2} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a881b3de2dc8c4f8b35f3da4689b71aaa}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDceOutV2Str@{freespace\_printDceOutV2Str}}
+\index{freespace\_printDceOutV2Str@{freespace\_printDceOutV2Str}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDceOutV2Str()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Dce\+Out\+V2\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Dce\+Out\+V2} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a31419d5f99581a8c24f5bc62aa83e6b6}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDceOutV3@{freespace\_printDceOutV3}}
+\index{freespace\_printDceOutV3@{freespace\_printDceOutV3}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDceOutV3()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Dce\+Out\+V3 (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Dce\+Out\+V3} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a18dd75288578b9b933d4060bf872b4f7}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDceOutV3Str@{freespace\_printDceOutV3Str}}
+\index{freespace\_printDceOutV3Str@{freespace\_printDceOutV3Str}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDceOutV3Str()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Dce\+Out\+V3\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Dce\+Out\+V3} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_ac1e7ad3e657827c1bbe1fb711e55f5bd}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDceOutV4T0@{freespace\_printDceOutV4T0}}
+\index{freespace\_printDceOutV4T0@{freespace\_printDceOutV4T0}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDceOutV4T0()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Dce\+Out\+V4\+T0 (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Dce\+Out\+V4\+T0} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a74667b62037c2c993019ea0168fc25cb}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDceOutV4T0Str@{freespace\_printDceOutV4T0Str}}
+\index{freespace\_printDceOutV4T0Str@{freespace\_printDceOutV4T0Str}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDceOutV4T0Str()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Dce\+Out\+V4\+T0\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Dce\+Out\+V4\+T0} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a5de9ee8e6772da17c28d235cc5509da7}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDceOutV4T1@{freespace\_printDceOutV4T1}}
+\index{freespace\_printDceOutV4T1@{freespace\_printDceOutV4T1}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDceOutV4T1()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Dce\+Out\+V4\+T1 (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Dce\+Out\+V4\+T1} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_af790f7fb26b66fa72d1843a0b8dfb57d}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDceOutV4T1Str@{freespace\_printDceOutV4T1Str}}
+\index{freespace\_printDceOutV4T1Str@{freespace\_printDceOutV4T1Str}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDceOutV4T1Str()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Dce\+Out\+V4\+T1\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Dce\+Out\+V4\+T1} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a2b87bea819e99368b1cff0d7beb0feda}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDongleRFDisableMessage@{freespace\_printDongleRFDisableMessage}}
+\index{freespace\_printDongleRFDisableMessage@{freespace\_printDongleRFDisableMessage}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDongleRFDisableMessage()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Dongle\+R\+F\+Disable\+Message (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Disable\+Message} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a71c4fb7429d68557ac1b711b3bbbf06d}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDongleRFDisableMessageStr@{freespace\_printDongleRFDisableMessageStr}}
+\index{freespace\_printDongleRFDisableMessageStr@{freespace\_printDongleRFDisableMessageStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDongleRFDisableMessageStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Dongle\+R\+F\+Disable\+Message\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Disable\+Message} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_aa2aedbd5ca51549be8b7d92c1d9b5eb1}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDongleRFEnableMessage@{freespace\_printDongleRFEnableMessage}}
+\index{freespace\_printDongleRFEnableMessage@{freespace\_printDongleRFEnableMessage}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDongleRFEnableMessage()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Dongle\+R\+F\+Enable\+Message (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Enable\+Message} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_aa476589d8bb93c2b1115fa007f10242d}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDongleRFEnableMessageStr@{freespace\_printDongleRFEnableMessageStr}}
+\index{freespace\_printDongleRFEnableMessageStr@{freespace\_printDongleRFEnableMessageStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDongleRFEnableMessageStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Dongle\+R\+F\+Enable\+Message\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Enable\+Message} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a37ec1baf4f8d58d6e0a9c9365833aa1b}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDongleRFSupressHomeFrequencyMessage@{freespace\_printDongleRFSupressHomeFrequencyMessage}}
+\index{freespace\_printDongleRFSupressHomeFrequencyMessage@{freespace\_printDongleRFSupressHomeFrequencyMessage}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDongleRFSupressHomeFrequencyMessage()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Dongle\+R\+F\+Supress\+Home\+Frequency\+Message (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Supress\+Home\+Frequency\+Message} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a522afb2a3313c82d7cc7a783104e7d16}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printDongleRFSupressHomeFrequencyMessageStr@{freespace\_printDongleRFSupressHomeFrequencyMessageStr}}
+\index{freespace\_printDongleRFSupressHomeFrequencyMessageStr@{freespace\_printDongleRFSupressHomeFrequencyMessageStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printDongleRFSupressHomeFrequencyMessageStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Dongle\+R\+F\+Supress\+Home\+Frequency\+Message\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Supress\+Home\+Frequency\+Message} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a0fe448905bb0b00675edce9e5833cbed}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFrequencyFixRequest@{freespace\_printFrequencyFixRequest}}
+\index{freespace\_printFrequencyFixRequest@{freespace\_printFrequencyFixRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFrequencyFixRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Frequency\+Fix\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Frequency\+Fix\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a491aced45de1567e1d9c030e8841e934}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFrequencyFixRequestStr@{freespace\_printFrequencyFixRequestStr}}
+\index{freespace\_printFrequencyFixRequestStr@{freespace\_printFrequencyFixRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFrequencyFixRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Frequency\+Fix\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Frequency\+Fix\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a6cb902bf747a93482291f0240c9e20c1}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSDongleReadRequest@{freespace\_printFRSDongleReadRequest}}
+\index{freespace\_printFRSDongleReadRequest@{freespace\_printFRSDongleReadRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSDongleReadRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Dongle\+Read\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a93b63e89042057ed34b3a6a6da88536c}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSDongleReadRequestStr@{freespace\_printFRSDongleReadRequestStr}}
+\index{freespace\_printFRSDongleReadRequestStr@{freespace\_printFRSDongleReadRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSDongleReadRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Dongle\+Read\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_aaa0db272d3eda6be4363f44cd6145131}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSDongleReadResponse@{freespace\_printFRSDongleReadResponse}}
+\index{freespace\_printFRSDongleReadResponse@{freespace\_printFRSDongleReadResponse}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSDongleReadResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Dongle\+Read\+Response (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a1005aa8529fc0f50d6773842cfc7de61}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSDongleReadResponseStr@{freespace\_printFRSDongleReadResponseStr}}
+\index{freespace\_printFRSDongleReadResponseStr@{freespace\_printFRSDongleReadResponseStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSDongleReadResponseStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Dongle\+Read\+Response\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_aea8e41a2a88b47ac91e8464fb4aa0fd7}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSDongleWriteData@{freespace\_printFRSDongleWriteData}}
+\index{freespace\_printFRSDongleWriteData@{freespace\_printFRSDongleWriteData}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSDongleWriteData()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Dongle\+Write\+Data (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Data} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_ab6b80fa6e15d0dd3df625b125d5162f4}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSDongleWriteDataStr@{freespace\_printFRSDongleWriteDataStr}}
+\index{freespace\_printFRSDongleWriteDataStr@{freespace\_printFRSDongleWriteDataStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSDongleWriteDataStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Dongle\+Write\+Data\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Data} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a273ff158831a44d013684a183b47e97f}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSDongleWriteRequest@{freespace\_printFRSDongleWriteRequest}}
+\index{freespace\_printFRSDongleWriteRequest@{freespace\_printFRSDongleWriteRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSDongleWriteRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Dongle\+Write\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a5752bc099c2796d78eebceca3b3c83c5}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSDongleWriteRequestStr@{freespace\_printFRSDongleWriteRequestStr}}
+\index{freespace\_printFRSDongleWriteRequestStr@{freespace\_printFRSDongleWriteRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSDongleWriteRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Dongle\+Write\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a6a6925e7e27856d295818702897ab578}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSDongleWriteResponse@{freespace\_printFRSDongleWriteResponse}}
+\index{freespace\_printFRSDongleWriteResponse@{freespace\_printFRSDongleWriteResponse}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSDongleWriteResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Dongle\+Write\+Response (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a7c6a0e9626c3ffe8a46fbfb2280d7821}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSDongleWriteResponseStr@{freespace\_printFRSDongleWriteResponseStr}}
+\index{freespace\_printFRSDongleWriteResponseStr@{freespace\_printFRSDongleWriteResponseStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSDongleWriteResponseStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Dongle\+Write\+Response\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_abe0c893d326f8a7f3feee7d9ed3b5338}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSEFlashReadRequest@{freespace\_printFRSEFlashReadRequest}}
+\index{freespace\_printFRSEFlashReadRequest@{freespace\_printFRSEFlashReadRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSEFlashReadRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Read\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Read\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a6099f425017a70a7c3a7c24f5ed1c07a}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSEFlashReadRequestStr@{freespace\_printFRSEFlashReadRequestStr}}
+\index{freespace\_printFRSEFlashReadRequestStr@{freespace\_printFRSEFlashReadRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSEFlashReadRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Read\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Read\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_ab3ecfd15e3e03f53badca82f4a60b495}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSEFlashReadResponse@{freespace\_printFRSEFlashReadResponse}}
+\index{freespace\_printFRSEFlashReadResponse@{freespace\_printFRSEFlashReadResponse}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSEFlashReadResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Read\+Response (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Read\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_acda695e57eb6682a3787494840961ab7}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSEFlashReadResponseStr@{freespace\_printFRSEFlashReadResponseStr}}
+\index{freespace\_printFRSEFlashReadResponseStr@{freespace\_printFRSEFlashReadResponseStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSEFlashReadResponseStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Read\+Response\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Read\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a87308c280a614d092bfc920338152e72}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSEFlashWriteData@{freespace\_printFRSEFlashWriteData}}
+\index{freespace\_printFRSEFlashWriteData@{freespace\_printFRSEFlashWriteData}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSEFlashWriteData()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Write\+Data (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Data} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_acd7185fe352ed81f453f4e9f6621c945}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSEFlashWriteDataStr@{freespace\_printFRSEFlashWriteDataStr}}
+\index{freespace\_printFRSEFlashWriteDataStr@{freespace\_printFRSEFlashWriteDataStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSEFlashWriteDataStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Write\+Data\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Data} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a8e9cd13462e7f53151c10cdacc531fb9}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSEFlashWriteRequest@{freespace\_printFRSEFlashWriteRequest}}
+\index{freespace\_printFRSEFlashWriteRequest@{freespace\_printFRSEFlashWriteRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSEFlashWriteRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Write\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_adc525b7ea3cbe006e4e316828154d2bc}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSEFlashWriteRequestStr@{freespace\_printFRSEFlashWriteRequestStr}}
+\index{freespace\_printFRSEFlashWriteRequestStr@{freespace\_printFRSEFlashWriteRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSEFlashWriteRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Write\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a66c73d6c04c67fe8eb477a664a183836}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSEFlashWriteResponse@{freespace\_printFRSEFlashWriteResponse}}
+\index{freespace\_printFRSEFlashWriteResponse@{freespace\_printFRSEFlashWriteResponse}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSEFlashWriteResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Write\+Response (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_ad02566cad87a9e3fea9f0bb42eb5e2fa}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSEFlashWriteResponseStr@{freespace\_printFRSEFlashWriteResponseStr}}
+\index{freespace\_printFRSEFlashWriteResponseStr@{freespace\_printFRSEFlashWriteResponseStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSEFlashWriteResponseStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+E\+Flash\+Write\+Response\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_ac5ce25ea28b0e8b52bd3314f2431f9d4}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSHandheldReadRequest@{freespace\_printFRSHandheldReadRequest}}
+\index{freespace\_printFRSHandheldReadRequest@{freespace\_printFRSHandheldReadRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSHandheldReadRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Handheld\+Read\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Read\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a29cb76da6c529a3bcb6f854271ce2f98}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSHandheldReadRequestStr@{freespace\_printFRSHandheldReadRequestStr}}
+\index{freespace\_printFRSHandheldReadRequestStr@{freespace\_printFRSHandheldReadRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSHandheldReadRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Handheld\+Read\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Read\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_af7fd35cb49bfcbdcc53ae9053633d70b}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSHandheldReadResponse@{freespace\_printFRSHandheldReadResponse}}
+\index{freespace\_printFRSHandheldReadResponse@{freespace\_printFRSHandheldReadResponse}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSHandheldReadResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Handheld\+Read\+Response (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Read\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a5363a85567f9d1aeaf0f2bd19ec803f2}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSHandheldReadResponseStr@{freespace\_printFRSHandheldReadResponseStr}}
+\index{freespace\_printFRSHandheldReadResponseStr@{freespace\_printFRSHandheldReadResponseStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSHandheldReadResponseStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Handheld\+Read\+Response\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Read\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_ad5f29f190f3111309bcd0dbd8ec64473}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSHandheldWriteData@{freespace\_printFRSHandheldWriteData}}
+\index{freespace\_printFRSHandheldWriteData@{freespace\_printFRSHandheldWriteData}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSHandheldWriteData()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Handheld\+Write\+Data (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Data} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_ac00c7fe67d560e812a5a764d3fcd4c7e}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSHandheldWriteDataStr@{freespace\_printFRSHandheldWriteDataStr}}
+\index{freespace\_printFRSHandheldWriteDataStr@{freespace\_printFRSHandheldWriteDataStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSHandheldWriteDataStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Handheld\+Write\+Data\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Data} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_aa8d370f10a589b742dfc44ef9247b63f}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSHandheldWriteRequest@{freespace\_printFRSHandheldWriteRequest}}
+\index{freespace\_printFRSHandheldWriteRequest@{freespace\_printFRSHandheldWriteRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSHandheldWriteRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Handheld\+Write\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_afabcf21e4fff12afeaaca7e1f22e954e}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSHandheldWriteRequestStr@{freespace\_printFRSHandheldWriteRequestStr}}
+\index{freespace\_printFRSHandheldWriteRequestStr@{freespace\_printFRSHandheldWriteRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSHandheldWriteRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Handheld\+Write\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_aa002490e9f9294761871469188099bd6}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSHandheldWriteResponse@{freespace\_printFRSHandheldWriteResponse}}
+\index{freespace\_printFRSHandheldWriteResponse@{freespace\_printFRSHandheldWriteResponse}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSHandheldWriteResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Handheld\+Write\+Response (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a7149d5321066d66f786f665c02185976}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSHandheldWriteResponseStr@{freespace\_printFRSHandheldWriteResponseStr}}
+\index{freespace\_printFRSHandheldWriteResponseStr@{freespace\_printFRSHandheldWriteResponseStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSHandheldWriteResponseStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Handheld\+Write\+Response\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_ab6fd2fff0a9157b781b0db04bb70a82e}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSReadRequest@{freespace\_printFRSReadRequest}}
+\index{freespace\_printFRSReadRequest@{freespace\_printFRSReadRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSReadRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Read\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a75979d69b3f9006bf12000b0496955f9}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSReadRequestStr@{freespace\_printFRSReadRequestStr}}
+\index{freespace\_printFRSReadRequestStr@{freespace\_printFRSReadRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSReadRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Read\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a04b0ac5411884cc9496f805a79cb41b6}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSReadResponse@{freespace\_printFRSReadResponse}}
+\index{freespace\_printFRSReadResponse@{freespace\_printFRSReadResponse}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSReadResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Read\+Response (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_afd319077c5e818e0aef39af7b37a2dee}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSReadResponseBLE@{freespace\_printFRSReadResponseBLE}}
+\index{freespace\_printFRSReadResponseBLE@{freespace\_printFRSReadResponseBLE}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSReadResponseBLE()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Read\+Response\+B\+LE (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Response\+B\+LE} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a578bbd8f75425c23a15c8e99226166b6}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSReadResponseBLEStr@{freespace\_printFRSReadResponseBLEStr}}
+\index{freespace\_printFRSReadResponseBLEStr@{freespace\_printFRSReadResponseBLEStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSReadResponseBLEStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Read\+Response\+B\+L\+E\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Response\+B\+LE} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a0f587423300785e09cdd159475c8bfd3}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSReadResponseStr@{freespace\_printFRSReadResponseStr}}
+\index{freespace\_printFRSReadResponseStr@{freespace\_printFRSReadResponseStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSReadResponseStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Read\+Response\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_adf5f920b1f41079e15c211bc990bbc76}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSWriteData@{freespace\_printFRSWriteData}}
+\index{freespace\_printFRSWriteData@{freespace\_printFRSWriteData}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSWriteData()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Write\+Data (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Data} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a6d76a95eeae4a1e3c0aa50f78c3af829}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSWriteDataStr@{freespace\_printFRSWriteDataStr}}
+\index{freespace\_printFRSWriteDataStr@{freespace\_printFRSWriteDataStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSWriteDataStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Write\+Data\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Data} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_ae9bf3f81607274ee6a33a6fc3d6796e1}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSWriteRequest@{freespace\_printFRSWriteRequest}}
+\index{freespace\_printFRSWriteRequest@{freespace\_printFRSWriteRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSWriteRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Write\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a2b497236c47287406cacf5e408a76cb9}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSWriteRequestStr@{freespace\_printFRSWriteRequestStr}}
+\index{freespace\_printFRSWriteRequestStr@{freespace\_printFRSWriteRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSWriteRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Write\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a0970e0ddfce394297a6868c95c0993ad}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSWriteResponse@{freespace\_printFRSWriteResponse}}
+\index{freespace\_printFRSWriteResponse@{freespace\_printFRSWriteResponse}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSWriteResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Write\+Response (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_ac9818f91fdff2db8a884b36a2e89a05a}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printFRSWriteResponseStr@{freespace\_printFRSWriteResponseStr}}
+\index{freespace\_printFRSWriteResponseStr@{freespace\_printFRSWriteResponseStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printFRSWriteResponseStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+F\+R\+S\+Write\+Response\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a91021bceba7e9d3b5ad623eeb9841d87}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printLEDSetRequest@{freespace\_printLEDSetRequest}}
+\index{freespace\_printLEDSetRequest@{freespace\_printLEDSetRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printLEDSetRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+L\+E\+D\+Set\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+L\+E\+D\+Set\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a0cc2e6c42596bef32b80a7bafcd0fe1c}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printLEDSetRequestStr@{freespace\_printLEDSetRequestStr}}
+\index{freespace\_printLEDSetRequestStr@{freespace\_printLEDSetRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printLEDSetRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+L\+E\+D\+Set\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+L\+E\+D\+Set\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a2ca0aebc757518fab9a8afed2602023c}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printLinkQualityRequest@{freespace\_printLinkQualityRequest}}
+\index{freespace\_printLinkQualityRequest@{freespace\_printLinkQualityRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printLinkQualityRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Link\+Quality\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Link\+Quality\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a032d4139baaefa1fb3573d5ae6f0341c}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printLinkQualityRequestStr@{freespace\_printLinkQualityRequestStr}}
+\index{freespace\_printLinkQualityRequestStr@{freespace\_printLinkQualityRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printLinkQualityRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Link\+Quality\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Link\+Quality\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a082009c87aa9d09e474a7f7f44a4af49}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printLinkStatus@{freespace\_printLinkStatus}}
+\index{freespace\_printLinkStatus@{freespace\_printLinkStatus}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printLinkStatus()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Link\+Status (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Link\+Status} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_ae245fe9f4200d7c91183a6639d7faf1f}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printLinkStatusStr@{freespace\_printLinkStatusStr}}
+\index{freespace\_printLinkStatusStr@{freespace\_printLinkStatusStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printLinkStatusStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Link\+Status\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Link\+Status} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a5c543f569e1db280ee0e9ee4769356e1}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printMessage@{freespace\_printMessage}}
+\index{freespace\_printMessage@{freespace\_printMessage}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printMessage()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} void freespace\+\_\+print\+Message (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Pretty print a Freespace message to the terminal.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fp} & the file pointer to print into \\
+\hline
+{\em s} & the H\+ID message \\
+\hline
+\end{DoxyParams}
+\mbox{\label{a00020_a96c714deca7eae50f9ca25e602cec5e2}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printMessageStr@{freespace\_printMessageStr}}
+\index{freespace\_printMessageStr@{freespace\_printMessageStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printMessageStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Message\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Pretty print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_acb536a66fd4991654dcfd6f3bfd574f5}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printMotionEngineOutput@{freespace\_printMotionEngineOutput}}
+\index{freespace\_printMotionEngineOutput@{freespace\_printMotionEngineOutput}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printMotionEngineOutput()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Motion\+Engine\+Output (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_adb30c0c67d167842f0d90b4883c9ed89}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printMotionEngineOutputStr@{freespace\_printMotionEngineOutputStr}}
+\index{freespace\_printMotionEngineOutputStr@{freespace\_printMotionEngineOutputStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printMotionEngineOutputStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Motion\+Engine\+Output\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a726a66384ff76f12a9a6c230ad31b697}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printPairingMessage@{freespace\_printPairingMessage}}
+\index{freespace\_printPairingMessage@{freespace\_printPairingMessage}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printPairingMessage()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Pairing\+Message (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Pairing\+Message} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a25f6cbfa5c7ec8126550a282211feda8}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printPairingMessageStr@{freespace\_printPairingMessageStr}}
+\index{freespace\_printPairingMessageStr@{freespace\_printPairingMessageStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printPairingMessageStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Pairing\+Message\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Pairing\+Message} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_aa07dd55324a9130a64c1c17ad990ea03}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printPairingResponse@{freespace\_printPairingResponse}}
+\index{freespace\_printPairingResponse@{freespace\_printPairingResponse}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printPairingResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Pairing\+Response (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Pairing\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_ab9d68e4d68221d08bb8a2a0b69470861}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printPairingResponseStr@{freespace\_printPairingResponseStr}}
+\index{freespace\_printPairingResponseStr@{freespace\_printPairingResponseStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printPairingResponseStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Pairing\+Response\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Pairing\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a4c68a1c811085aa6167599e30c9665a4}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printPerRequest@{freespace\_printPerRequest}}
+\index{freespace\_printPerRequest@{freespace\_printPerRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printPerRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Per\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Per\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_af30252b34285e390d332de6ce91191fe}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printPerRequestStr@{freespace\_printPerRequestStr}}
+\index{freespace\_printPerRequestStr@{freespace\_printPerRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printPerRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Per\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Per\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_aa7c184239023daae9409ad452cd1f29d}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printPerResponse@{freespace\_printPerResponse}}
+\index{freespace\_printPerResponse@{freespace\_printPerResponse}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printPerResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Per\+Response (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Per\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a776acb7c465aef4e1853b561b53ee06a}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printPerResponseStr@{freespace\_printPerResponseStr}}
+\index{freespace\_printPerResponseStr@{freespace\_printPerResponseStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printPerResponseStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Per\+Response\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Per\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a32deab7c47b92c7a2b1527645de9455e}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printProductIDRequest@{freespace\_printProductIDRequest}}
+\index{freespace\_printProductIDRequest@{freespace\_printProductIDRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printProductIDRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Product\+I\+D\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_ab911436a66a22862fa1bd52faff0ab56}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printProductIDRequestStr@{freespace\_printProductIDRequestStr}}
+\index{freespace\_printProductIDRequestStr@{freespace\_printProductIDRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printProductIDRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Product\+I\+D\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a10de3b705b5ab2d97016116962c0a694}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printProductIDResponse@{freespace\_printProductIDResponse}}
+\index{freespace\_printProductIDResponse@{freespace\_printProductIDResponse}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printProductIDResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Product\+I\+D\+Response (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a490b709a4aa073b99105b409229710fc}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printProductIDResponseBLE@{freespace\_printProductIDResponseBLE}}
+\index{freespace\_printProductIDResponseBLE@{freespace\_printProductIDResponseBLE}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printProductIDResponseBLE()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Product\+I\+D\+Response\+B\+LE (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Response\+B\+LE} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_aee42fc9ea62b00ee3ff0dc876484bde7}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printProductIDResponseBLEStr@{freespace\_printProductIDResponseBLEStr}}
+\index{freespace\_printProductIDResponseBLEStr@{freespace\_printProductIDResponseBLEStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printProductIDResponseBLEStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Product\+I\+D\+Response\+B\+L\+E\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Response\+B\+LE} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_ad389b21549fb89a0ca49cfd0b3a489cc}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printProductIDResponseStr@{freespace\_printProductIDResponseStr}}
+\index{freespace\_printProductIDResponseStr@{freespace\_printProductIDResponseStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printProductIDResponseStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Product\+I\+D\+Response\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a36a1c38bda6b351a9b2e23f7e7cc4daa}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printReorientationRequest@{freespace\_printReorientationRequest}}
+\index{freespace\_printReorientationRequest@{freespace\_printReorientationRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printReorientationRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Reorientation\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Reorientation\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a48ee964dc270c022c44b07ab5690072e}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printReorientationRequestStr@{freespace\_printReorientationRequestStr}}
+\index{freespace\_printReorientationRequestStr@{freespace\_printReorientationRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printReorientationRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Reorientation\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Reorientation\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_add2104c9053e2bf67645497e8de47767}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printSensorPeriodRequest@{freespace\_printSensorPeriodRequest}}
+\index{freespace\_printSensorPeriodRequest@{freespace\_printSensorPeriodRequest}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printSensorPeriodRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Sensor\+Period\+Request (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Sensor\+Period\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a19a029a984d86cd56e6f236d009d123a}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printSensorPeriodRequestStr@{freespace\_printSensorPeriodRequestStr}}
+\index{freespace\_printSensorPeriodRequestStr@{freespace\_printSensorPeriodRequestStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printSensorPeriodRequestStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Sensor\+Period\+Request\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Sensor\+Period\+Request} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a5e7ac707e0bc751c010e8b757e820017}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printSensorPeriodResponse@{freespace\_printSensorPeriodResponse}}
+\index{freespace\_printSensorPeriodResponse@{freespace\_printSensorPeriodResponse}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printSensorPeriodResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Sensor\+Period\+Response (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Sensor\+Period\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a3d60d1048455bbc8b579caf1cf01a6c4}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printSensorPeriodResponseStr@{freespace\_printSensorPeriodResponseStr}}
+\index{freespace\_printSensorPeriodResponseStr@{freespace\_printSensorPeriodResponseStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printSensorPeriodResponseStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Sensor\+Period\+Response\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Sensor\+Period\+Response} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a3bfffb63926edf6dbabe5b08bda81738}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printSoftwareResetMessage@{freespace\_printSoftwareResetMessage}}
+\index{freespace\_printSoftwareResetMessage@{freespace\_printSoftwareResetMessage}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printSoftwareResetMessage()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Software\+Reset\+Message (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Software\+Reset\+Message} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a965fa641f8b8a301fa29c47d5035363e}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printSoftwareResetMessageStr@{freespace\_printSoftwareResetMessageStr}}
+\index{freespace\_printSoftwareResetMessageStr@{freespace\_printSoftwareResetMessageStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printSoftwareResetMessageStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Software\+Reset\+Message\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Software\+Reset\+Message} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a51f02f8d66731951338ad932b8cfbcbe}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printTxDisableMessage@{freespace\_printTxDisableMessage}}
+\index{freespace\_printTxDisableMessage@{freespace\_printTxDisableMessage}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printTxDisableMessage()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Tx\+Disable\+Message (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+Tx\+Disable\+Message} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a729c782304974a6adb9b0dfa0dba47ea}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printTxDisableMessageStr@{freespace\_printTxDisableMessageStr}}
+\index{freespace\_printTxDisableMessageStr@{freespace\_printTxDisableMessageStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printTxDisableMessageStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+Tx\+Disable\+Message\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+Tx\+Disable\+Message} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a2d33bd32cef9746c9e6f6c05af08d9f6}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printUserFrame@{freespace\_printUserFrame}}
+\index{freespace\_printUserFrame@{freespace\_printUserFrame}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printUserFrame()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+User\+Frame (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{const struct \textbf{ freespace\+\_\+\+User\+Frame} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message to a file pointer. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & the destination file pointer \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}
+\mbox{\label{a00020_a93127173dd5a5731cd04b3dceec862dd}} 
+\index{freespace\_printers.h@{freespace\_printers.h}!freespace\_printUserFrameStr@{freespace\_printUserFrameStr}}
+\index{freespace\_printUserFrameStr@{freespace\_printUserFrameStr}!freespace\_printers.h@{freespace\_printers.h}}
+\doxysubsubsection{freespace\_printUserFrameStr()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+print\+User\+Frame\+Str (\begin{DoxyParamCaption}\item[{char $\ast$}]{dest,  }\item[{int}]{maxlen,  }\item[{const struct \textbf{ freespace\+\_\+\+User\+Frame} $\ast$}]{s }\end{DoxyParamCaption})}
+
+Print message struct to string dest, with maximum length maxlen. 
+\begin{DoxyParams}{Parameters}
+{\em dest} & the destination string \\
+\hline
+{\em maxlen} & the length of the passed in string \\
+\hline
+{\em s} & the struct to print \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters actually printed, or an error if it tries to print more than maxlen 
+\end{DoxyReturn}

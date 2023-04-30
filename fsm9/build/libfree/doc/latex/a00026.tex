@@ -1,0 +1,173 @@
+\doxysection{Initialization}
+\label{a00026}\index{Initialization@{Initialization}}
+
+
+This page documents the libfreespace function calls for initializing and cleaning up the library.  
+
+
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ freespace\+\_\+error} \{ \newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS} = 0, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+IO} = -\/1, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+A\+C\+C\+E\+SS} = -\/3, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+\_\+\+D\+E\+V\+I\+CE} = -\/4, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND} = -\/5, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+B\+U\+SY} = -\/6, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+T\+I\+M\+E\+O\+UT} = -\/7, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+I\+PE} = -\/9, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+ED} = -\/10, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY} = -\/11, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+\_\+\+T\+O\+O\+\_\+\+L\+A\+R\+GE} = -\/20, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE} = -\/21, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL} = -\/22, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+U\+L\+D\+\_\+\+N\+O\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+T\+H\+R\+E\+AD} = -\/23, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL} = -\/24, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+\_\+\+D\+A\+TA} = -\/25, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+A\+L\+F\+O\+R\+M\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE} = -\/26, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+I\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON} = -\/27, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+U\+I\+N\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED} = -\/97, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+U\+N\+E\+X\+P\+E\+C\+T\+ED} = -\/98
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+init} ()
+\item 
+const \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} char $\ast$ \textbf{ freespace\+\_\+version} ()
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} void \textbf{ freespace\+\_\+exit} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This page documents the libfreespace function calls for initializing and cleaning up the library. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\label{a00026_gadff139f0a51fa0a8a3bb5d71d48280ae}} 
+\index{Initialization@{Initialization}!freespace\_error@{freespace\_error}}
+\index{freespace\_error@{freespace\_error}!Initialization@{Initialization}}
+\doxysubsubsection{freespace\_error}
+{\footnotesize\ttfamily enum \textbf{ freespace\+\_\+error}}
+
+Error codes. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_SUCCESS@{FREESPACE\_SUCCESS}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_SUCCESS@{FREESPACE\_SUCCESS}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aea83eeae693ebdfab7f245ee4860f1c9df}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS&Success (no error) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_IO@{FREESPACE\_ERROR\_IO}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_IO@{FREESPACE\_ERROR\_IO}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aea2eb68dcb3e36cb1fa2b3c7466fea9672}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+IO&Input/output error \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_ACCESS@{FREESPACE\_ERROR\_ACCESS}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_ACCESS@{FREESPACE\_ERROR\_ACCESS}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aea99d2b7242b127e6a7ac6d7cffc3be4ba}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+A\+C\+C\+E\+SS&Access denied (insufficient permissions) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_NO\_DEVICE@{FREESPACE\_ERROR\_NO\_DEVICE}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_NO\_DEVICE@{FREESPACE\_ERROR\_NO\_DEVICE}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aeab248dbcdb3ee9478c73c215aaceacb4f}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+\_\+\+D\+E\+V\+I\+CE&No such device (it may have been disconnected) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_NOT\_FOUND@{FREESPACE\_ERROR\_NOT\_FOUND}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_NOT\_FOUND@{FREESPACE\_ERROR\_NOT\_FOUND}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aeaf64ff86afc0b68fd18df12744aaf004e}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND&Entity not found \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_BUSY@{FREESPACE\_ERROR\_BUSY}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_BUSY@{FREESPACE\_ERROR\_BUSY}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aeab807d3deddacd0634b80e7f62a389c51}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+B\+U\+SY&Resource busy \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_TIMEOUT@{FREESPACE\_ERROR\_TIMEOUT}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_TIMEOUT@{FREESPACE\_ERROR\_TIMEOUT}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aeadd32ce27208650344a7974f56ac44d18}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+T\+I\+M\+E\+O\+UT&Operation timed out \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_PIPE@{FREESPACE\_ERROR\_PIPE}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_PIPE@{FREESPACE\_ERROR\_PIPE}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aea0983a05b56edf01ceca2de7a380db7c7}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+I\+PE&Pipe error \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_INTERRUPTED@{FREESPACE\_ERROR\_INTERRUPTED}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_INTERRUPTED@{FREESPACE\_ERROR\_INTERRUPTED}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aeaea202f9425f1126217a2fd61cf684c8e}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+ED&System call interrupted (perhaps due to signal) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_OUT\_OF\_MEMORY@{FREESPACE\_ERROR\_OUT\_OF\_MEMORY}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_OUT\_OF\_MEMORY@{FREESPACE\_ERROR\_OUT\_OF\_MEMORY}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aead9dd25b70715f121f0a57232c48669ec}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY&Out of memory \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_SEND\_TOO\_LARGE@{FREESPACE\_ERROR\_SEND\_TOO\_LARGE}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_SEND\_TOO\_LARGE@{FREESPACE\_ERROR\_SEND\_TOO\_LARGE}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aeaa8952d65d95ba3b284e816baaafa07b2}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+\_\+\+T\+O\+O\+\_\+\+L\+A\+R\+GE&Amount to send was larger than the max \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_INVALID\_DEVICE@{FREESPACE\_ERROR\_INVALID\_DEVICE}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_INVALID\_DEVICE@{FREESPACE\_ERROR\_INVALID\_DEVICE}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aea03400eca5940818b56282e400b101352}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE&Invalid or uninitialized device handle \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_RECEIVE\_BUFFER\_TOO\_SMALL@{FREESPACE\_ERROR\_RECEIVE\_BUFFER\_TOO\_SMALL}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_RECEIVE\_BUFFER\_TOO\_SMALL@{FREESPACE\_ERROR\_RECEIVE\_BUFFER\_TOO\_SMALL}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aea23a0e405793bb63efa848033c5bb2e1a}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL&Receive buffer was too small \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_COULD\_NOT\_CREATE\_THREAD@{FREESPACE\_ERROR\_COULD\_NOT\_CREATE\_THREAD}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_COULD\_NOT\_CREATE\_THREAD@{FREESPACE\_ERROR\_COULD\_NOT\_CREATE\_THREAD}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aea16691444922bc2993572edff607d3e66}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+U\+L\+D\+\_\+\+N\+O\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+T\+H\+R\+E\+AD&Unknown error when trying to create or start a thread \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_BUFFER\_TOO\_SMALL@{FREESPACE\_ERROR\_BUFFER\_TOO\_SMALL}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_BUFFER\_TOO\_SMALL@{FREESPACE\_ERROR\_BUFFER\_TOO\_SMALL}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aea8c3f60f03daca6c5b096d3916cde38b6}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL&Buffer was too small \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_NO\_DATA@{FREESPACE\_ERROR\_NO\_DATA}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_NO\_DATA@{FREESPACE\_ERROR\_NO\_DATA}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aea8c125a4f401e365991a5404ded648195}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+\_\+\+D\+A\+TA&No data was received \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_MALFORMED\_MESSAGE@{FREESPACE\_ERROR\_MALFORMED\_MESSAGE}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_MALFORMED\_MESSAGE@{FREESPACE\_ERROR\_MALFORMED\_MESSAGE}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aeacfa7699d01e6698ea8268d87a66d806b}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+A\+L\+F\+O\+R\+M\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE&No data was received \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_INVALID\_HID\_PROTOCOL\_VERSION@{FREESPACE\_ERROR\_INVALID\_HID\_PROTOCOL\_VERSION}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_INVALID\_HID\_PROTOCOL\_VERSION@{FREESPACE\_ERROR\_INVALID\_HID\_PROTOCOL\_VERSION}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aea00933441710840bf9749d5e07b8f6336}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+I\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON&Invalid H\+ID protocol version \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_UINIMPLEMENTED@{FREESPACE\_ERROR\_UINIMPLEMENTED}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_UINIMPLEMENTED@{FREESPACE\_ERROR\_UINIMPLEMENTED}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aea858b543a4a92be00f49e7437790a49b3}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+U\+I\+N\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED&An unimplemented feature \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_ERROR\_UNEXPECTED@{FREESPACE\_ERROR\_UNEXPECTED}!Initialization@{Initialization}}\index{Initialization@{Initialization}!FREESPACE\_ERROR\_UNEXPECTED@{FREESPACE\_ERROR\_UNEXPECTED}}}\mbox{\label{a00026_ggadff139f0a51fa0a8a3bb5d71d48280aeaa2deb0caa1d6c45fe10ffe51a571e8e5}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+U\+N\+E\+X\+P\+E\+C\+T\+ED&Any uncategorized or unplanned error \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{a00026_ga3da04abd0e4761dc94d9c4e9c24e258d}} 
+\index{Initialization@{Initialization}!freespace\_exit@{freespace\_exit}}
+\index{freespace\_exit@{freespace\_exit}!Initialization@{Initialization}}
+\doxysubsubsection{freespace\_exit()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} void freespace\+\_\+exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Finalize the Freespace library. \mbox{\label{a00026_ga9e950995776c2942e6192a1327e33d55}} 
+\index{Initialization@{Initialization}!freespace\_init@{freespace\_init}}
+\index{freespace\_init@{freespace\_init}!Initialization@{Initialization}}
+\doxysubsubsection{freespace\_init()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initialize the Freespace library.
+
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS on success 
+\end{DoxyReturn}
+\mbox{\label{a00026_ga03b46b7cedb26028f54d4c8f5033f81a}} 
+\index{Initialization@{Initialization}!freespace\_version@{freespace\_version}}
+\index{freespace\_version@{freespace\_version}!Initialization@{Initialization}}
+\doxysubsubsection{freespace\_version()}
+{\footnotesize\ttfamily const \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} char$\ast$ freespace\+\_\+version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return a human readable string with the version of libfreespace being used.
+
+\begin{DoxyReturn}{Returns}
+version string 
+\end{DoxyReturn}

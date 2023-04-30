@@ -1,0 +1,44 @@
+\doxysection{freespace\+\_\+\+Pairing\+Response Struct Reference}
+\label{a00140}\index{freespace\_PairingResponse@{freespace\_PairingResponse}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \textbf{ pairing}
+\item 
+uint8\+\_\+t \textbf{ auto\+Pairing}
+\item 
+uint8\+\_\+t \textbf{ success}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Pairing response is used to either respond to pairing requests from the host or to send pairing status updates to the host that describe events during the pairing process. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00140_a60f9018fb47d4563431a900c01df9ebf}} 
+\index{freespace\_PairingResponse@{freespace\_PairingResponse}!autoPairing@{autoPairing}}
+\index{autoPairing@{autoPairing}!freespace\_PairingResponse@{freespace\_PairingResponse}}
+\doxysubsubsection{autoPairing}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Pairing\+Response\+::auto\+Pairing}
+
+0\+: dongle is not in auto-\/pairing 1\+: dongle is in auto-\/pairing \mbox{\label{a00140_a0994a8301a67d3c0f4180c19b9a9159d}} 
+\index{freespace\_PairingResponse@{freespace\_PairingResponse}!pairing@{pairing}}
+\index{pairing@{pairing}!freespace\_PairingResponse@{freespace\_PairingResponse}}
+\doxysubsubsection{pairing}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Pairing\+Response\+::pairing}
+
+0\+: not pairing. 1\+: pairing \mbox{\label{a00140_ae914e2e43e4a9e0cc6c79f7eec0012b4}} 
+\index{freespace\_PairingResponse@{freespace\_PairingResponse}!success@{success}}
+\index{success@{success}!freespace\_PairingResponse@{freespace\_PairingResponse}}
+\doxysubsubsection{success}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Pairing\+Response\+::success}
+
+0\+: not successful or still in progress 1\+: successful 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

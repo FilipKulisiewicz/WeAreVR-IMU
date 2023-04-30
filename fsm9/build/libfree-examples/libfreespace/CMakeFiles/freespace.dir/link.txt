@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfreespace.a CMakeFiles/freespace.dir/common/freespace_deviceTable.c.o CMakeFiles/freespace.dir/common/freespace_util.c.o CMakeFiles/freespace.dir/gen_src/freespace_codecs.c.o CMakeFiles/freespace.dir/gen_src/freespace_printers.c.o CMakeFiles/freespace.dir/linux/freespace.c.o CMakeFiles/freespace.dir/linux/linux_hotplug.c.o
+/usr/bin/ranlib libfreespace.a

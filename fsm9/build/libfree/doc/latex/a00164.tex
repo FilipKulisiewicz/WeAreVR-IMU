@@ -1,0 +1,60 @@
+\doxysection{freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Response Struct Reference}
+\label{a00164}\index{freespace\_FRSDongleReadResponse@{freespace\_FRSDongleReadResponse}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \textbf{ word\+Offset}
+\item 
+uint32\+\_\+t \textbf{ data} [5]
+\item 
+int \textbf{ status}
+\item 
+int \textbf{ data\+Length}
+\item 
+uint16\+\_\+t \textbf{ F\+R\+Stype}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is sent from the dongle to the host to convey an F\+RS record. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00164_a4c7787bcb64ecd9c11f8d9d3d97e162b}} 
+\index{freespace\_FRSDongleReadResponse@{freespace\_FRSDongleReadResponse}!data@{data}}
+\index{data@{data}!freespace\_FRSDongleReadResponse@{freespace\_FRSDongleReadResponse}}
+\doxysubsubsection{data}
+{\footnotesize\ttfamily uint32\+\_\+t freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Response\+::data[5]}
+
+\mbox{\label{a00164_add5c0fa48d3def567c933c3c72219749}} 
+\index{freespace\_FRSDongleReadResponse@{freespace\_FRSDongleReadResponse}!dataLength@{dataLength}}
+\index{dataLength@{dataLength}!freespace\_FRSDongleReadResponse@{freespace\_FRSDongleReadResponse}}
+\doxysubsubsection{dataLength}
+{\footnotesize\ttfamily int freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Response\+::data\+Length}
+
+Data Length indicates the number of data words contained within the message, typically 5 words \mbox{\label{a00164_a85ff9901a1ecca35f85e7597bb75c813}} 
+\index{freespace\_FRSDongleReadResponse@{freespace\_FRSDongleReadResponse}!FRStype@{FRStype}}
+\index{FRStype@{FRStype}!freespace\_FRSDongleReadResponse@{freespace\_FRSDongleReadResponse}}
+\doxysubsubsection{FRStype}
+{\footnotesize\ttfamily uint16\+\_\+t freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Response\+::\+F\+R\+Stype}
+
+F\+RS record type \mbox{\label{a00164_a348a7abba3ec329c6a4c52218276eba1}} 
+\index{freespace\_FRSDongleReadResponse@{freespace\_FRSDongleReadResponse}!status@{status}}
+\index{status@{status}!freespace\_FRSDongleReadResponse@{freespace\_FRSDongleReadResponse}}
+\doxysubsubsection{status}
+{\footnotesize\ttfamily int freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Response\+::status}
+
+Status\+: 0\+: no error 1\+: unrecognized F\+RS type 2\+: busy 3\+: read completed 4\+: offset out of range 5\+: record empty 6\+: read block completed 7\+: read block completed and read reacord completed \mbox{\label{a00164_a570898e6bec9e0b69bffc89e522961d1}} 
+\index{freespace\_FRSDongleReadResponse@{freespace\_FRSDongleReadResponse}!wordOffset@{wordOffset}}
+\index{wordOffset@{wordOffset}!freespace\_FRSDongleReadResponse@{freespace\_FRSDongleReadResponse}}
+\doxysubsubsection{wordOffset}
+{\footnotesize\ttfamily uint16\+\_\+t freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Response\+::word\+Offset}
+
+Word Offset indicates the number of words the data is offset from the beginning of the record 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

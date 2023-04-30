@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/firmware_version_example.dir/src/firmware_version_example.c.o CMakeFiles/firmware_version_example.dir/src/appControlHandler.c.o -o firmware_version_example  libfreespace/libfreespace.a -lm -lpthread -lusb-1.0 

@@ -1,0 +1,60 @@
+\doxysection{freespace\+\_\+\+Data\+Motion\+Control Struct Reference}
+\label{a00204}\index{freespace\_DataMotionControl@{freespace\_DataMotionControl}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \textbf{ enable\+Body\+Motion}
+\item 
+uint8\+\_\+t \textbf{ enable\+User\+Position}
+\item 
+uint8\+\_\+t \textbf{ inhibit\+Power\+Manager}
+\item 
+uint8\+\_\+t \textbf{ enable\+Mouse\+Movement}
+\item 
+uint8\+\_\+t \textbf{ disable\+Freespace}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+D\+E\+P\+R\+E\+C\+A\+T\+ED\+: This report controls the behavior of the Freespace motion reports. The unused bits are reserved for future features. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00204_af0047aafc26a426989dcf5e8948e53b2}} 
+\index{freespace\_DataMotionControl@{freespace\_DataMotionControl}!disableFreespace@{disableFreespace}}
+\index{disableFreespace@{disableFreespace}!freespace\_DataMotionControl@{freespace\_DataMotionControl}}
+\doxysubsubsection{disableFreespace}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Motion\+Control\+::disable\+Freespace}
+
+Disable Freespace\+: when set to 1 disables the Freespace motion sensing system to conserve power. No pointer or motion reports are sent regardless of the value of the other bits. \mbox{\label{a00204_ac82dac4db07152c478bd7e068b1bec3b}} 
+\index{freespace\_DataMotionControl@{freespace\_DataMotionControl}!enableBodyMotion@{enableBodyMotion}}
+\index{enableBodyMotion@{enableBodyMotion}!freespace\_DataMotionControl@{freespace\_DataMotionControl}}
+\doxysubsubsection{enableBodyMotion}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Motion\+Control\+::enable\+Body\+Motion}
+
+Enable Body Motion\+: when set to 1 enables Body Frame Motion reports. \mbox{\label{a00204_ae8e444bf4498ed52327077eb01258822}} 
+\index{freespace\_DataMotionControl@{freespace\_DataMotionControl}!enableMouseMovement@{enableMouseMovement}}
+\index{enableMouseMovement@{enableMouseMovement}!freespace\_DataMotionControl@{freespace\_DataMotionControl}}
+\doxysubsubsection{enableMouseMovement}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Motion\+Control\+::enable\+Mouse\+Movement}
+
+Enable Mouse Movement\+: when set to 1 enables Mouse Movement reports. \mbox{\label{a00204_a24f9a3593efcb038a6511b99a67a8ae9}} 
+\index{freespace\_DataMotionControl@{freespace\_DataMotionControl}!enableUserPosition@{enableUserPosition}}
+\index{enableUserPosition@{enableUserPosition}!freespace\_DataMotionControl@{freespace\_DataMotionControl}}
+\doxysubsubsection{enableUserPosition}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Motion\+Control\+::enable\+User\+Position}
+
+Enable User Position\+: when set to 1 enables User Frame Position reports \mbox{\label{a00204_abc061fd80fa9261bb501f818426e34bd}} 
+\index{freespace\_DataMotionControl@{freespace\_DataMotionControl}!inhibitPowerManager@{inhibitPowerManager}}
+\index{inhibitPowerManager@{inhibitPowerManager}!freespace\_DataMotionControl@{freespace\_DataMotionControl}}
+\doxysubsubsection{inhibitPowerManager}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Motion\+Control\+::inhibit\+Power\+Manager}
+
+Inhibit Power Manager\+: when set to 1 disables the power management feature that automatically stops sending motion reports after a period of no motion. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

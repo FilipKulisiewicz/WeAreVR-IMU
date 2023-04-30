@@ -1,0 +1,44 @@
+\doxysection{freespace\+\_\+\+F\+R\+S\+Handheld\+Read\+Request Struct Reference}
+\label{a00092}\index{freespace\_FRSHandheldReadRequest@{freespace\_FRSHandheldReadRequest}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \textbf{ word\+Offset}
+\item 
+uint16\+\_\+t \textbf{ F\+R\+Stype}
+\item 
+uint16\+\_\+t \textbf{ Block\+Size}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is sent from dongle towards the handheld to request flash record to be sent. The data sent starts from the word offset and continues through to the end of the record. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00092_ae9d2efc928eb6ebe09a3da003f4ec7bc}} 
+\index{freespace\_FRSHandheldReadRequest@{freespace\_FRSHandheldReadRequest}!BlockSize@{BlockSize}}
+\index{BlockSize@{BlockSize}!freespace\_FRSHandheldReadRequest@{freespace\_FRSHandheldReadRequest}}
+\doxysubsubsection{BlockSize}
+{\footnotesize\ttfamily uint16\+\_\+t freespace\+\_\+\+F\+R\+S\+Handheld\+Read\+Request\+::\+Block\+Size}
+
+Number of 32-\/bit words to read. \mbox{\label{a00092_a0a1c7d0adf74198c942e8c0ca6ca3b08}} 
+\index{freespace\_FRSHandheldReadRequest@{freespace\_FRSHandheldReadRequest}!FRStype@{FRStype}}
+\index{FRStype@{FRStype}!freespace\_FRSHandheldReadRequest@{freespace\_FRSHandheldReadRequest}}
+\doxysubsubsection{FRStype}
+{\footnotesize\ttfamily uint16\+\_\+t freespace\+\_\+\+F\+R\+S\+Handheld\+Read\+Request\+::\+F\+R\+Stype}
+
+F\+RS record type to read. \mbox{\label{a00092_a4cc760ede6a9e7faf4d1081156860966}} 
+\index{freespace\_FRSHandheldReadRequest@{freespace\_FRSHandheldReadRequest}!wordOffset@{wordOffset}}
+\index{wordOffset@{wordOffset}!freespace\_FRSHandheldReadRequest@{freespace\_FRSHandheldReadRequest}}
+\doxysubsubsection{wordOffset}
+{\footnotesize\ttfamily uint16\+\_\+t freespace\+\_\+\+F\+R\+S\+Handheld\+Read\+Request\+::word\+Offset}
+
+Offset from start of record to begin reading. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

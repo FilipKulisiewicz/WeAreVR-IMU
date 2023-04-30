@@ -1,0 +1,278 @@
+\doxysection{Asynchronous A\+PI}
+\label{a00030}\index{Asynchronous API@{Asynchronous API}}
+
+
+This page describes the asynchronous A\+PI for communicating with Freespace(r) devices.  
+
+
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \textbf{ freespace\+\_\+send\+Callback}) (\textbf{ Freespace\+Device\+Id} id, void $\ast$cookie, int result)
+\item 
+typedef void($\ast$ \textbf{ freespace\+\_\+receive\+Callback}) (\textbf{ Freespace\+Device\+Id} id, const uint8\+\_\+t $\ast$message, int length, void $\ast$cookie, int result)
+\item 
+typedef void($\ast$ \textbf{ freespace\+\_\+receive\+Message\+Callback}) (\textbf{ Freespace\+Device\+Id} id, struct \textbf{ freespace\+\_\+message} $\ast$message, void $\ast$cookie, int result)
+\item 
+typedef void($\ast$ \textbf{ freespace\+\_\+pollfd\+Added\+Callback}) (\textbf{ Freespace\+File\+Handle\+Type} fd, short events)
+\item 
+typedef void($\ast$ \textbf{ freespace\+\_\+pollfd\+Removed\+Callback}) (\textbf{ Freespace\+File\+Handle\+Type} fd)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+private\+\_\+set\+Receive\+Callback} (\textbf{ Freespace\+Device\+Id} id, \textbf{ freespace\+\_\+receive\+Callback} callback, void $\ast$cookie)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+set\+Receive\+Message\+Callback} (\textbf{ Freespace\+Device\+Id} id, \textbf{ freespace\+\_\+receive\+Message\+Callback} callback, void $\ast$cookie)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+private\+\_\+send\+Async} (\textbf{ Freespace\+Device\+Id} id, const uint8\+\_\+t $\ast$message, int length, unsigned int timeout\+Ms, \textbf{ freespace\+\_\+send\+Callback} callback, void $\ast$cookie)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+send\+Message\+Async} (\textbf{ Freespace\+Device\+Id} id, struct \textbf{ freespace\+\_\+message} $\ast$message, unsigned int timeout\+Ms, \textbf{ freespace\+\_\+send\+Callback} callback, void $\ast$cookie)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+get\+Next\+Timeout} (int $\ast$timeout\+Ms\+Out)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+perform} ()
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} void \textbf{ freespace\+\_\+set\+File\+Descriptor\+Callbacks} (\textbf{ freespace\+\_\+pollfd\+Added\+Callback} added\+Callback, \textbf{ freespace\+\_\+pollfd\+Removed\+Callback} removed\+Callback)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+sync\+File\+Descriptors} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This page describes the asynchronous A\+PI for communicating with Freespace(r) devices. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{a00030_gac47a2cafc4ca09f7358ce6d6909b7fa2}} 
+\index{Asynchronous API@{Asynchronous API}!freespace\_pollfdAddedCallback@{freespace\_pollfdAddedCallback}}
+\index{freespace\_pollfdAddedCallback@{freespace\_pollfdAddedCallback}!Asynchronous API@{Asynchronous API}}
+\doxysubsubsection{freespace\_pollfdAddedCallback}
+{\footnotesize\ttfamily typedef void($\ast$ freespace\+\_\+pollfd\+Added\+Callback) (\textbf{ Freespace\+File\+Handle\+Type} fd, short events)}
+
+Callback for when file descriptors should be added to the poll or select fd sets
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & the file descriptor \\
+\hline
+{\em events} & flag such as P\+O\+L\+L\+IN or P\+O\+L\+L\+O\+UT from poll.\+h \\
+\hline
+\end{DoxyParams}
+\mbox{\label{a00030_gad3d0867fb74dd90c11f54ef8c7ac5b18}} 
+\index{Asynchronous API@{Asynchronous API}!freespace\_pollfdRemovedCallback@{freespace\_pollfdRemovedCallback}}
+\index{freespace\_pollfdRemovedCallback@{freespace\_pollfdRemovedCallback}!Asynchronous API@{Asynchronous API}}
+\doxysubsubsection{freespace\_pollfdRemovedCallback}
+{\footnotesize\ttfamily typedef void($\ast$ freespace\+\_\+pollfd\+Removed\+Callback) (\textbf{ Freespace\+File\+Handle\+Type} fd)}
+
+Callback for when file descriptors should be removed from the poll or select fd sets
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & the file descriptor \\
+\hline
+\end{DoxyParams}
+\mbox{\label{a00030_gae880d6f69ebc02c27dc87140264cc64b}} 
+\index{Asynchronous API@{Asynchronous API}!freespace\_receiveCallback@{freespace\_receiveCallback}}
+\index{freespace\_receiveCallback@{freespace\_receiveCallback}!Asynchronous API@{Asynchronous API}}
+\doxysubsubsection{freespace\_receiveCallback}
+{\footnotesize\ttfamily typedef void($\ast$ freespace\+\_\+receive\+Callback) (\textbf{ Freespace\+Device\+Id} id, const uint8\+\_\+t $\ast$message, int length, void $\ast$cookie, int result)}
+
+Callback for received Freespace events in byte stream form. Deprecated for external use. For use with other language bindings, such as Python and Java, only.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The device that generated the message \\
+\hline
+{\em message} & the raw H\+ID report \\
+\hline
+{\em length} & its length \\
+\hline
+{\em cookie} & the data passed to freespace\+\_\+set\+Receive\+Callback(). \\
+\hline
+{\em result} & F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS if a packet was received; else error code \\
+\hline
+\end{DoxyParams}
+\mbox{\label{a00030_gae99b0172eced2f7043a18e956997cab1}} 
+\index{Asynchronous API@{Asynchronous API}!freespace\_receiveMessageCallback@{freespace\_receiveMessageCallback}}
+\index{freespace\_receiveMessageCallback@{freespace\_receiveMessageCallback}!Asynchronous API@{Asynchronous API}}
+\doxysubsubsection{freespace\_receiveMessageCallback}
+{\footnotesize\ttfamily typedef void($\ast$ freespace\+\_\+receive\+Message\+Callback) (\textbf{ Freespace\+Device\+Id} id, struct \textbf{ freespace\+\_\+message} $\ast$message, void $\ast$cookie, int result)}
+
+Callback for received Freespace events in message form.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The device that generated the message \\
+\hline
+{\em message} & the decoded H\+ID message \\
+\hline
+{\em cookie} & the data passed to freespace\+\_\+set\+Receive\+Callback(). \\
+\hline
+{\em result} & F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS if a packet was received; else error code \\
+\hline
+\end{DoxyParams}
+\mbox{\label{a00030_ga2f68b69aea030a8de50399d62e6186bc}} 
+\index{Asynchronous API@{Asynchronous API}!freespace\_sendCallback@{freespace\_sendCallback}}
+\index{freespace\_sendCallback@{freespace\_sendCallback}!Asynchronous API@{Asynchronous API}}
+\doxysubsubsection{freespace\_sendCallback}
+{\footnotesize\ttfamily typedef void($\ast$ freespace\+\_\+send\+Callback) (\textbf{ Freespace\+Device\+Id} id, void $\ast$cookie, int result)}
+
+Callback for getting notified when a U\+SB packet has been sent.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the device that sent the message \\
+\hline
+{\em cookie} & the data passed to freespace\+\_\+send\+Async(). \\
+\hline
+{\em result} & F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS if the packet was sent; else error code \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{a00030_gacb86137bdfee642725c4ae82fb2c9a33}} 
+\index{Asynchronous API@{Asynchronous API}!freespace\_getNextTimeout@{freespace\_getNextTimeout}}
+\index{freespace\_getNextTimeout@{freespace\_getNextTimeout}!Asynchronous API@{Asynchronous API}}
+\doxysubsubsection{freespace\_getNextTimeout()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+get\+Next\+Timeout (\begin{DoxyParamCaption}\item[{int $\ast$}]{timeout\+Ms\+Out }\end{DoxyParamCaption})}
+
+Get the next timeout for a call to select or poll.
+
+
+\begin{DoxyParams}{Parameters}
+{\em timeout\+Ms\+Out} & where to store the timeout ($<$0 is infinite) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00030_ga64a014bed4756444227571bd42aa9d30}} 
+\index{Asynchronous API@{Asynchronous API}!freespace\_perform@{freespace\_perform}}
+\index{freespace\_perform@{freespace\_perform}!Asynchronous API@{Asynchronous API}}
+\doxysubsubsection{freespace\_perform()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+After select or poll returns, call this to allow libfreespace to service all of its active file descriptors.
+
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00030_gab554b7d0748f30cca3d1d12b0f4f3f3e}} 
+\index{Asynchronous API@{Asynchronous API}!freespace\_private\_sendAsync@{freespace\_private\_sendAsync}}
+\index{freespace\_private\_sendAsync@{freespace\_private\_sendAsync}!Asynchronous API@{Asynchronous API}}
+\doxysubsubsection{freespace\_private\_sendAsync()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+private\+\_\+send\+Async (\begin{DoxyParamCaption}\item[{\textbf{ Freespace\+Device\+Id}}]{id,  }\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{unsigned int}]{timeout\+Ms,  }\item[{\textbf{ freespace\+\_\+send\+Callback}}]{callback,  }\item[{void $\ast$}]{cookie }\end{DoxyParamCaption})}
+
+Send a message to the specified Freespace device, but do not block. Deprecated for external use. For use with other language bindings, such as Python and Java, only.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the Freespace\+Device\+Id of the device to send message to \\
+\hline
+{\em message} & the H\+ID message to send \\
+\hline
+{\em length} & the length of the message \\
+\hline
+{\em timeout\+Ms} & the number of milliseconds to wait before timing out \\
+\hline
+{\em callback} & the function to call when the send completes \\
+\hline
+{\em cookie} & data passed to the callback function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00030_ga89194fa6d3d13a3b29c086dfdfb7ee42}} 
+\index{Asynchronous API@{Asynchronous API}!freespace\_private\_setReceiveCallback@{freespace\_private\_setReceiveCallback}}
+\index{freespace\_private\_setReceiveCallback@{freespace\_private\_setReceiveCallback}!Asynchronous API@{Asynchronous API}}
+\doxysubsubsection{freespace\_private\_setReceiveCallback()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+private\+\_\+set\+Receive\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ Freespace\+Device\+Id}}]{id,  }\item[{\textbf{ freespace\+\_\+receive\+Callback}}]{callback,  }\item[{void $\ast$}]{cookie }\end{DoxyParamCaption})}
+
+Register a callback function to handle received H\+ID messages. Deprecated for external use. For use with other language bindings, such as Python and Java, only.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the Freespace\+Device\+Id of the device \\
+\hline
+{\em callback} & the callback function \\
+\hline
+{\em cookie} & any user data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00030_gacb83b6ad4c734cd0a765f953a0b6e666}} 
+\index{Asynchronous API@{Asynchronous API}!freespace\_sendMessageAsync@{freespace\_sendMessageAsync}}
+\index{freespace\_sendMessageAsync@{freespace\_sendMessageAsync}!Asynchronous API@{Asynchronous API}}
+\doxysubsubsection{freespace\_sendMessageAsync()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+send\+Message\+Async (\begin{DoxyParamCaption}\item[{\textbf{ Freespace\+Device\+Id}}]{id,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{message,  }\item[{unsigned int}]{timeout\+Ms,  }\item[{\textbf{ freespace\+\_\+send\+Callback}}]{callback,  }\item[{void $\ast$}]{cookie }\end{DoxyParamCaption})}
+
+Send a message struct to the specified Freespace device, but do not block.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the Freespace\+Device\+Id of the device to send message to \\
+\hline
+{\em message} & the H\+ID message struct to send \\
+\hline
+{\em timeout\+Ms} & the number of milliseconds to wait before timing out \\
+\hline
+{\em callback} & the function to call when the send completes \\
+\hline
+{\em cookie} & data passed to the callback function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00030_ga785c9e44a5b71f6958820131ec51acab}} 
+\index{Asynchronous API@{Asynchronous API}!freespace\_setFileDescriptorCallbacks@{freespace\_setFileDescriptorCallbacks}}
+\index{freespace\_setFileDescriptorCallbacks@{freespace\_setFileDescriptorCallbacks}!Asynchronous API@{Asynchronous API}}
+\doxysubsubsection{freespace\_setFileDescriptorCallbacks()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} void freespace\+\_\+set\+File\+Descriptor\+Callbacks (\begin{DoxyParamCaption}\item[{\textbf{ freespace\+\_\+pollfd\+Added\+Callback}}]{added\+Callback,  }\item[{\textbf{ freespace\+\_\+pollfd\+Removed\+Callback}}]{removed\+Callback }\end{DoxyParamCaption})}
+
+Set callback functions for when file descriptors need to be added or removed from the select/poll list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em added\+Callback} & the function to call when descriptors are added \\
+\hline
+{\em removed\+Callback} & the function to call when descriptors are removed \\
+\hline
+\end{DoxyParams}
+\mbox{\label{a00030_ga966792b379b1be6e44505446a5504a2a}} 
+\index{Asynchronous API@{Asynchronous API}!freespace\_setReceiveMessageCallback@{freespace\_setReceiveMessageCallback}}
+\index{freespace\_setReceiveMessageCallback@{freespace\_setReceiveMessageCallback}!Asynchronous API@{Asynchronous API}}
+\doxysubsubsection{freespace\_setReceiveMessageCallback()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+set\+Receive\+Message\+Callback (\begin{DoxyParamCaption}\item[{\textbf{ Freespace\+Device\+Id}}]{id,  }\item[{\textbf{ freespace\+\_\+receive\+Message\+Callback}}]{callback,  }\item[{void $\ast$}]{cookie }\end{DoxyParamCaption})}
+
+Register a callback function to handle decoded received H\+ID messages.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the Freespace\+Device\+Id of the device \\
+\hline
+{\em callback} & the callback function \\
+\hline
+{\em cookie} & any user data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00030_ga46dd89c0e94ecb137100a0386bf71bb9}} 
+\index{Asynchronous API@{Asynchronous API}!freespace\_syncFileDescriptors@{freespace\_syncFileDescriptors}}
+\index{freespace\_syncFileDescriptors@{freespace\_syncFileDescriptors}!Asynchronous API@{Asynchronous API}}
+\doxysubsubsection{freespace\_syncFileDescriptors()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+sync\+File\+Descriptors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Call the file descriptor added callback function for each internal file descriptor that is in use. This should be called after freespace\+\_\+set\+File\+Descriptor\+Callbacks so that the app can get in sync with the current active set.
+
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS on success 
+\end{DoxyReturn}

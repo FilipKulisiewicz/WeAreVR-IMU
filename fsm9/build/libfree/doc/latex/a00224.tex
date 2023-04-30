@@ -1,0 +1,52 @@
+\doxysection{freespace\+\_\+\+Per\+Response Struct Reference}
+\label{a00224}\index{freespace\_PerResponse@{freespace\_PerResponse}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \textbf{ count}
+\item 
+uint32\+\_\+t \textbf{ ms\+Error}
+\item 
+uint32\+\_\+t \textbf{ sm\+Error}
+\item 
+uint32\+\_\+t \textbf{ fr\+Error}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This report provides the results of a packet error rate test. Wi\+C\+E(tm) only. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00224_a967033b2c6f86598e3f4c131f347c7ce}} 
+\index{freespace\_PerResponse@{freespace\_PerResponse}!count@{count}}
+\index{count@{count}!freespace\_PerResponse@{freespace\_PerResponse}}
+\doxysubsubsection{count}
+{\footnotesize\ttfamily uint32\+\_\+t freespace\+\_\+\+Per\+Response\+::count}
+
+Frame count of the P\+ER test. The duration. \mbox{\label{a00224_aa18c6d8142ed8e3c66c32ed3e7de1d14}} 
+\index{freespace\_PerResponse@{freespace\_PerResponse}!frError@{frError}}
+\index{frError@{frError}!freespace\_PerResponse@{freespace\_PerResponse}}
+\doxysubsubsection{frError}
+{\footnotesize\ttfamily uint32\+\_\+t freespace\+\_\+\+Per\+Response\+::fr\+Error}
+
+Number of frame errors detected during the test. A frame error occurred if both slave-\/to-\/master messages in a frame were errors. Maximum 1 per frame. \mbox{\label{a00224_ace35caa3f6323b893cb8cf3d2d40c021}} 
+\index{freespace\_PerResponse@{freespace\_PerResponse}!msError@{msError}}
+\index{msError@{msError}!freespace\_PerResponse@{freespace\_PerResponse}}
+\doxysubsubsection{msError}
+{\footnotesize\ttfamily uint32\+\_\+t freespace\+\_\+\+Per\+Response\+::ms\+Error}
+
+Number of master-\/to-\/slave errors detected during the test. Maximum 1 per frame. \mbox{\label{a00224_a6fe1e689e83ea89b1f37f3844ad7d2a5}} 
+\index{freespace\_PerResponse@{freespace\_PerResponse}!smError@{smError}}
+\index{smError@{smError}!freespace\_PerResponse@{freespace\_PerResponse}}
+\doxysubsubsection{smError}
+{\footnotesize\ttfamily uint32\+\_\+t freespace\+\_\+\+Per\+Response\+::sm\+Error}
+
+Number of slave-\/to-\/master errors detected during the test. Maximum 2 per frame. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

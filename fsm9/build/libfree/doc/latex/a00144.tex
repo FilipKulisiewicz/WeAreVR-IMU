@@ -1,0 +1,100 @@
+\doxysection{freespace\+\_\+\+Product\+I\+D\+Response Struct Reference}
+\label{a00144}\index{freespace\_ProductIDResponse@{freespace\_ProductIDResponse}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \textbf{ sw\+Part\+Number}
+\item 
+uint32\+\_\+t \textbf{ sw\+Build\+Number}
+\item 
+uint32\+\_\+t \textbf{ swicn}
+\item 
+uint16\+\_\+t \textbf{ sw\+Version\+Patch}
+\item 
+uint8\+\_\+t \textbf{ sw\+Version\+Minor}
+\item 
+uint8\+\_\+t \textbf{ sw\+Version\+Major}
+\item 
+uint32\+\_\+t \textbf{ serial\+Number}
+\item 
+int \textbf{ device\+Class}
+\item 
+uint8\+\_\+t \textbf{ invalid\+NS}
+\item 
+uint8\+\_\+t \textbf{ startup}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is sent from the polled device towards the host to convey the product ID information. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00144_a83b3151246a7edb39fadeb53150516f3}} 
+\index{freespace\_ProductIDResponse@{freespace\_ProductIDResponse}!deviceClass@{deviceClass}}
+\index{deviceClass@{deviceClass}!freespace\_ProductIDResponse@{freespace\_ProductIDResponse}}
+\doxysubsubsection{deviceClass}
+{\footnotesize\ttfamily int freespace\+\_\+\+Product\+I\+D\+Response\+::device\+Class}
+
+The device class represents the characteristics of the device providing the product ID. 0\+: device type not known. 1\+: non-\/data-\/generating device. 2\+: data-\/generating device. \mbox{\label{a00144_a0c63d7fb7b90559d056cf1c130801fd5}} 
+\index{freespace\_ProductIDResponse@{freespace\_ProductIDResponse}!invalidNS@{invalidNS}}
+\index{invalidNS@{invalidNS}!freespace\_ProductIDResponse@{freespace\_ProductIDResponse}}
+\doxysubsubsection{invalidNS}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Product\+I\+D\+Response\+::invalid\+NS}
+
+0\+: read serial number is valid, 1 read serial number is invalid; retry read until valid. \mbox{\label{a00144_a6662ea799bc70e7f665655a62b91bf12}} 
+\index{freespace\_ProductIDResponse@{freespace\_ProductIDResponse}!serialNumber@{serialNumber}}
+\index{serialNumber@{serialNumber}!freespace\_ProductIDResponse@{freespace\_ProductIDResponse}}
+\doxysubsubsection{serialNumber}
+{\footnotesize\ttfamily uint32\+\_\+t freespace\+\_\+\+Product\+I\+D\+Response\+::serial\+Number}
+
+\mbox{\label{a00144_a7335286f468337bafae3a5c6cc4b5514}} 
+\index{freespace\_ProductIDResponse@{freespace\_ProductIDResponse}!startup@{startup}}
+\index{startup@{startup}!freespace\_ProductIDResponse@{freespace\_ProductIDResponse}}
+\doxysubsubsection{startup}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Product\+I\+D\+Response\+::startup}
+
+The device has just started up. This bit self clears after the first message is sent. \mbox{\label{a00144_ac5e1604cf8c864dbb4953e1ad8ef9068}} 
+\index{freespace\_ProductIDResponse@{freespace\_ProductIDResponse}!swBuildNumber@{swBuildNumber}}
+\index{swBuildNumber@{swBuildNumber}!freespace\_ProductIDResponse@{freespace\_ProductIDResponse}}
+\doxysubsubsection{swBuildNumber}
+{\footnotesize\ttfamily uint32\+\_\+t freespace\+\_\+\+Product\+I\+D\+Response\+::sw\+Build\+Number}
+
+\mbox{\label{a00144_abc5f80d5255033e435982e1b2a495665}} 
+\index{freespace\_ProductIDResponse@{freespace\_ProductIDResponse}!swicn@{swicn}}
+\index{swicn@{swicn}!freespace\_ProductIDResponse@{freespace\_ProductIDResponse}}
+\doxysubsubsection{swicn}
+{\footnotesize\ttfamily uint32\+\_\+t freespace\+\_\+\+Product\+I\+D\+Response\+::swicn}
+
+\mbox{\label{a00144_adb904aaa95872eeaf1b30b3d7602ab86}} 
+\index{freespace\_ProductIDResponse@{freespace\_ProductIDResponse}!swPartNumber@{swPartNumber}}
+\index{swPartNumber@{swPartNumber}!freespace\_ProductIDResponse@{freespace\_ProductIDResponse}}
+\doxysubsubsection{swPartNumber}
+{\footnotesize\ttfamily uint32\+\_\+t freespace\+\_\+\+Product\+I\+D\+Response\+::sw\+Part\+Number}
+
+\mbox{\label{a00144_ac93ace35cca0ddd46622b5ef7ed9701f}} 
+\index{freespace\_ProductIDResponse@{freespace\_ProductIDResponse}!swVersionMajor@{swVersionMajor}}
+\index{swVersionMajor@{swVersionMajor}!freespace\_ProductIDResponse@{freespace\_ProductIDResponse}}
+\doxysubsubsection{swVersionMajor}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Product\+I\+D\+Response\+::sw\+Version\+Major}
+
+\mbox{\label{a00144_a7483f8c6089a09b01e4acfbc67e37374}} 
+\index{freespace\_ProductIDResponse@{freespace\_ProductIDResponse}!swVersionMinor@{swVersionMinor}}
+\index{swVersionMinor@{swVersionMinor}!freespace\_ProductIDResponse@{freespace\_ProductIDResponse}}
+\doxysubsubsection{swVersionMinor}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Product\+I\+D\+Response\+::sw\+Version\+Minor}
+
+\mbox{\label{a00144_abde4d047a890d212f5645cae81e537c5}} 
+\index{freespace\_ProductIDResponse@{freespace\_ProductIDResponse}!swVersionPatch@{swVersionPatch}}
+\index{swVersionPatch@{swVersionPatch}!freespace\_ProductIDResponse@{freespace\_ProductIDResponse}}
+\doxysubsubsection{swVersionPatch}
+{\footnotesize\ttfamily uint16\+\_\+t freespace\+\_\+\+Product\+I\+D\+Response\+::sw\+Version\+Patch}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

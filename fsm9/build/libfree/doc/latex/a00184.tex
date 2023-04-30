@@ -1,0 +1,44 @@
+\doxysection{freespace\+\_\+\+Button\+Test\+Mode\+Response Struct Reference}
+\label{a00184}\index{freespace\_ButtonTestModeResponse@{freespace\_ButtonTestModeResponse}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \textbf{ status}
+\item 
+uint8\+\_\+t \textbf{ button}
+\item 
+uint8\+\_\+t \textbf{ press}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Report button status changes and acknowledge button mode request message. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00184_a39b269b9b2041b68db392c9945839652}} 
+\index{freespace\_ButtonTestModeResponse@{freespace\_ButtonTestModeResponse}!button@{button}}
+\index{button@{button}!freespace\_ButtonTestModeResponse@{freespace\_ButtonTestModeResponse}}
+\doxysubsubsection{button}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Button\+Test\+Mode\+Response\+::button}
+
+0 -\/ 15\+: number of button pressed or released. Only valid when status = update. \mbox{\label{a00184_a3a1673953b5a64686eb7be5db7d1c192}} 
+\index{freespace\_ButtonTestModeResponse@{freespace\_ButtonTestModeResponse}!press@{press}}
+\index{press@{press}!freespace\_ButtonTestModeResponse@{freespace\_ButtonTestModeResponse}}
+\doxysubsubsection{press}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Button\+Test\+Mode\+Response\+::press}
+
+0\+: button released. 1\+: button pressed. Only valid when status = update. \mbox{\label{a00184_a567a55ffc0abd0e31f7c39632ed586cc}} 
+\index{freespace\_ButtonTestModeResponse@{freespace\_ButtonTestModeResponse}!status@{status}}
+\index{status@{status}!freespace\_ButtonTestModeResponse@{freespace\_ButtonTestModeResponse}}
+\doxysubsubsection{status}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Button\+Test\+Mode\+Response\+::status}
+
+0\+: ack exit test mode. 1\+: ack enter test mode. 2\+: button update. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

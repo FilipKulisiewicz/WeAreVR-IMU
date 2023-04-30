@@ -1,0 +1,28 @@
+var a00272 =
+[
+    [ "angularPosA", "a00272.html#a53b6f5be8e5683692830f3a354406d37", null ],
+    [ "angularPosB", "a00272.html#a63139583754cff25a62e74817980ad95", null ],
+    [ "angularPosC", "a00272.html#a6cce983be366210ad36e1328845a1034", null ],
+    [ "angularPosD", "a00272.html#a1b31d0e3282b72f6405b600f65da8d4b", null ],
+    [ "angularVelX", "a00272.html#add473e1be9912eca42106ff905226bbc", null ],
+    [ "angularVelY", "a00272.html#ac7731dc0ed58ebccbbf1613e806b0ecf", null ],
+    [ "angularVelZ", "a00272.html#a75f65a0ddb2721be233f9afae84be586", null ],
+    [ "button1", "a00272.html#a3d347d61757cf1ddc8dbaf5e7c084b47", null ],
+    [ "button2", "a00272.html#ab116351160c189eb6abb5da32e90bde7", null ],
+    [ "button3", "a00272.html#a76b82b9298286cfdb936fd878dede452", null ],
+    [ "button4", "a00272.html#a2a347168db95aec872f376164f148111", null ],
+    [ "button5", "a00272.html#a853c57ea8b7e681e202039282ccd7bbc", null ],
+    [ "button6", "a00272.html#ac1f6afd94110e0221592336fbaa96aa0", null ],
+    [ "button7", "a00272.html#a1e5b65023a7657e6d2d15cf7af6d09aa", null ],
+    [ "button8", "a00272.html#a51170cb85ffed7e00737464551d7a72e", null ],
+    [ "deltaWheel", "a00272.html#a12b43353a1dc464be48e0356ac816acb", null ],
+    [ "deltaX", "a00272.html#a0f9443fbb5153e064df5e2d5b786d8e6", null ],
+    [ "deltaY", "a00272.html#a5a3edb0381e3c18a2b6b721f599916fa", null ],
+    [ "linearAccelX", "a00272.html#aa2e0b631f6ff0ac73c33ab6e333ba7b7", null ],
+    [ "linearAccelY", "a00272.html#aac9db1159dd2af808cc495dd80b49418", null ],
+    [ "linearAccelZ", "a00272.html#a93d3f098e0741cd48aea2c8b93c904ac", null ],
+    [ "linearPosX", "a00272.html#a0cf87a48b2cf68f4962602cfbf3d954c", null ],
+    [ "linearPosY", "a00272.html#a5eb3b5020aa0cd0fd0ced6403acf1790", null ],
+    [ "linearPosZ", "a00272.html#a3972566640b270fdf418b741f95e4cbc", null ],
+    [ "sequenceNumber", "a00272.html#a64fa7a655a564429ba19c450e482d51f", null ]
+];

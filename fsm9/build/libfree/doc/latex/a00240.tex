@@ -1,0 +1,36 @@
+\doxysection{freespace\+\_\+\+Per\+Request Struct Reference}
+\label{a00240}\index{freespace\_PerRequest@{freespace\_PerRequest}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \textbf{ op}
+\item 
+uint8\+\_\+t \textbf{ payload} [5]
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Configures and executes packet error rate tests. Wi\+C\+E(tm) only. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00240_ab1b14a61b73a9697c5ba351d1a0c7697}} 
+\index{freespace\_PerRequest@{freespace\_PerRequest}!op@{op}}
+\index{op@{op}!freespace\_PerRequest@{freespace\_PerRequest}}
+\doxysubsubsection{op}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Per\+Request\+::op}
+
+0\+: sets the frequency set for fixed-\/frequency P\+ER tests. 1\+: starts a P\+ER test. \mbox{\label{a00240_af8163ae5463c03747dccafbd6805be18}} 
+\index{freespace\_PerRequest@{freespace\_PerRequest}!payload@{payload}}
+\index{payload@{payload}!freespace\_PerRequest@{freespace\_PerRequest}}
+\doxysubsubsection{payload}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Per\+Request\+::payload[5]}
+
+op == 0\+: Sets fixed channels for the test. All 5 0x\+FF will clear the fixed frequency state. op == 1\+: Starts a P\+ER test of duration ((payload[1] $\ast$ 256 + payload[0]) $\ast$ 256) Wi\+C\+E(tm) frames. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/power_mgmt_example.dir/src/power_mgmt_example.c.o CMakeFiles/power_mgmt_example.dir/src/appControlHandler.c.o -o power_mgmt_example  libfreespace/libfreespace.a -lm -lpthread -lusb-1.0 

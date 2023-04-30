@@ -1,0 +1,52 @@
+\doxysection{freespace\+\_\+\+Link\+Status Struct Reference}
+\label{a00148}\index{freespace\_LinkStatus@{freespace\_LinkStatus}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \textbf{ status}
+\item 
+uint8\+\_\+t \textbf{ mode}
+\item 
+uint8\+\_\+t \textbf{ reset\+Status}
+\item 
+uint8\+\_\+t \textbf{ tx\+Disabled}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This message is sent from a compliance test-\/ready dongle to indicate the dongle\textquotesingle{}s current status. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00148_aa5844da3152ac39ecce9cc7b1df935e5}} 
+\index{freespace\_LinkStatus@{freespace\_LinkStatus}!mode@{mode}}
+\index{mode@{mode}!freespace\_LinkStatus@{freespace\_LinkStatus}}
+\doxysubsubsection{mode}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Link\+Status\+::mode}
+
+0\+: normal operation 1\+: fixed frequency operation 2\+: RF disabled \mbox{\label{a00148_afcc8c304ec5fc2a987b81cd54a1b7101}} 
+\index{freespace\_LinkStatus@{freespace\_LinkStatus}!resetStatus@{resetStatus}}
+\index{resetStatus@{resetStatus}!freespace\_LinkStatus@{freespace\_LinkStatus}}
+\doxysubsubsection{resetStatus}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Link\+Status\+::reset\+Status}
+
+0\+: did not occur 1\+: occurred. Self clears. \mbox{\label{a00148_a45b47e6b1b3579aa1e88ad537f403ef7}} 
+\index{freespace\_LinkStatus@{freespace\_LinkStatus}!status@{status}}
+\index{status@{status}!freespace\_LinkStatus@{freespace\_LinkStatus}}
+\doxysubsubsection{status}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Link\+Status\+::status}
+
+0\+: bad 1\+: good \mbox{\label{a00148_ac7db5092b0cd8d947555628d409c7d7c}} 
+\index{freespace\_LinkStatus@{freespace\_LinkStatus}!txDisabled@{txDisabled}}
+\index{txDisabled@{txDisabled}!freespace\_LinkStatus@{freespace\_LinkStatus}}
+\doxysubsubsection{txDisabled}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Link\+Status\+::tx\+Disabled}
+
+0\+: TX is enabled 1\+: TX is disabled. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

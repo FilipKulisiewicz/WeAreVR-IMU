@@ -1,0 +1,83 @@
+\doxysection{freespace\+\_\+common.\+h File Reference}
+\label{a00008}\index{freespace\_common.h@{freespace\_common.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for freespace\+\_\+common.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{a00009}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{a00010}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \textbf{ Freespace\+File\+Handle\+Type}
+\item 
+typedef uint8\+\_\+t \textbf{ Freespace\+Address}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ freespace\+\_\+error} \{ \newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS} = 0, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+IO} = -\/1, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+A\+C\+C\+E\+SS} = -\/3, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+\_\+\+D\+E\+V\+I\+CE} = -\/4, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND} = -\/5, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+B\+U\+SY} = -\/6, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+T\+I\+M\+E\+O\+UT} = -\/7, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+I\+PE} = -\/9, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+ED} = -\/10, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY} = -\/11, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+S\+E\+N\+D\+\_\+\+T\+O\+O\+\_\+\+L\+A\+R\+GE} = -\/20, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+E\+V\+I\+CE} = -\/21, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+R\+E\+C\+E\+I\+V\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL} = -\/22, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+U\+L\+D\+\_\+\+N\+O\+T\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+T\+H\+R\+E\+AD} = -\/23, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL} = -\/24, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+N\+O\+\_\+\+D\+A\+TA} = -\/25, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+M\+A\+L\+F\+O\+R\+M\+E\+D\+\_\+\+M\+E\+S\+S\+A\+GE} = -\/26, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+I\+D\+\_\+\+P\+R\+O\+T\+O\+C\+O\+L\+\_\+\+V\+E\+R\+S\+I\+ON} = -\/27, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+U\+I\+N\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED} = -\/97, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+E\+R\+R\+O\+R\+\_\+\+U\+N\+E\+X\+P\+E\+C\+T\+ED} = -\/98
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{a00008_a8a20427e0aaf03b1162506fd25533b31}} 
+\index{freespace\_common.h@{freespace\_common.h}!LIBFREESPACE\_API@{LIBFREESPACE\_API}}
+\index{LIBFREESPACE\_API@{LIBFREESPACE\_API}!freespace\_common.h@{freespace\_common.h}}
+\doxysubsubsection{LIBFREESPACE\_API}
+{\footnotesize\ttfamily \#define L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{a00008_a2b03789653efcc2db7b10c2001425906}} 
+\index{freespace\_common.h@{freespace\_common.h}!FreespaceAddress@{FreespaceAddress}}
+\index{FreespaceAddress@{FreespaceAddress}!freespace\_common.h@{freespace\_common.h}}
+\doxysubsubsection{FreespaceAddress}
+{\footnotesize\ttfamily typedef uint8\+\_\+t \textbf{ Freespace\+Address}}
+
+Address of the Freespace device to which the message will be sent. These are reserved for now and must be set to 0 when calling into libfreespace to send a message. \mbox{\label{a00008_a7a8b3d0c078d88c597461d37428198cd}} 
+\index{freespace\_common.h@{freespace\_common.h}!FreespaceFileHandleType@{FreespaceFileHandleType}}
+\index{FreespaceFileHandleType@{FreespaceFileHandleType}!freespace\_common.h@{freespace\_common.h}}
+\doxysubsubsection{FreespaceFileHandleType}
+{\footnotesize\ttfamily typedef int \textbf{ Freespace\+File\+Handle\+Type}}
+

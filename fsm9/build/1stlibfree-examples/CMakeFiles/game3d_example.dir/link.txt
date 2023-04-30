@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/game3d_example.dir/src/game3d_example.c.o CMakeFiles/game3d_example.dir/src/appControlHandler.c.o CMakeFiles/game3d_example.dir/src/math/quaternion.c.o  -o game3d_example  libfreespace/libfreespace.a -lm -lpthread -lusb-1.0 

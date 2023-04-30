@@ -1,0 +1,57 @@
+\doxysection{freespace\+\_\+device\+Table.\+h File Reference}
+\label{a00011}\index{freespace\_deviceTable.h@{freespace\_deviceTable.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}freespace/freespace.\+h\char`\"{}}\newline
+Include dependency graph for freespace\+\_\+device\+Table.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{a00012}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ Freespace\+Device\+Usage\+A\+PI}
+\item 
+struct \textbf{ Freespace\+Device\+A\+PI}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ U\+S\+A\+GE}~uint16\+\_\+t
+\item 
+\#define \textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+\+M\+AX}~2
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const struct \textbf{ Freespace\+Device\+A\+PI} \textbf{ freespace\+\_\+device\+A\+P\+I\+Table} [$\,$]
+\item 
+const int \textbf{ freespace\+\_\+device\+A\+P\+I\+Table\+Num}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{a00011_ac12224b0dbf13cb6aa75a3202e7a5ff7}} 
+\index{freespace\_deviceTable.h@{freespace\_deviceTable.h}!FREESPACE\_HANDLE\_COUNT\_MAX@{FREESPACE\_HANDLE\_COUNT\_MAX}}
+\index{FREESPACE\_HANDLE\_COUNT\_MAX@{FREESPACE\_HANDLE\_COUNT\_MAX}!freespace\_deviceTable.h@{freespace\_deviceTable.h}}
+\doxysubsubsection{FREESPACE\_HANDLE\_COUNT\_MAX}
+{\footnotesize\ttfamily \#define F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+C\+O\+U\+N\+T\+\_\+\+M\+AX~2}
+
+Define the maximum number of handles (interfaces) per device that can be joined together as a single virtual device. Changing this value requires changing instances of freespace\+\_\+device\+A\+PI. This may be Windows-\/specific. \mbox{\label{a00011_a56fe9bff0a1be75aae2da3e593053e2c}} 
+\index{freespace\_deviceTable.h@{freespace\_deviceTable.h}!USAGE@{USAGE}}
+\index{USAGE@{USAGE}!freespace\_deviceTable.h@{freespace\_deviceTable.h}}
+\doxysubsubsection{USAGE}
+{\footnotesize\ttfamily \#define U\+S\+A\+GE~uint16\+\_\+t}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{a00011_a56ea351892bbd806cfba01745a401e4d}} 
+\index{freespace\_deviceTable.h@{freespace\_deviceTable.h}!freespace\_deviceAPITableNum@{freespace\_deviceAPITableNum}}
+\index{freespace\_deviceAPITableNum@{freespace\_deviceAPITableNum}!freespace\_deviceTable.h@{freespace\_deviceTable.h}}
+\doxysubsubsection{freespace\_deviceAPITableNum}
+{\footnotesize\ttfamily const int freespace\+\_\+device\+A\+P\+I\+Table\+Num}
+
+Defines the number of devices in the A\+PI table. This can\textquotesingle{}t be done as a sizeof the array because the externed definition of the array is not dimensioned. 

@@ -1,0 +1,52 @@
+\doxysection{freespace\+\_\+\+Reorientation\+Request Struct Reference}
+\label{a00252}\index{freespace\_ReorientationRequest@{freespace\_ReorientationRequest}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \textbf{ select}
+\item 
+uint8\+\_\+t \textbf{ commit}
+\item 
+uint16\+\_\+t \textbf{ quaternion\+Parameter1}
+\item 
+uint16\+\_\+t \textbf{ quaternion\+Parameter2}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This packet is sent from the host to a handheld to reorient the device. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00252_aa270c7ced63e5986a024d42515a96a53}} 
+\index{freespace\_ReorientationRequest@{freespace\_ReorientationRequest}!commit@{commit}}
+\index{commit@{commit}!freespace\_ReorientationRequest@{freespace\_ReorientationRequest}}
+\doxysubsubsection{commit}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Reorientation\+Request\+::commit}
+
+Commit reorientation quaternion \mbox{\label{a00252_a50691e945de2fdef49500333fbaeb461}} 
+\index{freespace\_ReorientationRequest@{freespace\_ReorientationRequest}!quaternionParameter1@{quaternionParameter1}}
+\index{quaternionParameter1@{quaternionParameter1}!freespace\_ReorientationRequest@{freespace\_ReorientationRequest}}
+\doxysubsubsection{quaternionParameter1}
+{\footnotesize\ttfamily uint16\+\_\+t freespace\+\_\+\+Reorientation\+Request\+::quaternion\+Parameter1}
+
+Quaternion Parameter 1 (W or X, based on Select \mbox{\label{a00252_a6091ff41ea7b06e40d55ac51bbcecd53}} 
+\index{freespace\_ReorientationRequest@{freespace\_ReorientationRequest}!quaternionParameter2@{quaternionParameter2}}
+\index{quaternionParameter2@{quaternionParameter2}!freespace\_ReorientationRequest@{freespace\_ReorientationRequest}}
+\doxysubsubsection{quaternionParameter2}
+{\footnotesize\ttfamily uint16\+\_\+t freespace\+\_\+\+Reorientation\+Request\+::quaternion\+Parameter2}
+
+Quaternion Parameter 2 (Y or Z, based on Select \mbox{\label{a00252_ac029afc964dc81c5c8ad368fd9b49bc3}} 
+\index{freespace\_ReorientationRequest@{freespace\_ReorientationRequest}!select@{select}}
+\index{select@{select}!freespace\_ReorientationRequest@{freespace\_ReorientationRequest}}
+\doxysubsubsection{select}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Reorientation\+Request\+::select}
+
+Select W \& X, or Y \& Z 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

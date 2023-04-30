@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/frs_prop_example.dir/src/frs_prop_example.c.o CMakeFiles/frs_prop_example.dir/src/appControlHandler.c.o -o frs_prop_example  libfreespace/libfreespace.a -lm -lpthread -lusb-1.0 

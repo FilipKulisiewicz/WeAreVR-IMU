@@ -1,0 +1,85 @@
+\doxysection{freespace\+\_\+\+Data\+Mode\+Request Struct Reference}
+\label{a00132}\index{freespace\_DataModeRequest@{freespace\_DataModeRequest}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \textbf{ enable\+Body\+Motion}
+\item 
+uint8\+\_\+t \textbf{ enable\+User\+Position}
+\item 
+uint8\+\_\+t \textbf{ inhibit\+Power\+Manager}
+\item 
+uint8\+\_\+t \textbf{ enable\+Mouse\+Movement}
+\item 
+uint8\+\_\+t \textbf{ disable\+Freespace}
+\item 
+uint8\+\_\+t \textbf{ S\+DA}
+\item 
+uint8\+\_\+t \textbf{ status}
+\item 
+uint8\+\_\+t \textbf{ aggregate}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This report controls the behavior of the Freespace motion reports. The unused bits are reserved for future features. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00132_a8f564332783e7ba63bcfb32ff5076d1e}} 
+\index{freespace\_DataModeRequest@{freespace\_DataModeRequest}!aggregate@{aggregate}}
+\index{aggregate@{aggregate}!freespace\_DataModeRequest@{freespace\_DataModeRequest}}
+\doxysubsubsection{aggregate}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Mode\+Request\+::aggregate}
+
+Aggregate\+: when set, if both Body Frame and User frame are enabled, send them as a Body\+User message, which combines the two. ~\newline
+ \mbox{\label{a00132_aa3783e3434d9c983954d709920a0a716}} 
+\index{freespace\_DataModeRequest@{freespace\_DataModeRequest}!disableFreespace@{disableFreespace}}
+\index{disableFreespace@{disableFreespace}!freespace\_DataModeRequest@{freespace\_DataModeRequest}}
+\doxysubsubsection{disableFreespace}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Mode\+Request\+::disable\+Freespace}
+
+Disable Freespace\+: when set to 1 disables the Freespace motion sensing system to conserve power. No pointer or motion reports are sent regardless of the value of the other bits. \mbox{\label{a00132_a1b679827a0ff36d69c5434c00d676963}} 
+\index{freespace\_DataModeRequest@{freespace\_DataModeRequest}!enableBodyMotion@{enableBodyMotion}}
+\index{enableBodyMotion@{enableBodyMotion}!freespace\_DataModeRequest@{freespace\_DataModeRequest}}
+\doxysubsubsection{enableBodyMotion}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Mode\+Request\+::enable\+Body\+Motion}
+
+Enable Body Motion\+: when set to 1 enables Body Frame Motion reports. \mbox{\label{a00132_ad9f5e3eb1d11a45dccb0f482f8035b4c}} 
+\index{freespace\_DataModeRequest@{freespace\_DataModeRequest}!enableMouseMovement@{enableMouseMovement}}
+\index{enableMouseMovement@{enableMouseMovement}!freespace\_DataModeRequest@{freespace\_DataModeRequest}}
+\doxysubsubsection{enableMouseMovement}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Mode\+Request\+::enable\+Mouse\+Movement}
+
+Enable Mouse Movement\+: when set to 1 enables Mouse Movement reports. \mbox{\label{a00132_a9f4c2c0ccb190b15d22878084ad0407c}} 
+\index{freespace\_DataModeRequest@{freespace\_DataModeRequest}!enableUserPosition@{enableUserPosition}}
+\index{enableUserPosition@{enableUserPosition}!freespace\_DataModeRequest@{freespace\_DataModeRequest}}
+\doxysubsubsection{enableUserPosition}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Mode\+Request\+::enable\+User\+Position}
+
+Enable User Position\+: when set to 1 enables User Frame Position reports \mbox{\label{a00132_a4c6703b0e59a5f53be3c7b70b5723500}} 
+\index{freespace\_DataModeRequest@{freespace\_DataModeRequest}!inhibitPowerManager@{inhibitPowerManager}}
+\index{inhibitPowerManager@{inhibitPowerManager}!freespace\_DataModeRequest@{freespace\_DataModeRequest}}
+\doxysubsubsection{inhibitPowerManager}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Mode\+Request\+::inhibit\+Power\+Manager}
+
+Inhibit Power Manager\+: when set to 1 disables the power management feature that automatically stops sending motion reports after a period of no motion. \mbox{\label{a00132_a92142de8a3c206353ac8b1a66c57b69e}} 
+\index{freespace\_DataModeRequest@{freespace\_DataModeRequest}!SDA@{SDA}}
+\index{SDA@{SDA}!freespace\_DataModeRequest@{freespace\_DataModeRequest}}
+\doxysubsubsection{SDA}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Mode\+Request\+::\+S\+DA}
+
+Reserved for testing, \mbox{\label{a00132_ae0e316453002aa15e5c6d2274c480cf4}} 
+\index{freespace\_DataModeRequest@{freespace\_DataModeRequest}!status@{status}}
+\index{status@{status}!freespace\_DataModeRequest@{freespace\_DataModeRequest}}
+\doxysubsubsection{status}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+Data\+Mode\+Request\+::status}
+
+Report current data mode\+: when set to causes a data mode repsones message to be generated but does not update data mode. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

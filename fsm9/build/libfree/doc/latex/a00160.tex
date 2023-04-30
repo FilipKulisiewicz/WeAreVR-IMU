@@ -1,0 +1,36 @@
+\doxysection{freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Response Struct Reference}
+\label{a00160}\index{freespace\_FRSHandheldWriteResponse@{freespace\_FRSHandheldWriteResponse}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \textbf{ word\+Offset}
+\item 
+uint8\+\_\+t \textbf{ status}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is sent from the handheld to the host to indicate status of the write operation. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00160_ae661784a44af474bf3ebacfa9c476171}} 
+\index{freespace\_FRSHandheldWriteResponse@{freespace\_FRSHandheldWriteResponse}!status@{status}}
+\index{status@{status}!freespace\_FRSHandheldWriteResponse@{freespace\_FRSHandheldWriteResponse}}
+\doxysubsubsection{status}
+{\footnotesize\ttfamily uint8\+\_\+t freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Response\+::status}
+
+Status/\+Error\+: 0\+: word received 1\+: unrecognized F\+RS type 2\+: busy 3\+: write completed 4\+: write mode entered already 5\+: write failed 6\+: data received while not in write mode 7\+: invalid length 8\+: record valid (the complete record passed internal validation checks) 9\+:record invalid (the complete record failed internal validation checks) \mbox{\label{a00160_adbbf00fff229da5354739b611d0f49ec}} 
+\index{freespace\_FRSHandheldWriteResponse@{freespace\_FRSHandheldWriteResponse}!wordOffset@{wordOffset}}
+\index{wordOffset@{wordOffset}!freespace\_FRSHandheldWriteResponse@{freespace\_FRSHandheldWriteResponse}}
+\doxysubsubsection{wordOffset}
+{\footnotesize\ttfamily uint16\+\_\+t freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Response\+::word\+Offset}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

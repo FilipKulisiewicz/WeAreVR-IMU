@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/motion_example_async.dir/src/motion_example_async.c.o CMakeFiles/motion_example_async.dir/src/appControlHandler.c.o  -o motion_example_async  libfreespace/libfreespace.a -lm -lpthread -lusb-1.0 

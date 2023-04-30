@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/data_rate_example.dir/src/data_rate_example.c.o CMakeFiles/data_rate_example.dir/src/appControlHandler.c.o -o data_rate_example  libfreespace/libfreespace.a -lm -lpthread -lusb-1.0 

@@ -1,0 +1,1953 @@
+\doxysection{Freespace Messages}
+\label{a00032}\index{Freespace Messages@{Freespace Messages}}
+
+
+This page describes the messages that can be sent to and from the Freespace Device. They are represented as structs which can be encoded and decoded from strings.  
+
+
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ freespace\+\_\+\+Pairing\+Message}
+\item 
+struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+L\+E\+D\+Set\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+Link\+Quality\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+Always\+On\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+Frequency\+Fix\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+Software\+Reset\+Message}
+\item 
+struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Disable\+Message}
+\item 
+struct \textbf{ freespace\+\_\+\+Tx\+Disable\+Message}
+\item 
+struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Supress\+Home\+Frequency\+Message}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Read\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Data}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Data}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Read\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Data}
+\item 
+struct \textbf{ freespace\+\_\+\+Dongle\+R\+F\+Enable\+Message}
+\item 
+struct \textbf{ freespace\+\_\+\+Data\+Mode\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+Button\+Test\+Mode\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+Pairing\+Response}
+\item 
+struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Response}
+\item 
+struct \textbf{ freespace\+\_\+\+Link\+Status}
+\item 
+struct \textbf{ freespace\+\_\+\+Always\+On\+Response}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Read\+Response}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+Handheld\+Write\+Response}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Read\+Response}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+Dongle\+Write\+Response}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Read\+Response}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+E\+Flash\+Write\+Response}
+\item 
+struct \textbf{ freespace\+\_\+\+Data\+Mode\+Response}
+\item 
+struct \textbf{ freespace\+\_\+\+Button\+Test\+Mode\+Response}
+\item 
+struct \textbf{ freespace\+\_\+\+Battery\+Level\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+Battery\+Level}
+\item 
+struct \textbf{ freespace\+\_\+\+Body\+Frame}
+\item 
+struct \textbf{ freespace\+\_\+\+User\+Frame}
+\item 
+struct \textbf{ freespace\+\_\+\+Data\+Motion\+Control}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Response}
+\item 
+struct \textbf{ freespace\+\_\+\+Data\+Mode\+Control\+V2\+Response}
+\item 
+struct \textbf{ freespace\+\_\+\+Sensor\+Period\+Response}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Response}
+\item 
+struct \textbf{ freespace\+\_\+\+Per\+Response}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+Write\+Data}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+Per\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+Activity\+Classification\+Notification}
+\item 
+struct \textbf{ freespace\+\_\+\+Data\+Mode\+Control\+V2\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+Reorientation\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+Sensor\+Period\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+Bms\+Request}
+\item 
+struct \textbf{ freespace\+\_\+\+Product\+I\+D\+Response\+B\+LE}
+\item 
+struct \textbf{ freespace\+\_\+\+F\+R\+S\+Read\+Response\+B\+LE}
+\item 
+struct \textbf{ freespace\+\_\+\+Body\+User\+Frame}
+\item 
+struct \textbf{ freespace\+\_\+\+Motion\+Engine\+Output}
+\item 
+struct \textbf{ freespace\+\_\+\+Dce\+Out\+V2}
+\item 
+struct \textbf{ freespace\+\_\+\+Dce\+Out\+V3}
+\item 
+struct \textbf{ freespace\+\_\+\+Dce\+Out\+V4\+T0}
+\item 
+struct \textbf{ freespace\+\_\+\+Dce\+Out\+V4\+T1}
+\item 
+struct \textbf{ freespace\+\_\+message}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ Message\+Types} \{ \newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+P\+A\+I\+R\+I\+N\+G\+M\+E\+S\+S\+A\+GE} = 0, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+P\+R\+O\+D\+U\+C\+T\+I\+D\+R\+E\+Q\+U\+E\+ST} = 1, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+E\+D\+S\+E\+T\+R\+E\+Q\+U\+E\+ST} = 2, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+I\+N\+K\+Q\+U\+A\+L\+I\+T\+Y\+R\+E\+Q\+U\+E\+ST} = 3, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+A\+L\+W\+A\+Y\+S\+O\+N\+R\+E\+Q\+U\+E\+ST} = 4, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+F\+I\+X\+R\+E\+Q\+U\+E\+ST} = 5, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+R\+E\+S\+E\+T\+M\+E\+S\+S\+A\+GE} = 6, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+O\+N\+G\+L\+E\+R\+F\+D\+I\+S\+A\+B\+L\+E\+M\+E\+S\+S\+A\+GE} = 7, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+X\+D\+I\+S\+A\+B\+L\+E\+M\+E\+S\+S\+A\+GE} = 8, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+O\+N\+G\+L\+E\+R\+F\+S\+U\+P\+R\+E\+S\+S\+H\+O\+M\+E\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+M\+E\+S\+S\+A\+GE} = 9, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+H\+A\+N\+D\+H\+E\+L\+D\+R\+E\+A\+D\+R\+E\+Q\+U\+E\+ST} = 10, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+H\+A\+N\+D\+H\+E\+L\+D\+W\+R\+I\+T\+E\+R\+E\+Q\+U\+E\+ST} = 11, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+H\+A\+N\+D\+H\+E\+L\+D\+W\+R\+I\+T\+E\+D\+A\+TA} = 12, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+D\+O\+N\+G\+L\+E\+R\+E\+A\+D\+R\+E\+Q\+U\+E\+ST} = 13, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+D\+O\+N\+G\+L\+E\+W\+R\+I\+T\+E\+R\+E\+Q\+U\+E\+ST} = 14, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+D\+O\+N\+G\+L\+E\+W\+R\+I\+T\+E\+D\+A\+TA} = 15, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+E\+F\+L\+A\+S\+H\+R\+E\+A\+D\+R\+E\+Q\+U\+E\+ST} = 16, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+E\+F\+L\+A\+S\+H\+W\+R\+I\+T\+E\+R\+E\+Q\+U\+E\+ST} = 17, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+E\+F\+L\+A\+S\+H\+W\+R\+I\+T\+E\+D\+A\+TA} = 18, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+O\+N\+G\+L\+E\+R\+F\+E\+N\+A\+B\+L\+E\+M\+E\+S\+S\+A\+GE} = 19, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+A\+T\+A\+M\+O\+D\+E\+R\+E\+Q\+U\+E\+ST} = 20, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+U\+T\+T\+O\+N\+T\+E\+S\+T\+M\+O\+D\+E\+R\+E\+Q\+U\+E\+ST} = 21, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+P\+A\+I\+R\+I\+N\+G\+R\+E\+S\+P\+O\+N\+SE} = 22, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+P\+R\+O\+D\+U\+C\+T\+I\+D\+R\+E\+S\+P\+O\+N\+SE} = 23, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+I\+N\+K\+S\+T\+A\+T\+US} = 24, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+A\+L\+W\+A\+Y\+S\+O\+N\+R\+E\+S\+P\+O\+N\+SE} = 25, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+H\+A\+N\+D\+H\+E\+L\+D\+R\+E\+A\+D\+R\+E\+S\+P\+O\+N\+SE} = 26, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+H\+A\+N\+D\+H\+E\+L\+D\+W\+R\+I\+T\+E\+R\+E\+S\+P\+O\+N\+SE} = 27, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+D\+O\+N\+G\+L\+E\+R\+E\+A\+D\+R\+E\+S\+P\+O\+N\+SE} = 28, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+D\+O\+N\+G\+L\+E\+W\+R\+I\+T\+E\+R\+E\+S\+P\+O\+N\+SE} = 29, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+E\+F\+L\+A\+S\+H\+R\+E\+A\+D\+R\+E\+S\+P\+O\+N\+SE} = 30, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+E\+F\+L\+A\+S\+H\+W\+R\+I\+T\+E\+R\+E\+S\+P\+O\+N\+SE} = 31, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+A\+T\+A\+M\+O\+D\+E\+R\+E\+S\+P\+O\+N\+SE} = 32, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+U\+T\+T\+O\+N\+T\+E\+S\+T\+M\+O\+D\+E\+R\+E\+S\+P\+O\+N\+SE} = 33, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+L\+E\+V\+E\+L\+R\+E\+Q\+U\+E\+ST} = 34, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+L\+E\+V\+EL} = 35, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+D\+Y\+F\+R\+A\+ME} = 36, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+U\+S\+E\+R\+F\+R\+A\+ME} = 37, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+A\+T\+A\+M\+O\+T\+I\+O\+N\+C\+O\+N\+T\+R\+OL} = 38, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+W\+R\+I\+T\+E\+R\+E\+S\+P\+O\+N\+SE} = 39, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+A\+T\+A\+M\+O\+D\+E\+C\+O\+N\+T\+R\+O\+L\+V2\+R\+E\+S\+P\+O\+N\+SE} = 40, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+E\+N\+S\+O\+R\+P\+E\+R\+I\+O\+D\+R\+E\+S\+P\+O\+N\+SE} = 41, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+R\+E\+A\+D\+R\+E\+S\+P\+O\+N\+SE} = 42, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+P\+E\+R\+R\+E\+S\+P\+O\+N\+SE} = 43, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+W\+R\+I\+T\+E\+R\+E\+Q\+U\+E\+ST} = 44, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+W\+R\+I\+T\+E\+D\+A\+TA} = 45, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+R\+E\+A\+D\+R\+E\+Q\+U\+E\+ST} = 46, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+P\+E\+R\+R\+E\+Q\+U\+E\+ST} = 47, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+A\+C\+T\+I\+V\+I\+T\+Y\+C\+L\+A\+S\+S\+I\+F\+I\+C\+A\+T\+I\+O\+N\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+ON} = 48, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+A\+T\+A\+M\+O\+D\+E\+C\+O\+N\+T\+R\+O\+L\+V2\+R\+E\+Q\+U\+E\+ST} = 49, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+R\+E\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+R\+E\+Q\+U\+E\+ST} = 50, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+E\+N\+S\+O\+R\+P\+E\+R\+I\+O\+D\+R\+E\+Q\+U\+E\+ST} = 51, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+M\+S\+R\+E\+Q\+U\+E\+ST} = 52, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+P\+R\+O\+D\+U\+C\+T\+I\+D\+R\+E\+S\+P\+O\+N\+S\+E\+B\+LE} = 53, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+R\+E\+A\+D\+R\+E\+S\+P\+O\+N\+S\+E\+B\+LE} = 54, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+D\+Y\+U\+S\+E\+R\+F\+R\+A\+ME} = 55, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+M\+O\+T\+I\+O\+N\+E\+N\+G\+I\+N\+E\+O\+U\+T\+P\+UT} = 56, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+C\+E\+O\+U\+T\+V2} = 57, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+C\+E\+O\+U\+T\+V3} = 58, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+C\+E\+O\+U\+T\+V4\+T0} = 59, 
+\newline
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+C\+E\+O\+U\+T\+V4\+T1} = 60
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+\_\+message} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$s, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+\_\+message} (struct \textbf{ freespace\+\_\+message} $\ast$message, uint8\+\_\+t $\ast$msg\+Buf, int max\+Length)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Pairing\+Message} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Product\+I\+D\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+L\+E\+D\+Set\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Link\+Quality\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Always\+On\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Frequency\+Fix\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Software\+Reset\+Message} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Dongle\+R\+F\+Disable\+Message} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Tx\+Disable\+Message} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Dongle\+R\+F\+Supress\+Home\+Frequency\+Message} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+F\+R\+S\+Handheld\+Read\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+F\+R\+S\+Handheld\+Write\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+F\+R\+S\+Handheld\+Write\+Data} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+F\+R\+S\+Dongle\+Read\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+F\+R\+S\+Dongle\+Write\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+F\+R\+S\+Dongle\+Write\+Data} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+F\+R\+S\+E\+Flash\+Read\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+F\+R\+S\+E\+Flash\+Write\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+F\+R\+S\+E\+Flash\+Write\+Data} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Dongle\+R\+F\+Enable\+Message} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Data\+Mode\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Button\+Test\+Mode\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Pairing\+Response} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Product\+I\+D\+Response} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Link\+Status} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Always\+On\+Response} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+F\+R\+S\+Handheld\+Read\+Response} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+F\+R\+S\+Handheld\+Write\+Response} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+F\+R\+S\+Dongle\+Read\+Response} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+F\+R\+S\+Dongle\+Write\+Response} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+F\+R\+S\+E\+Flash\+Read\+Response} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+F\+R\+S\+E\+Flash\+Write\+Response} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Data\+Mode\+Response} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Button\+Test\+Mode\+Response} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Battery\+Level\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Battery\+Level} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Body\+Frame} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+User\+Frame} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Data\+Motion\+Control} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+F\+R\+S\+Write\+Response} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Data\+Mode\+Control\+V2\+Response} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Sensor\+Period\+Response} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+F\+R\+S\+Read\+Response} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Per\+Response} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+F\+R\+S\+Write\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+F\+R\+S\+Write\+Data} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+F\+R\+S\+Read\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Per\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Activity\+Classification\+Notification} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Data\+Mode\+Control\+V2\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Reorientation\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Sensor\+Period\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+encode\+Bms\+Request} (const struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t $\ast$message, int maxlength)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Product\+I\+D\+Response\+B\+LE} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+F\+R\+S\+Read\+Response\+B\+LE} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Body\+User\+Frame} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Motion\+Engine\+Output} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Dce\+Out\+V2} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Dce\+Out\+V3} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Dce\+Out\+V4\+T0} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+decode\+Dce\+Out\+V4\+T1} (const uint8\+\_\+t $\ast$message, int length, struct \textbf{ freespace\+\_\+message} $\ast$m, uint8\+\_\+t ver)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This page describes the messages that can be sent to and from the Freespace Device. They are represented as structs which can be encoded and decoded from strings. 
+
+\doxysubsubsection{Motion\+Engine Output Format}\label{meoutformat}
+\label{a00032_meoutformatinfo}%
+
+
+When the user requests motion from a Freespace device using a Data Mode Control V2 Request, the user must provide a Format by setting the format\+Select field and then request data fields by setting the appropriate Format Flags. The Format determines the different data fields that can be transmitted, and the Format Flags determine which fields are actually transmitted in the Motion\+Engine Output Packet. The Motion\+Engine Output Packets that are transmitted in response to a Data Mode Control V2 Request will have the same format\+Select and Format Flag values as the Request, plus the appropriate real-\/time data. Below is a table which outlines the available data fields by Format and Format Flag\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{5}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Format Flag }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ format\+Select = 0 }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ format\+Select = 1 }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ format\+Select = 2 }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ format\+Select = 3  }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Format Flag }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ format\+Select = 0 }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ format\+Select = 1 }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ format\+Select = 2 }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ format\+Select = 3  }\\\cline{1-5}
+\endhead
+F\+F0 &Pointer &Acceleration &Reserved &Pointer  \\\cline{1-5}
+F\+F1 &Linear Acceleration &Linear Acceleration, No Gravity &Reserved &Linear Acceleration  \\\cline{1-5}
+F\+F2 &Linear Acceleration, No Gravity &Angular Velocity &Reserved &Linear Acceleration, No Gravity  \\\cline{1-5}
+F\+F3 &Angular Velocity &Magnetometer &Reserved &Angular Velocity  \\\cline{1-5}
+F\+F4 &Magnetometer &Inclination &Reserved &Magnetometer  \\\cline{1-5}
+F\+F5 &Temperature &Compass Heading &Reserved &Temperature  \\\cline{1-5}
+F\+F6 &Angular Position (W\+X\+YZ) &Angular Position (X\+Y\+ZW) &Reserved &Angular Position (W\+X\+YZ)  \\\cline{1-5}
+F\+F7 &Reserved &Activity Classification/\+Power Management Flags &Reserved &Reserved  \\\cline{1-5}
+\end{longtabu}
+
+
+For more information about using the Data Mode Control V2 Request and Motion\+Engine Output Packet, or for detailed information about the meaning, units, and orientation of these data fields, please refer to the 1000-\/2984 H\+C\+O\+MM Reference Manual. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\label{a00032_ga8a71ab4395ca4331fc50559eb1127e76}} 
+\index{Freespace Messages@{Freespace Messages}!MessageTypes@{MessageTypes}}
+\index{MessageTypes@{MessageTypes}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{MessageTypes}
+{\footnotesize\ttfamily enum \textbf{ Message\+Types}}
+
+An enumeration for all the types of messages that can exist. Used in \doxyref{freespace\+\_\+message}{p.}{a00296} to determine the type of message contained in the union \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_PAIRINGMESSAGE@{FREESPACE\_MESSAGE\_PAIRINGMESSAGE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_PAIRINGMESSAGE@{FREESPACE\_MESSAGE\_PAIRINGMESSAGE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a2817bc71dc4c8ce4be1d00c323f32647}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+P\+A\+I\+R\+I\+N\+G\+M\+E\+S\+S\+A\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_PRODUCTIDREQUEST@{FREESPACE\_MESSAGE\_PRODUCTIDREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_PRODUCTIDREQUEST@{FREESPACE\_MESSAGE\_PRODUCTIDREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76ac619e610370bdd96829055a2cdddf523}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+P\+R\+O\+D\+U\+C\+T\+I\+D\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_LEDSETREQUEST@{FREESPACE\_MESSAGE\_LEDSETREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_LEDSETREQUEST@{FREESPACE\_MESSAGE\_LEDSETREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a0748458bd858b0cb55dbfa9bb0d84674}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+E\+D\+S\+E\+T\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_LINKQUALITYREQUEST@{FREESPACE\_MESSAGE\_LINKQUALITYREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_LINKQUALITYREQUEST@{FREESPACE\_MESSAGE\_LINKQUALITYREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a105d8d8f20f273647ec70b9630ac60e4}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+I\+N\+K\+Q\+U\+A\+L\+I\+T\+Y\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_ALWAYSONREQUEST@{FREESPACE\_MESSAGE\_ALWAYSONREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_ALWAYSONREQUEST@{FREESPACE\_MESSAGE\_ALWAYSONREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76ae9c2cad8436944f5f10575c1956b5402}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+A\+L\+W\+A\+Y\+S\+O\+N\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FREQUENCYFIXREQUEST@{FREESPACE\_MESSAGE\_FREQUENCYFIXREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FREQUENCYFIXREQUEST@{FREESPACE\_MESSAGE\_FREQUENCYFIXREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a58a0f44bcd71f465395e9401343c5f91}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+F\+I\+X\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_SOFTWARERESETMESSAGE@{FREESPACE\_MESSAGE\_SOFTWARERESETMESSAGE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_SOFTWARERESETMESSAGE@{FREESPACE\_MESSAGE\_SOFTWARERESETMESSAGE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76aaba450a0f6cffad3b11afa00ece77b55}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+O\+F\+T\+W\+A\+R\+E\+R\+E\+S\+E\+T\+M\+E\+S\+S\+A\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_DONGLERFDISABLEMESSAGE@{FREESPACE\_MESSAGE\_DONGLERFDISABLEMESSAGE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_DONGLERFDISABLEMESSAGE@{FREESPACE\_MESSAGE\_DONGLERFDISABLEMESSAGE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a1e9092c1bd50527013000deb9e496ca9}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+O\+N\+G\+L\+E\+R\+F\+D\+I\+S\+A\+B\+L\+E\+M\+E\+S\+S\+A\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_TXDISABLEMESSAGE@{FREESPACE\_MESSAGE\_TXDISABLEMESSAGE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_TXDISABLEMESSAGE@{FREESPACE\_MESSAGE\_TXDISABLEMESSAGE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76aeef72b79701c1d9723e595480c668c64}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+T\+X\+D\+I\+S\+A\+B\+L\+E\+M\+E\+S\+S\+A\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_DONGLERFSUPRESSHOMEFREQUENCYMESSAGE@{FREESPACE\_MESSAGE\_DONGLERFSUPRESSHOMEFREQUENCYMESSAGE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_DONGLERFSUPRESSHOMEFREQUENCYMESSAGE@{FREESPACE\_MESSAGE\_DONGLERFSUPRESSHOMEFREQUENCYMESSAGE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a5166bc597deff04294c3f9423c35be6f}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+O\+N\+G\+L\+E\+R\+F\+S\+U\+P\+R\+E\+S\+S\+H\+O\+M\+E\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+M\+E\+S\+S\+A\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSHANDHELDREADREQUEST@{FREESPACE\_MESSAGE\_FRSHANDHELDREADREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSHANDHELDREADREQUEST@{FREESPACE\_MESSAGE\_FRSHANDHELDREADREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a5e6e70b0fb6291eb62f5f1c6e488eb8e}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+H\+A\+N\+D\+H\+E\+L\+D\+R\+E\+A\+D\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSHANDHELDWRITEREQUEST@{FREESPACE\_MESSAGE\_FRSHANDHELDWRITEREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSHANDHELDWRITEREQUEST@{FREESPACE\_MESSAGE\_FRSHANDHELDWRITEREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a214b8b3b3991f57e6f990666f3f24629}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+H\+A\+N\+D\+H\+E\+L\+D\+W\+R\+I\+T\+E\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSHANDHELDWRITEDATA@{FREESPACE\_MESSAGE\_FRSHANDHELDWRITEDATA}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSHANDHELDWRITEDATA@{FREESPACE\_MESSAGE\_FRSHANDHELDWRITEDATA}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76ad75e2fb23093f3f79133e23ef609587b}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+H\+A\+N\+D\+H\+E\+L\+D\+W\+R\+I\+T\+E\+D\+A\+TA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSDONGLEREADREQUEST@{FREESPACE\_MESSAGE\_FRSDONGLEREADREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSDONGLEREADREQUEST@{FREESPACE\_MESSAGE\_FRSDONGLEREADREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a10effacc3053c147de0f4c0fa5fc2ca7}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+D\+O\+N\+G\+L\+E\+R\+E\+A\+D\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSDONGLEWRITEREQUEST@{FREESPACE\_MESSAGE\_FRSDONGLEWRITEREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSDONGLEWRITEREQUEST@{FREESPACE\_MESSAGE\_FRSDONGLEWRITEREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a5449c86b6b5bab8d9853b8e9459a91e6}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+D\+O\+N\+G\+L\+E\+W\+R\+I\+T\+E\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSDONGLEWRITEDATA@{FREESPACE\_MESSAGE\_FRSDONGLEWRITEDATA}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSDONGLEWRITEDATA@{FREESPACE\_MESSAGE\_FRSDONGLEWRITEDATA}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76aa8b3a636ff143f0ad891776d8211ddd1}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+D\+O\+N\+G\+L\+E\+W\+R\+I\+T\+E\+D\+A\+TA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSEFLASHREADREQUEST@{FREESPACE\_MESSAGE\_FRSEFLASHREADREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSEFLASHREADREQUEST@{FREESPACE\_MESSAGE\_FRSEFLASHREADREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76aa115ecb316fef6f62abfa769a63917ee}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+E\+F\+L\+A\+S\+H\+R\+E\+A\+D\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSEFLASHWRITEREQUEST@{FREESPACE\_MESSAGE\_FRSEFLASHWRITEREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSEFLASHWRITEREQUEST@{FREESPACE\_MESSAGE\_FRSEFLASHWRITEREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a10ab97de3268e240395c52cac5e98dfc}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+E\+F\+L\+A\+S\+H\+W\+R\+I\+T\+E\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSEFLASHWRITEDATA@{FREESPACE\_MESSAGE\_FRSEFLASHWRITEDATA}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSEFLASHWRITEDATA@{FREESPACE\_MESSAGE\_FRSEFLASHWRITEDATA}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a638c1c3b24c984de03405f5c7025b8df}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+E\+F\+L\+A\+S\+H\+W\+R\+I\+T\+E\+D\+A\+TA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_DONGLERFENABLEMESSAGE@{FREESPACE\_MESSAGE\_DONGLERFENABLEMESSAGE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_DONGLERFENABLEMESSAGE@{FREESPACE\_MESSAGE\_DONGLERFENABLEMESSAGE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76af2951fdb6e152473fe2b43abd545212b}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+O\+N\+G\+L\+E\+R\+F\+E\+N\+A\+B\+L\+E\+M\+E\+S\+S\+A\+GE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_DATAMODEREQUEST@{FREESPACE\_MESSAGE\_DATAMODEREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_DATAMODEREQUEST@{FREESPACE\_MESSAGE\_DATAMODEREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a62b29caaab0eb0d81ec7cb311cefa3e7}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+A\+T\+A\+M\+O\+D\+E\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_BUTTONTESTMODEREQUEST@{FREESPACE\_MESSAGE\_BUTTONTESTMODEREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_BUTTONTESTMODEREQUEST@{FREESPACE\_MESSAGE\_BUTTONTESTMODEREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a10baf3ebb5d7f7fd9c2b99e9f365e52d}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+U\+T\+T\+O\+N\+T\+E\+S\+T\+M\+O\+D\+E\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_PAIRINGRESPONSE@{FREESPACE\_MESSAGE\_PAIRINGRESPONSE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_PAIRINGRESPONSE@{FREESPACE\_MESSAGE\_PAIRINGRESPONSE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a127f77c333230422eeb60634b31fa759}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+P\+A\+I\+R\+I\+N\+G\+R\+E\+S\+P\+O\+N\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_PRODUCTIDRESPONSE@{FREESPACE\_MESSAGE\_PRODUCTIDRESPONSE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_PRODUCTIDRESPONSE@{FREESPACE\_MESSAGE\_PRODUCTIDRESPONSE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a5509c461d5ee07c40ed206d632c4198e}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+P\+R\+O\+D\+U\+C\+T\+I\+D\+R\+E\+S\+P\+O\+N\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_LINKSTATUS@{FREESPACE\_MESSAGE\_LINKSTATUS}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_LINKSTATUS@{FREESPACE\_MESSAGE\_LINKSTATUS}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a89a02f64efd8b8005685aed3cb4cffe8}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+I\+N\+K\+S\+T\+A\+T\+US&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_ALWAYSONRESPONSE@{FREESPACE\_MESSAGE\_ALWAYSONRESPONSE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_ALWAYSONRESPONSE@{FREESPACE\_MESSAGE\_ALWAYSONRESPONSE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76af1ea12155fb9553f1da175233ed7d0e4}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+A\+L\+W\+A\+Y\+S\+O\+N\+R\+E\+S\+P\+O\+N\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSHANDHELDREADRESPONSE@{FREESPACE\_MESSAGE\_FRSHANDHELDREADRESPONSE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSHANDHELDREADRESPONSE@{FREESPACE\_MESSAGE\_FRSHANDHELDREADRESPONSE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a52009f063e303e599bbe0df048f91165}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+H\+A\+N\+D\+H\+E\+L\+D\+R\+E\+A\+D\+R\+E\+S\+P\+O\+N\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSHANDHELDWRITERESPONSE@{FREESPACE\_MESSAGE\_FRSHANDHELDWRITERESPONSE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSHANDHELDWRITERESPONSE@{FREESPACE\_MESSAGE\_FRSHANDHELDWRITERESPONSE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a1bc33f6db3d82ee9029da2b3c8a59c85}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+H\+A\+N\+D\+H\+E\+L\+D\+W\+R\+I\+T\+E\+R\+E\+S\+P\+O\+N\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSDONGLEREADRESPONSE@{FREESPACE\_MESSAGE\_FRSDONGLEREADRESPONSE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSDONGLEREADRESPONSE@{FREESPACE\_MESSAGE\_FRSDONGLEREADRESPONSE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a57cfb3c6a2762a786a1f2bcde7bd1e7b}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+D\+O\+N\+G\+L\+E\+R\+E\+A\+D\+R\+E\+S\+P\+O\+N\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSDONGLEWRITERESPONSE@{FREESPACE\_MESSAGE\_FRSDONGLEWRITERESPONSE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSDONGLEWRITERESPONSE@{FREESPACE\_MESSAGE\_FRSDONGLEWRITERESPONSE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a6abd1325835e7eb5ddd6eee239e44300}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+D\+O\+N\+G\+L\+E\+W\+R\+I\+T\+E\+R\+E\+S\+P\+O\+N\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSEFLASHREADRESPONSE@{FREESPACE\_MESSAGE\_FRSEFLASHREADRESPONSE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSEFLASHREADRESPONSE@{FREESPACE\_MESSAGE\_FRSEFLASHREADRESPONSE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a5caedf94f63e1fbe4bde88c440d290ab}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+E\+F\+L\+A\+S\+H\+R\+E\+A\+D\+R\+E\+S\+P\+O\+N\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSEFLASHWRITERESPONSE@{FREESPACE\_MESSAGE\_FRSEFLASHWRITERESPONSE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSEFLASHWRITERESPONSE@{FREESPACE\_MESSAGE\_FRSEFLASHWRITERESPONSE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76aeeaf5374717e1f1224af8eaed219d404}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+E\+F\+L\+A\+S\+H\+W\+R\+I\+T\+E\+R\+E\+S\+P\+O\+N\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_DATAMODERESPONSE@{FREESPACE\_MESSAGE\_DATAMODERESPONSE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_DATAMODERESPONSE@{FREESPACE\_MESSAGE\_DATAMODERESPONSE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76aaf153753658fa51ad5d5dbd5b0f3fd64}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+A\+T\+A\+M\+O\+D\+E\+R\+E\+S\+P\+O\+N\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_BUTTONTESTMODERESPONSE@{FREESPACE\_MESSAGE\_BUTTONTESTMODERESPONSE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_BUTTONTESTMODERESPONSE@{FREESPACE\_MESSAGE\_BUTTONTESTMODERESPONSE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a888e9f4192a7f2020c79bc19607b9d81}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+U\+T\+T\+O\+N\+T\+E\+S\+T\+M\+O\+D\+E\+R\+E\+S\+P\+O\+N\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_BATTERYLEVELREQUEST@{FREESPACE\_MESSAGE\_BATTERYLEVELREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_BATTERYLEVELREQUEST@{FREESPACE\_MESSAGE\_BATTERYLEVELREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a15f7adc2e4a6918f5f5ffb4843c77909}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+L\+E\+V\+E\+L\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_BATTERYLEVEL@{FREESPACE\_MESSAGE\_BATTERYLEVEL}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_BATTERYLEVEL@{FREESPACE\_MESSAGE\_BATTERYLEVEL}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a02831f559969fc2193667f6d58a296b9}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+A\+T\+T\+E\+R\+Y\+L\+E\+V\+EL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_BODYFRAME@{FREESPACE\_MESSAGE\_BODYFRAME}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_BODYFRAME@{FREESPACE\_MESSAGE\_BODYFRAME}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a6c493ad32b404fb0d90f7aa5b5bcf95a}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+D\+Y\+F\+R\+A\+ME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_USERFRAME@{FREESPACE\_MESSAGE\_USERFRAME}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_USERFRAME@{FREESPACE\_MESSAGE\_USERFRAME}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a7191866ac5fa8c60411843901080c906}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+U\+S\+E\+R\+F\+R\+A\+ME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_DATAMOTIONCONTROL@{FREESPACE\_MESSAGE\_DATAMOTIONCONTROL}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_DATAMOTIONCONTROL@{FREESPACE\_MESSAGE\_DATAMOTIONCONTROL}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a0903370c84d1a101dcfee2e6091b14ec}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+A\+T\+A\+M\+O\+T\+I\+O\+N\+C\+O\+N\+T\+R\+OL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSWRITERESPONSE@{FREESPACE\_MESSAGE\_FRSWRITERESPONSE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSWRITERESPONSE@{FREESPACE\_MESSAGE\_FRSWRITERESPONSE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a606d191008f27c955838bdf2d5bed69c}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+W\+R\+I\+T\+E\+R\+E\+S\+P\+O\+N\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_DATAMODECONTROLV2RESPONSE@{FREESPACE\_MESSAGE\_DATAMODECONTROLV2RESPONSE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_DATAMODECONTROLV2RESPONSE@{FREESPACE\_MESSAGE\_DATAMODECONTROLV2RESPONSE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a00ad613ebacd81f959aa756625ba5e9a}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+A\+T\+A\+M\+O\+D\+E\+C\+O\+N\+T\+R\+O\+L\+V2\+R\+E\+S\+P\+O\+N\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_SENSORPERIODRESPONSE@{FREESPACE\_MESSAGE\_SENSORPERIODRESPONSE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_SENSORPERIODRESPONSE@{FREESPACE\_MESSAGE\_SENSORPERIODRESPONSE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a33b846665fb8783f682834dbc107e741}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+E\+N\+S\+O\+R\+P\+E\+R\+I\+O\+D\+R\+E\+S\+P\+O\+N\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSREADRESPONSE@{FREESPACE\_MESSAGE\_FRSREADRESPONSE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSREADRESPONSE@{FREESPACE\_MESSAGE\_FRSREADRESPONSE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a01ef3b3e430ece959d33a22367ff8832}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+R\+E\+A\+D\+R\+E\+S\+P\+O\+N\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_PERRESPONSE@{FREESPACE\_MESSAGE\_PERRESPONSE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_PERRESPONSE@{FREESPACE\_MESSAGE\_PERRESPONSE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a7df246e31aa214da7182de05c40e8917}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+P\+E\+R\+R\+E\+S\+P\+O\+N\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSWRITEREQUEST@{FREESPACE\_MESSAGE\_FRSWRITEREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSWRITEREQUEST@{FREESPACE\_MESSAGE\_FRSWRITEREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76ae83f043ed80b32608a9b934a0e3887a7}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+W\+R\+I\+T\+E\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSWRITEDATA@{FREESPACE\_MESSAGE\_FRSWRITEDATA}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSWRITEDATA@{FREESPACE\_MESSAGE\_FRSWRITEDATA}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a9e5754a147774ed19a92af828704ea4c}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+W\+R\+I\+T\+E\+D\+A\+TA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSREADREQUEST@{FREESPACE\_MESSAGE\_FRSREADREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSREADREQUEST@{FREESPACE\_MESSAGE\_FRSREADREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76af7a2d588138240790bfc13b0f2ee94eb}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+R\+E\+A\+D\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_PERREQUEST@{FREESPACE\_MESSAGE\_PERREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_PERREQUEST@{FREESPACE\_MESSAGE\_PERREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a5b360e942096e0784a8f13fb392cd14f}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+P\+E\+R\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_ACTIVITYCLASSIFICATIONNOTIFICATION@{FREESPACE\_MESSAGE\_ACTIVITYCLASSIFICATIONNOTIFICATION}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_ACTIVITYCLASSIFICATIONNOTIFICATION@{FREESPACE\_MESSAGE\_ACTIVITYCLASSIFICATIONNOTIFICATION}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76ae4b99e04739386d823cdfefeca8e10e7}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+A\+C\+T\+I\+V\+I\+T\+Y\+C\+L\+A\+S\+S\+I\+F\+I\+C\+A\+T\+I\+O\+N\+N\+O\+T\+I\+F\+I\+C\+A\+T\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_DATAMODECONTROLV2REQUEST@{FREESPACE\_MESSAGE\_DATAMODECONTROLV2REQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_DATAMODECONTROLV2REQUEST@{FREESPACE\_MESSAGE\_DATAMODECONTROLV2REQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a1ecc85a564197e570cca7417bb02c0c3}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+A\+T\+A\+M\+O\+D\+E\+C\+O\+N\+T\+R\+O\+L\+V2\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_REORIENTATIONREQUEST@{FREESPACE\_MESSAGE\_REORIENTATIONREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_REORIENTATIONREQUEST@{FREESPACE\_MESSAGE\_REORIENTATIONREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a7e11f55153069022807fe324170ed076}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+R\+E\+O\+R\+I\+E\+N\+T\+A\+T\+I\+O\+N\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_SENSORPERIODREQUEST@{FREESPACE\_MESSAGE\_SENSORPERIODREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_SENSORPERIODREQUEST@{FREESPACE\_MESSAGE\_SENSORPERIODREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a8df60d4d74c280f5992d8a938fc4bea4}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+E\+N\+S\+O\+R\+P\+E\+R\+I\+O\+D\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_BMSREQUEST@{FREESPACE\_MESSAGE\_BMSREQUEST}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_BMSREQUEST@{FREESPACE\_MESSAGE\_BMSREQUEST}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a6b6573bcd49144882048f10e8a1b0e51}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+M\+S\+R\+E\+Q\+U\+E\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_PRODUCTIDRESPONSEBLE@{FREESPACE\_MESSAGE\_PRODUCTIDRESPONSEBLE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_PRODUCTIDRESPONSEBLE@{FREESPACE\_MESSAGE\_PRODUCTIDRESPONSEBLE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76aa6c75b407cbaa1b47ef2f47348177c5e}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+P\+R\+O\+D\+U\+C\+T\+I\+D\+R\+E\+S\+P\+O\+N\+S\+E\+B\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_FRSREADRESPONSEBLE@{FREESPACE\_MESSAGE\_FRSREADRESPONSEBLE}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_FRSREADRESPONSEBLE@{FREESPACE\_MESSAGE\_FRSREADRESPONSEBLE}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a02b5c16e61a3517711508e1dc5928a1e}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+F\+R\+S\+R\+E\+A\+D\+R\+E\+S\+P\+O\+N\+S\+E\+B\+LE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_BODYUSERFRAME@{FREESPACE\_MESSAGE\_BODYUSERFRAME}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_BODYUSERFRAME@{FREESPACE\_MESSAGE\_BODYUSERFRAME}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a5d431e1cb96de1176cbda0f034693d7e}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+B\+O\+D\+Y\+U\+S\+E\+R\+F\+R\+A\+ME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_MOTIONENGINEOUTPUT@{FREESPACE\_MESSAGE\_MOTIONENGINEOUTPUT}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_MOTIONENGINEOUTPUT@{FREESPACE\_MESSAGE\_MOTIONENGINEOUTPUT}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a94dddde318eae2f2648ad9637c7d3f3b}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+M\+O\+T\+I\+O\+N\+E\+N\+G\+I\+N\+E\+O\+U\+T\+P\+UT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_DCEOUTV2@{FREESPACE\_MESSAGE\_DCEOUTV2}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_DCEOUTV2@{FREESPACE\_MESSAGE\_DCEOUTV2}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76ab879e9c1459e9027aa7e718c58cd0a44}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+C\+E\+O\+U\+T\+V2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_DCEOUTV3@{FREESPACE\_MESSAGE\_DCEOUTV3}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_DCEOUTV3@{FREESPACE\_MESSAGE\_DCEOUTV3}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a2ac099bc9b5183ed899fbffe1834a0d6}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+C\+E\+O\+U\+T\+V3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_DCEOUTV4T0@{FREESPACE\_MESSAGE\_DCEOUTV4T0}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_DCEOUTV4T0@{FREESPACE\_MESSAGE\_DCEOUTV4T0}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76aeb797fcc13c0abaa5bbac183ce752488}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+C\+E\+O\+U\+T\+V4\+T0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FREESPACE\_MESSAGE\_DCEOUTV4T1@{FREESPACE\_MESSAGE\_DCEOUTV4T1}!Freespace Messages@{Freespace Messages}}\index{Freespace Messages@{Freespace Messages}!FREESPACE\_MESSAGE\_DCEOUTV4T1@{FREESPACE\_MESSAGE\_DCEOUTV4T1}}}\mbox{\label{a00032_gga8a71ab4395ca4331fc50559eb1127e76a7c744017e31944343fedd01b3794e3aa}} 
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+C\+E\+O\+U\+T\+V4\+T1&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{a00032_ga3e77df93ccd556f83103d609f0cb6b81}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decode\_message@{freespace\_decode\_message}}
+\index{freespace\_decode\_message@{freespace\_decode\_message}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decode\_message()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+\_\+message (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{s,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode an arbitrary message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em s} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct to decode into \\
+\hline
+{\em ver} & the H\+ID protocol version to use to decode the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+E\+SS or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga114aa56f651c423a5e5c8371313256d6}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeAlwaysOnResponse@{freespace\_decodeAlwaysOnResponse}}
+\index{freespace\_decodeAlwaysOnResponse@{freespace\_decodeAlwaysOnResponse}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeAlwaysOnResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Always\+On\+Response (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Always\+On\+Response message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga2f9ba0354f38253bbd0a41d7d5e32241}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeBatteryLevel@{freespace\_decodeBatteryLevel}}
+\index{freespace\_decodeBatteryLevel@{freespace\_decodeBatteryLevel}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeBatteryLevel()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Battery\+Level (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Battery\+Level message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_gab7a2cafa3deb8c281a5bd2eadbfb1bfe}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeBodyFrame@{freespace\_decodeBodyFrame}}
+\index{freespace\_decodeBodyFrame@{freespace\_decodeBodyFrame}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeBodyFrame()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Body\+Frame (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Body\+Frame message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_gad754f14cb093b5be1ccd481d1a89cde4}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeBodyUserFrame@{freespace\_decodeBodyUserFrame}}
+\index{freespace\_decodeBodyUserFrame@{freespace\_decodeBodyUserFrame}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeBodyUserFrame()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Body\+User\+Frame (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Body\+User\+Frame message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_gaed5ff798d40588592dc89fb381df07c5}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeButtonTestModeResponse@{freespace\_decodeButtonTestModeResponse}}
+\index{freespace\_decodeButtonTestModeResponse@{freespace\_decodeButtonTestModeResponse}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeButtonTestModeResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Button\+Test\+Mode\+Response (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Button\+Test\+Mode\+Response message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_gaecc92cb05209c347d7e90366355f0145}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeDataModeControlV2Response@{freespace\_decodeDataModeControlV2Response}}
+\index{freespace\_decodeDataModeControlV2Response@{freespace\_decodeDataModeControlV2Response}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeDataModeControlV2Response()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Data\+Mode\+Control\+V2\+Response (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Data\+Mode\+Control\+V2\+Response message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga7ad3591baad023f05de9977d0d042193}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeDataModeResponse@{freespace\_decodeDataModeResponse}}
+\index{freespace\_decodeDataModeResponse@{freespace\_decodeDataModeResponse}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeDataModeResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Data\+Mode\+Response (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Data\+Mode\+Response message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_gaa8989c8e9e3d912f81bf941fe25a0237}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeDceOutV2@{freespace\_decodeDceOutV2}}
+\index{freespace\_decodeDceOutV2@{freespace\_decodeDceOutV2}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeDceOutV2()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Dce\+Out\+V2 (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Dce\+Out\+V2 message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga3a549fccccf15ace47c6336bcc33dce5}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeDceOutV3@{freespace\_decodeDceOutV3}}
+\index{freespace\_decodeDceOutV3@{freespace\_decodeDceOutV3}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeDceOutV3()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Dce\+Out\+V3 (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Dce\+Out\+V3 message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga0d6948222987657421c65390680bbb9d}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeDceOutV4T0@{freespace\_decodeDceOutV4T0}}
+\index{freespace\_decodeDceOutV4T0@{freespace\_decodeDceOutV4T0}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeDceOutV4T0()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Dce\+Out\+V4\+T0 (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Dce\+Out\+V4\+T0 message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga3666e3ebc2bb305f23624c4830a50c67}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeDceOutV4T1@{freespace\_decodeDceOutV4T1}}
+\index{freespace\_decodeDceOutV4T1@{freespace\_decodeDceOutV4T1}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeDceOutV4T1()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Dce\+Out\+V4\+T1 (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Dce\+Out\+V4\+T1 message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga4d013945dbe9dc81f3539fcc6ca46fc2}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeFRSDongleReadResponse@{freespace\_decodeFRSDongleReadResponse}}
+\index{freespace\_decodeFRSDongleReadResponse@{freespace\_decodeFRSDongleReadResponse}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeFRSDongleReadResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+F\+R\+S\+Dongle\+Read\+Response (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a F\+R\+S\+Dongle\+Read\+Response message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga1b02a8f6235ba1cd15a62bd350a99257}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeFRSDongleWriteResponse@{freespace\_decodeFRSDongleWriteResponse}}
+\index{freespace\_decodeFRSDongleWriteResponse@{freespace\_decodeFRSDongleWriteResponse}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeFRSDongleWriteResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+F\+R\+S\+Dongle\+Write\+Response (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a F\+R\+S\+Dongle\+Write\+Response message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga2e3c3e486670b91dfe6fa9271fba5e11}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeFRSEFlashReadResponse@{freespace\_decodeFRSEFlashReadResponse}}
+\index{freespace\_decodeFRSEFlashReadResponse@{freespace\_decodeFRSEFlashReadResponse}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeFRSEFlashReadResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+F\+R\+S\+E\+Flash\+Read\+Response (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a F\+R\+S\+E\+Flash\+Read\+Response message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_gaad37e43035be0f72beca91fdf4ae6d03}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeFRSEFlashWriteResponse@{freespace\_decodeFRSEFlashWriteResponse}}
+\index{freespace\_decodeFRSEFlashWriteResponse@{freespace\_decodeFRSEFlashWriteResponse}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeFRSEFlashWriteResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+F\+R\+S\+E\+Flash\+Write\+Response (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a F\+R\+S\+E\+Flash\+Write\+Response message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga7d4d4f499205b744a617a068a390c720}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeFRSHandheldReadResponse@{freespace\_decodeFRSHandheldReadResponse}}
+\index{freespace\_decodeFRSHandheldReadResponse@{freespace\_decodeFRSHandheldReadResponse}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeFRSHandheldReadResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+F\+R\+S\+Handheld\+Read\+Response (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a F\+R\+S\+Handheld\+Read\+Response message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_gab8d81006b186b84080eb12fb5be242a3}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeFRSHandheldWriteResponse@{freespace\_decodeFRSHandheldWriteResponse}}
+\index{freespace\_decodeFRSHandheldWriteResponse@{freespace\_decodeFRSHandheldWriteResponse}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeFRSHandheldWriteResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+F\+R\+S\+Handheld\+Write\+Response (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a F\+R\+S\+Handheld\+Write\+Response message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga35c48c647fbf9773ad465cf941667161}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeFRSReadResponse@{freespace\_decodeFRSReadResponse}}
+\index{freespace\_decodeFRSReadResponse@{freespace\_decodeFRSReadResponse}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeFRSReadResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+F\+R\+S\+Read\+Response (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a F\+R\+S\+Read\+Response message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga2eb7019311a5fd3a565b5df326b8fbab}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeFRSReadResponseBLE@{freespace\_decodeFRSReadResponseBLE}}
+\index{freespace\_decodeFRSReadResponseBLE@{freespace\_decodeFRSReadResponseBLE}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeFRSReadResponseBLE()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+F\+R\+S\+Read\+Response\+B\+LE (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a F\+R\+S\+Read\+Response\+B\+LE message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga0350efa0cfb0084a40799c74b9bff27f}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeFRSWriteResponse@{freespace\_decodeFRSWriteResponse}}
+\index{freespace\_decodeFRSWriteResponse@{freespace\_decodeFRSWriteResponse}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeFRSWriteResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+F\+R\+S\+Write\+Response (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a F\+R\+S\+Write\+Response message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga7731dc9f27442ab08c16bef7f1d79910}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeLinkStatus@{freespace\_decodeLinkStatus}}
+\index{freespace\_decodeLinkStatus@{freespace\_decodeLinkStatus}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeLinkStatus()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Link\+Status (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Link\+Status message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga181c27a80e1f2f30dbfecf78a26ce8c1}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeMotionEngineOutput@{freespace\_decodeMotionEngineOutput}}
+\index{freespace\_decodeMotionEngineOutput@{freespace\_decodeMotionEngineOutput}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeMotionEngineOutput()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Motion\+Engine\+Output (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Motion\+Engine\+Output message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga958ebdc751c61377a9594605ffac37e9}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodePairingResponse@{freespace\_decodePairingResponse}}
+\index{freespace\_decodePairingResponse@{freespace\_decodePairingResponse}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodePairingResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Pairing\+Response (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Pairing\+Response message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_gaef71c37832cac7e433176e842020183f}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodePerResponse@{freespace\_decodePerResponse}}
+\index{freespace\_decodePerResponse@{freespace\_decodePerResponse}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodePerResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Per\+Response (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Per\+Response message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_gafb35f297c6848d298b68b7cf8fb4c696}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeProductIDResponse@{freespace\_decodeProductIDResponse}}
+\index{freespace\_decodeProductIDResponse@{freespace\_decodeProductIDResponse}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeProductIDResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Product\+I\+D\+Response (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Product\+I\+D\+Response message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga539414a8002eef86781a13ee291d5ea8}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeProductIDResponseBLE@{freespace\_decodeProductIDResponseBLE}}
+\index{freespace\_decodeProductIDResponseBLE@{freespace\_decodeProductIDResponseBLE}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeProductIDResponseBLE()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Product\+I\+D\+Response\+B\+LE (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Product\+I\+D\+Response\+B\+LE message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga848d82b7d18bdb703e9a49f6e36c09f4}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeSensorPeriodResponse@{freespace\_decodeSensorPeriodResponse}}
+\index{freespace\_decodeSensorPeriodResponse@{freespace\_decodeSensorPeriodResponse}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeSensorPeriodResponse()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+Sensor\+Period\+Response (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a Sensor\+Period\+Response message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_gaa51f37be0cef419a389a587c91d3121c}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_decodeUserFrame@{freespace\_decodeUserFrame}}
+\index{freespace\_decodeUserFrame@{freespace\_decodeUserFrame}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_decodeUserFrame()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+decode\+User\+Frame (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{length,  }\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t}]{ver }\end{DoxyParamCaption})}
+
+Decode a User\+Frame message. Fill out the corresponding values in struct s.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the message to decode that was received from the Freespace device \\
+\hline
+{\em length} & the length of the received message \\
+\hline
+{\em m} & the preallocated \doxyref{freespace\+\_\+message}{p.}{a00296} struct into which to decode \\
+\hline
+{\em ver} & the protocol version to use for this message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+S\+U\+C\+C\+E\+SS or an error 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga24c4365218b41ab5024872cc1192c15f}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encode\_message@{freespace\_encode\_message}}
+\index{freespace\_encode\_message@{freespace\_encode\_message}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encode\_message()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+\_\+message (\begin{DoxyParamCaption}\item[{struct \textbf{ freespace\+\_\+message} $\ast$}]{message,  }\item[{uint8\+\_\+t $\ast$}]{msg\+Buf,  }\item[{int}]{max\+Length }\end{DoxyParamCaption})}
+
+Encode an arbitrary message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct \\
+\hline
+{\em msg\+Buf} & the buffer to put the encoded message into \\
+\hline
+{\em max\+Length} & the maximum length of the encoded message (i.\+e sizeof($\ast$msg\+Buf)) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_gaabf72168195eae95caf43526d64587b2}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeActivityClassificationNotification@{freespace\_encodeActivityClassificationNotification}}
+\index{freespace\_encodeActivityClassificationNotification@{freespace\_encodeActivityClassificationNotification}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeActivityClassificationNotification()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Activity\+Classification\+Notification (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Activity\+Classification\+Notification message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga340e63f524208dd7d14d17a588517175}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeAlwaysOnRequest@{freespace\_encodeAlwaysOnRequest}}
+\index{freespace\_encodeAlwaysOnRequest@{freespace\_encodeAlwaysOnRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeAlwaysOnRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Always\+On\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Always\+On\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_gab117fc903393429e15c1e4fe9b74c668}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeBatteryLevelRequest@{freespace\_encodeBatteryLevelRequest}}
+\index{freespace\_encodeBatteryLevelRequest@{freespace\_encodeBatteryLevelRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeBatteryLevelRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Battery\+Level\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Battery\+Level\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga55a4e24e3d4e1231cd8986b023d10d55}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeBmsRequest@{freespace\_encodeBmsRequest}}
+\index{freespace\_encodeBmsRequest@{freespace\_encodeBmsRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeBmsRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Bms\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Bms\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga3991a2838330fddc3aefe865b5756fd2}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeButtonTestModeRequest@{freespace\_encodeButtonTestModeRequest}}
+\index{freespace\_encodeButtonTestModeRequest@{freespace\_encodeButtonTestModeRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeButtonTestModeRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Button\+Test\+Mode\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Button\+Test\+Mode\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga89335017edcc2eef9c3fe8b87edb13df}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeDataModeControlV2Request@{freespace\_encodeDataModeControlV2Request}}
+\index{freespace\_encodeDataModeControlV2Request@{freespace\_encodeDataModeControlV2Request}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeDataModeControlV2Request()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Data\+Mode\+Control\+V2\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Data\+Mode\+Control\+V2\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_gadb2ad704fc8054ef16d5b910993d9154}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeDataModeRequest@{freespace\_encodeDataModeRequest}}
+\index{freespace\_encodeDataModeRequest@{freespace\_encodeDataModeRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeDataModeRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Data\+Mode\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Data\+Mode\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga40380f674578b1fcaf04148190680f04}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeDataMotionControl@{freespace\_encodeDataMotionControl}}
+\index{freespace\_encodeDataMotionControl@{freespace\_encodeDataMotionControl}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeDataMotionControl()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Data\+Motion\+Control (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Data\+Motion\+Control message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_gad3baae2fcd457b475e19a92f9eb07bac}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeDongleRFDisableMessage@{freespace\_encodeDongleRFDisableMessage}}
+\index{freespace\_encodeDongleRFDisableMessage@{freespace\_encodeDongleRFDisableMessage}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeDongleRFDisableMessage()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Dongle\+R\+F\+Disable\+Message (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Dongle\+R\+F\+Disable\+Message message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga1f5d312456604b2b210c5bd4a150a803}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeDongleRFEnableMessage@{freespace\_encodeDongleRFEnableMessage}}
+\index{freespace\_encodeDongleRFEnableMessage@{freespace\_encodeDongleRFEnableMessage}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeDongleRFEnableMessage()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Dongle\+R\+F\+Enable\+Message (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Dongle\+R\+F\+Enable\+Message message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_gaab0ed42790d3065ee2b5324e5ea258a7}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeDongleRFSupressHomeFrequencyMessage@{freespace\_encodeDongleRFSupressHomeFrequencyMessage}}
+\index{freespace\_encodeDongleRFSupressHomeFrequencyMessage@{freespace\_encodeDongleRFSupressHomeFrequencyMessage}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeDongleRFSupressHomeFrequencyMessage()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Dongle\+R\+F\+Supress\+Home\+Frequency\+Message (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Dongle\+R\+F\+Supress\+Home\+Frequency\+Message message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga14d019298698f0d1af4a86173d52d33e}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeFrequencyFixRequest@{freespace\_encodeFrequencyFixRequest}}
+\index{freespace\_encodeFrequencyFixRequest@{freespace\_encodeFrequencyFixRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeFrequencyFixRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Frequency\+Fix\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Frequency\+Fix\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_gabd80dc52d9f2a178a657c526cacc4eeb}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeFRSDongleReadRequest@{freespace\_encodeFRSDongleReadRequest}}
+\index{freespace\_encodeFRSDongleReadRequest@{freespace\_encodeFRSDongleReadRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeFRSDongleReadRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+F\+R\+S\+Dongle\+Read\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a F\+R\+S\+Dongle\+Read\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga9556a82f9fecf53d12072e3a830bfc69}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeFRSDongleWriteData@{freespace\_encodeFRSDongleWriteData}}
+\index{freespace\_encodeFRSDongleWriteData@{freespace\_encodeFRSDongleWriteData}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeFRSDongleWriteData()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+F\+R\+S\+Dongle\+Write\+Data (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a F\+R\+S\+Dongle\+Write\+Data message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_gad1d4efc542cd62bb3008141a8f6c5018}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeFRSDongleWriteRequest@{freespace\_encodeFRSDongleWriteRequest}}
+\index{freespace\_encodeFRSDongleWriteRequest@{freespace\_encodeFRSDongleWriteRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeFRSDongleWriteRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+F\+R\+S\+Dongle\+Write\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a F\+R\+S\+Dongle\+Write\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga751d4623a6c8ddf5fc475e01cc4b135b}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeFRSEFlashReadRequest@{freespace\_encodeFRSEFlashReadRequest}}
+\index{freespace\_encodeFRSEFlashReadRequest@{freespace\_encodeFRSEFlashReadRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeFRSEFlashReadRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+F\+R\+S\+E\+Flash\+Read\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a F\+R\+S\+E\+Flash\+Read\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_gacfdcb87bfa527ea5d9715c53dd069446}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeFRSEFlashWriteData@{freespace\_encodeFRSEFlashWriteData}}
+\index{freespace\_encodeFRSEFlashWriteData@{freespace\_encodeFRSEFlashWriteData}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeFRSEFlashWriteData()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+F\+R\+S\+E\+Flash\+Write\+Data (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a F\+R\+S\+E\+Flash\+Write\+Data message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_gaae7ab7436dc286a4c77a71635114f6eb}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeFRSEFlashWriteRequest@{freespace\_encodeFRSEFlashWriteRequest}}
+\index{freespace\_encodeFRSEFlashWriteRequest@{freespace\_encodeFRSEFlashWriteRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeFRSEFlashWriteRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+F\+R\+S\+E\+Flash\+Write\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a F\+R\+S\+E\+Flash\+Write\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga2336bd6258982f8bc3c7cb48e3338cf1}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeFRSHandheldReadRequest@{freespace\_encodeFRSHandheldReadRequest}}
+\index{freespace\_encodeFRSHandheldReadRequest@{freespace\_encodeFRSHandheldReadRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeFRSHandheldReadRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+F\+R\+S\+Handheld\+Read\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a F\+R\+S\+Handheld\+Read\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga669f1ceefaea01fb80171797dabd4d53}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeFRSHandheldWriteData@{freespace\_encodeFRSHandheldWriteData}}
+\index{freespace\_encodeFRSHandheldWriteData@{freespace\_encodeFRSHandheldWriteData}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeFRSHandheldWriteData()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+F\+R\+S\+Handheld\+Write\+Data (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a F\+R\+S\+Handheld\+Write\+Data message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_gabc4cfb2d22480fb0e964b6220937f453}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeFRSHandheldWriteRequest@{freespace\_encodeFRSHandheldWriteRequest}}
+\index{freespace\_encodeFRSHandheldWriteRequest@{freespace\_encodeFRSHandheldWriteRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeFRSHandheldWriteRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+F\+R\+S\+Handheld\+Write\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a F\+R\+S\+Handheld\+Write\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga98f4fd8eb255ab566e6838b3ec4a4e2a}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeFRSReadRequest@{freespace\_encodeFRSReadRequest}}
+\index{freespace\_encodeFRSReadRequest@{freespace\_encodeFRSReadRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeFRSReadRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+F\+R\+S\+Read\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a F\+R\+S\+Read\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_gac46f8ba5909053bbc6c13d228bbca460}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeFRSWriteData@{freespace\_encodeFRSWriteData}}
+\index{freespace\_encodeFRSWriteData@{freespace\_encodeFRSWriteData}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeFRSWriteData()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+F\+R\+S\+Write\+Data (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a F\+R\+S\+Write\+Data message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga26d3214501ff236f07bee5408f4407a2}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeFRSWriteRequest@{freespace\_encodeFRSWriteRequest}}
+\index{freespace\_encodeFRSWriteRequest@{freespace\_encodeFRSWriteRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeFRSWriteRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+F\+R\+S\+Write\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a F\+R\+S\+Write\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga076861e63169b09d6ae90f4122108980}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeLEDSetRequest@{freespace\_encodeLEDSetRequest}}
+\index{freespace\_encodeLEDSetRequest@{freespace\_encodeLEDSetRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeLEDSetRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+L\+E\+D\+Set\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a L\+E\+D\+Set\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga98f933e4db252b781f9b62a4259db0a7}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeLinkQualityRequest@{freespace\_encodeLinkQualityRequest}}
+\index{freespace\_encodeLinkQualityRequest@{freespace\_encodeLinkQualityRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeLinkQualityRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Link\+Quality\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Link\+Quality\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga6bc69030a52bb3e1bf6af3954447deae}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodePairingMessage@{freespace\_encodePairingMessage}}
+\index{freespace\_encodePairingMessage@{freespace\_encodePairingMessage}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodePairingMessage()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Pairing\+Message (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Pairing\+Message message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga686d74c3f59ff0a56480ca67d02b89a6}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodePerRequest@{freespace\_encodePerRequest}}
+\index{freespace\_encodePerRequest@{freespace\_encodePerRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodePerRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Per\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Per\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga87dfcb61ac99da1e301cc0d0638df4a0}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeProductIDRequest@{freespace\_encodeProductIDRequest}}
+\index{freespace\_encodeProductIDRequest@{freespace\_encodeProductIDRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeProductIDRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Product\+I\+D\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Product\+I\+D\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga596b9941c8b0cb8fa14f023e73df6732}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeReorientationRequest@{freespace\_encodeReorientationRequest}}
+\index{freespace\_encodeReorientationRequest@{freespace\_encodeReorientationRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeReorientationRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Reorientation\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Reorientation\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_gaedbb1329738d32ca303abd48d47c823a}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeSensorPeriodRequest@{freespace\_encodeSensorPeriodRequest}}
+\index{freespace\_encodeSensorPeriodRequest@{freespace\_encodeSensorPeriodRequest}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeSensorPeriodRequest()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Sensor\+Period\+Request (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Sensor\+Period\+Request message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_gac5b95919c165f91c3086451d358bd578}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeSoftwareResetMessage@{freespace\_encodeSoftwareResetMessage}}
+\index{freespace\_encodeSoftwareResetMessage@{freespace\_encodeSoftwareResetMessage}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeSoftwareResetMessage()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Software\+Reset\+Message (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Software\+Reset\+Message message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}
+\mbox{\label{a00032_ga239d5c860becfd60c5cbc617708d29a3}} 
+\index{Freespace Messages@{Freespace Messages}!freespace\_encodeTxDisableMessage@{freespace\_encodeTxDisableMessage}}
+\index{freespace\_encodeTxDisableMessage@{freespace\_encodeTxDisableMessage}!Freespace Messages@{Freespace Messages}}
+\doxysubsubsection{freespace\_encodeTxDisableMessage()}
+{\footnotesize\ttfamily \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int freespace\+\_\+encode\+Tx\+Disable\+Message (\begin{DoxyParamCaption}\item[{const struct \textbf{ freespace\+\_\+message} $\ast$}]{m,  }\item[{uint8\+\_\+t $\ast$}]{message,  }\item[{int}]{maxlength }\end{DoxyParamCaption})}
+
+Encode a Tx\+Disable\+Message message.
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & the \doxyref{freespace\+\_\+message}{p.}{a00296} struct to encode \\
+\hline
+{\em message} & the string to put the encoded message into \\
+\hline
+{\em maxlength} & the maximum length of the message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the actual size of the encoded message or an error code 
+\end{DoxyReturn}

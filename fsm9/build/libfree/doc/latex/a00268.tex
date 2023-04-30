@@ -1,0 +1,68 @@
+\doxysection{freespace\+\_\+\+F\+R\+S\+Read\+Response\+B\+LE Struct Reference}
+\label{a00268}\index{freespace\_FRSReadResponseBLE@{freespace\_FRSReadResponseBLE}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ status}
+\item 
+int \textbf{ data\+Length}
+\item 
+uint16\+\_\+t \textbf{ word\+Offset}
+\item 
+uint32\+\_\+t \textbf{ data} [2]
+\item 
+uint16\+\_\+t \textbf{ reserved}
+\item 
+uint16\+\_\+t \textbf{ F\+R\+Stype}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is sent from the device to the host to convey an F\+RS record. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00268_adf262b68375fe6b3dc34d2efd88682cb}} 
+\index{freespace\_FRSReadResponseBLE@{freespace\_FRSReadResponseBLE}!data@{data}}
+\index{data@{data}!freespace\_FRSReadResponseBLE@{freespace\_FRSReadResponseBLE}}
+\doxysubsubsection{data}
+{\footnotesize\ttfamily uint32\+\_\+t freespace\+\_\+\+F\+R\+S\+Read\+Response\+B\+L\+E\+::data[2]}
+
+\mbox{\label{a00268_aa0552bde46ed39ac7f668bae2dcac386}} 
+\index{freespace\_FRSReadResponseBLE@{freespace\_FRSReadResponseBLE}!dataLength@{dataLength}}
+\index{dataLength@{dataLength}!freespace\_FRSReadResponseBLE@{freespace\_FRSReadResponseBLE}}
+\doxysubsubsection{dataLength}
+{\footnotesize\ttfamily int freespace\+\_\+\+F\+R\+S\+Read\+Response\+B\+L\+E\+::data\+Length}
+
+Data Length indicates the number of data words contained within the message, typically 5 words \mbox{\label{a00268_af59465fdbfe5a671245d19628565617f}} 
+\index{freespace\_FRSReadResponseBLE@{freespace\_FRSReadResponseBLE}!FRStype@{FRStype}}
+\index{FRStype@{FRStype}!freespace\_FRSReadResponseBLE@{freespace\_FRSReadResponseBLE}}
+\doxysubsubsection{FRStype}
+{\footnotesize\ttfamily uint16\+\_\+t freespace\+\_\+\+F\+R\+S\+Read\+Response\+B\+L\+E\+::\+F\+R\+Stype}
+
+F\+RS record type \mbox{\label{a00268_a41f143d35464b2f1592fa6da9a99c4bc}} 
+\index{freespace\_FRSReadResponseBLE@{freespace\_FRSReadResponseBLE}!reserved@{reserved}}
+\index{reserved@{reserved}!freespace\_FRSReadResponseBLE@{freespace\_FRSReadResponseBLE}}
+\doxysubsubsection{reserved}
+{\footnotesize\ttfamily uint16\+\_\+t freespace\+\_\+\+F\+R\+S\+Read\+Response\+B\+L\+E\+::reserved}
+
+\mbox{\label{a00268_af871ba23c2ae1fa137f53501b84f6221}} 
+\index{freespace\_FRSReadResponseBLE@{freespace\_FRSReadResponseBLE}!status@{status}}
+\index{status@{status}!freespace\_FRSReadResponseBLE@{freespace\_FRSReadResponseBLE}}
+\doxysubsubsection{status}
+{\footnotesize\ttfamily int freespace\+\_\+\+F\+R\+S\+Read\+Response\+B\+L\+E\+::status}
+
+Status\+: 0\+: no error 1\+: unrecognized F\+RS type 2\+: busy 3\+: read completed 4\+: offset out of range 5\+: record empty 6\+: read block completed 7\+: read block completed and read reacord completed \mbox{\label{a00268_a7e0715c4c170003e13d6ccd5bc54aac2}} 
+\index{freespace\_FRSReadResponseBLE@{freespace\_FRSReadResponseBLE}!wordOffset@{wordOffset}}
+\index{wordOffset@{wordOffset}!freespace\_FRSReadResponseBLE@{freespace\_FRSReadResponseBLE}}
+\doxysubsubsection{wordOffset}
+{\footnotesize\ttfamily uint16\+\_\+t freespace\+\_\+\+F\+R\+S\+Read\+Response\+B\+L\+E\+::word\+Offset}
+
+Word Offset indicates the number of words the data is offset from the beginning of the record 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

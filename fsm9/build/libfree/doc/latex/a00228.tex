@@ -1,0 +1,36 @@
+\doxysection{freespace\+\_\+\+F\+R\+S\+Write\+Request Struct Reference}
+\label{a00228}\index{freespace\_FRSWriteRequest@{freespace\_FRSWriteRequest}}
+
+
+{\ttfamily \#include $<$freespace\+\_\+codecs.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \textbf{ length}
+\item 
+uint16\+\_\+t \textbf{ F\+R\+Stype}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is sent from the host towards the device to initiate a flash record write. A length of 0 will cause the record to be invalidated. 
+
+\doxysubsection{Field Documentation}
+\mbox{\label{a00228_a691218a8391def236c08b375ace006cc}} 
+\index{freespace\_FRSWriteRequest@{freespace\_FRSWriteRequest}!FRStype@{FRStype}}
+\index{FRStype@{FRStype}!freespace\_FRSWriteRequest@{freespace\_FRSWriteRequest}}
+\doxysubsubsection{FRStype}
+{\footnotesize\ttfamily uint16\+\_\+t freespace\+\_\+\+F\+R\+S\+Write\+Request\+::\+F\+R\+Stype}
+
+F\+RS record type to read. \mbox{\label{a00228_a943b1ba14d92d563a95dca05ba8ab4fc}} 
+\index{freespace\_FRSWriteRequest@{freespace\_FRSWriteRequest}!length@{length}}
+\index{length@{length}!freespace\_FRSWriteRequest@{freespace\_FRSWriteRequest}}
+\doxysubsubsection{length}
+{\footnotesize\ttfamily uint16\+\_\+t freespace\+\_\+\+F\+R\+S\+Write\+Request\+::length}
+
+Length in 32-\/bit words of record to be written. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ freespace\+\_\+codecs.\+h}\end{DoxyCompactItemize}

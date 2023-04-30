@@ -1,0 +1,140 @@
+\doxysection{freespace.\+h File Reference}
+\label{a00005}\index{freespace.h@{freespace.h}}
+{\ttfamily \#include \char`\"{}freespace/freespace\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}freespace/freespace\+\_\+codecs.\+h\char`\"{}}\newline
+Include dependency graph for freespace.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{a00006}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{a00007}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ Freespace\+Device\+Info}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+A\+X\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+I\+ZE}~96
+\item 
+\#define \textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+A\+X\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+I\+ZE}~96
+\item 
+\#define \textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+A\+X\+I\+M\+U\+M\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+O\+U\+NT}~16
+\item 
+\#define \textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+A\+D\+D\+R\+E\+SS}~4
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \textbf{ Freespace\+Device\+Id}
+\item 
+typedef void($\ast$ \textbf{ freespace\+\_\+hotplug\+Callback}) (enum \textbf{ freespace\+\_\+hotplug\+Event} event, \textbf{ Freespace\+Device\+Id} id, void $\ast$cookie)
+\item 
+typedef void($\ast$ \textbf{ freespace\+\_\+send\+Callback}) (\textbf{ Freespace\+Device\+Id} id, void $\ast$cookie, int result)
+\item 
+typedef void($\ast$ \textbf{ freespace\+\_\+receive\+Callback}) (\textbf{ Freespace\+Device\+Id} id, const uint8\+\_\+t $\ast$message, int length, void $\ast$cookie, int result)
+\item 
+typedef void($\ast$ \textbf{ freespace\+\_\+receive\+Message\+Callback}) (\textbf{ Freespace\+Device\+Id} id, struct \textbf{ freespace\+\_\+message} $\ast$message, void $\ast$cookie, int result)
+\item 
+typedef void($\ast$ \textbf{ freespace\+\_\+pollfd\+Added\+Callback}) (\textbf{ Freespace\+File\+Handle\+Type} fd, short events)
+\item 
+typedef void($\ast$ \textbf{ freespace\+\_\+pollfd\+Removed\+Callback}) (\textbf{ Freespace\+File\+Handle\+Type} fd)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ freespace\+\_\+hotplug\+Event} \{ \textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+H\+O\+T\+P\+L\+U\+G\+\_\+\+I\+N\+S\+E\+R\+T\+I\+ON}, 
+\textbf{ F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+H\+O\+T\+P\+L\+U\+G\+\_\+\+R\+E\+M\+O\+V\+AL}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+init} ()
+\item 
+const \textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} char $\ast$ \textbf{ freespace\+\_\+version} ()
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} void \textbf{ freespace\+\_\+exit} ()
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+set\+Device\+Hotplug\+Callback} (\textbf{ freespace\+\_\+hotplug\+Callback} callback, void $\ast$cookie)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+get\+Device\+List} (\textbf{ Freespace\+Device\+Id} $\ast$list, int list\+Size, int $\ast$list\+Size\+Out)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+get\+Device\+Info} (\textbf{ Freespace\+Device\+Id} id, struct \textbf{ Freespace\+Device\+Info} $\ast$info)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+open\+Device} (\textbf{ Freespace\+Device\+Id} id)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+private\+\_\+send} (\textbf{ Freespace\+Device\+Id} id, const uint8\+\_\+t $\ast$message, int length)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+send\+Message} (\textbf{ Freespace\+Device\+Id} id, struct \textbf{ freespace\+\_\+message} $\ast$message)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+private\+\_\+read} (\textbf{ Freespace\+Device\+Id} id, uint8\+\_\+t $\ast$message, int max\+Length, unsigned int timeout\+Ms, int $\ast$actual\+Length)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+read\+Message} (\textbf{ Freespace\+Device\+Id} id, struct \textbf{ freespace\+\_\+message} $\ast$message, unsigned int timeout\+Ms)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+flush} (\textbf{ Freespace\+Device\+Id} id)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+private\+\_\+set\+Receive\+Callback} (\textbf{ Freespace\+Device\+Id} id, \textbf{ freespace\+\_\+receive\+Callback} callback, void $\ast$cookie)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+set\+Receive\+Message\+Callback} (\textbf{ Freespace\+Device\+Id} id, \textbf{ freespace\+\_\+receive\+Message\+Callback} callback, void $\ast$cookie)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+private\+\_\+send\+Async} (\textbf{ Freespace\+Device\+Id} id, const uint8\+\_\+t $\ast$message, int length, unsigned int timeout\+Ms, \textbf{ freespace\+\_\+send\+Callback} callback, void $\ast$cookie)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+send\+Message\+Async} (\textbf{ Freespace\+Device\+Id} id, struct \textbf{ freespace\+\_\+message} $\ast$message, unsigned int timeout\+Ms, \textbf{ freespace\+\_\+send\+Callback} callback, void $\ast$cookie)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+get\+Next\+Timeout} (int $\ast$timeout\+Ms\+Out)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+perform} ()
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} void \textbf{ freespace\+\_\+set\+File\+Descriptor\+Callbacks} (\textbf{ freespace\+\_\+pollfd\+Added\+Callback} added\+Callback, \textbf{ freespace\+\_\+pollfd\+Removed\+Callback} removed\+Callback)
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} int \textbf{ freespace\+\_\+sync\+File\+Descriptors} ()
+\item 
+\textbf{ L\+I\+B\+F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+A\+PI} void \textbf{ freespace\+\_\+close\+Device} (\textbf{ Freespace\+Device\+Id} id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{a00005_a35c1881bf7669b1ab0d48350504a17f3}} 
+\index{freespace.h@{freespace.h}!FREESPACE\_MAX\_INPUT\_MESSAGE\_SIZE@{FREESPACE\_MAX\_INPUT\_MESSAGE\_SIZE}}
+\index{FREESPACE\_MAX\_INPUT\_MESSAGE\_SIZE@{FREESPACE\_MAX\_INPUT\_MESSAGE\_SIZE}!freespace.h@{freespace.h}}
+\doxysubsubsection{FREESPACE\_MAX\_INPUT\_MESSAGE\_SIZE}
+{\footnotesize\ttfamily \#define F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+A\+X\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+I\+ZE~96}
+
+\mbox{\label{a00005_a7f8870aa5dd7054c7253a0591cdda284}} 
+\index{freespace.h@{freespace.h}!FREESPACE\_MAX\_OUTPUT\_MESSAGE\_SIZE@{FREESPACE\_MAX\_OUTPUT\_MESSAGE\_SIZE}}
+\index{FREESPACE\_MAX\_OUTPUT\_MESSAGE\_SIZE@{FREESPACE\_MAX\_OUTPUT\_MESSAGE\_SIZE}!freespace.h@{freespace.h}}
+\doxysubsubsection{FREESPACE\_MAX\_OUTPUT\_MESSAGE\_SIZE}
+{\footnotesize\ttfamily \#define F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+A\+X\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+S\+I\+ZE~96}
+
+\mbox{\label{a00005_a65c6e590c7fb7cc65e3ee5edeeb295a7}} 
+\index{freespace.h@{freespace.h}!FREESPACE\_MAXIMUM\_DEVICE\_COUNT@{FREESPACE\_MAXIMUM\_DEVICE\_COUNT}}
+\index{FREESPACE\_MAXIMUM\_DEVICE\_COUNT@{FREESPACE\_MAXIMUM\_DEVICE\_COUNT}!freespace.h@{freespace.h}}
+\doxysubsubsection{FREESPACE\_MAXIMUM\_DEVICE\_COUNT}
+{\footnotesize\ttfamily \#define F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+M\+A\+X\+I\+M\+U\+M\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+C\+O\+U\+NT~16}
+
+\mbox{\label{a00005_a78d2ee5176c7b1f6727798b853c50caf}} 
+\index{freespace.h@{freespace.h}!FREESPACE\_RESERVED\_ADDRESS@{FREESPACE\_RESERVED\_ADDRESS}}
+\index{FREESPACE\_RESERVED\_ADDRESS@{FREESPACE\_RESERVED\_ADDRESS}!freespace.h@{freespace.h}}
+\doxysubsubsection{FREESPACE\_RESERVED\_ADDRESS}
+{\footnotesize\ttfamily \#define F\+R\+E\+E\+S\+P\+A\+C\+E\+\_\+\+R\+E\+S\+E\+R\+V\+E\+D\+\_\+\+A\+D\+D\+R\+E\+SS~4}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{a00005_a398ce902eb061bf0bb5f520955205932}} 
+\index{freespace.h@{freespace.h}!FreespaceDeviceId@{FreespaceDeviceId}}
+\index{FreespaceDeviceId@{FreespaceDeviceId}!freespace.h@{freespace.h}}
+\doxysubsubsection{FreespaceDeviceId}
+{\footnotesize\ttfamily typedef int \textbf{ Freespace\+Device\+Id}}
+
+Handle to a Freespace device. 

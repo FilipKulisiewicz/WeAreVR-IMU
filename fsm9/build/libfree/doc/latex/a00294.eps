@@ -1,0 +1,2368 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.43.0 (0)
+%%Title: freespace_message
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 556 2102
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 520 2066 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% Node1
+gsave
+0 0 0.74902 nodecolor
+newpath 398 990.1708 moveto
+398 1009.1708 lineto
+512 1009.1708 lineto
+512 990.1708 lineto
+closepath fill
+1 setlinewidth
+filled
+0 0 0 nodecolor
+newpath 398 990.1708 moveto
+398 1009.1708 lineto
+512 1009.1708 lineto
+512 990.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+406 997.1708 moveto 98 (freespace_message) alignedtext
+grestore
+% Node2
+gsave
+[ /Rect [ 28.5 2012.6708 166.5 2032.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00232.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 28.5 2013.1708 moveto
+28.5 2032.1708 lineto
+166.5 2032.1708 lineto
+166.5 2013.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+36.5 2020.1708 moveto 122 (freespace_FRSWriteData) alignedtext
+grestore
+% Node2->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 141.7569 2034.5413 moveto
+203.8875 2048.674 317.745 2063.1879 380 2000.6708 curveto
+453.93 1926.4294 454.2628 1108.2259 454.0321 1009.4187 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 142.417 2031.1009 moveto
+131.8792 2032.1979 lineto
+140.8012 2037.9118 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 142.417 2031.1009 moveto
+131.8792 2032.1979 lineto
+140.8012 2037.9118 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+261.5 2049.6708 moveto 70 ( fRSWriteData) alignedtext
+grestore
+% Node3
+gsave
+[ /Rect [ 7 1974.6708 188 1994.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00216.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 7 1975.1708 moveto
+7 1994.1708 lineto
+188 1994.1708 lineto
+188 1975.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+15 1982.1708 moveto 165 (freespace_SensorPeriodResponse) alignedtext
+grestore
+% Node3->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 198.4816 1989.3039 moveto
+268.98 1990.214 355.1034 1985.7724 380 1960.6708 curveto
+450.7758 1889.3121 453.8834 1105.5008 453.9979 1009.3254 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 198.2596 1985.7998 moveto
+188.2027 1989.1326 lineto
+198.1429 1992.7988 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 198.2596 1985.7998 moveto
+188.2027 1989.1326 lineto
+198.1429 1992.7988 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+239.5 1991.6708 moveto 114 ( sensorPeriodResponse) alignedtext
+grestore
+% Node4
+gsave
+[ /Rect [ 17 1925.1708 178 1956.1708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00096.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 17 1925.6708 moveto
+17 1955.6708 lineto
+178 1955.6708 lineto
+178 1925.6708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+25 1943.6708 moveto 145 (freespace_FRSHandheldWrite) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+77.5 1932.6708 moveto 40 (Request) alignedtext
+grestore
+% Node4->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 188.2964 1945.7904 moveto
+260.3943 1947.773 353.7743 1944.8347 380 1918.6708 curveto
+447.9897 1850.8409 453.5378 1102.4772 453.9657 1009.1967 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 188.3772 1942.2913 moveto
+178.2736 1945.4799 lineto
+188.1604 1949.2879 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 188.3772 1942.2913 moveto
+178.2736 1945.4799 lineto
+188.1604 1949.2879 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+230 1948.6708 moveto 133 ( fRSHandheldWriteRequest) alignedtext
+grestore
+% Node5
+gsave
+[ /Rect [ 20 1876.1708 175 1907.1708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00088.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 20 1876.6708 moveto
+20 1906.6708 lineto
+175 1906.6708 lineto
+175 1876.6708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+28 1894.6708 moveto 139 (freespace_DongleRFSupress) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+35.5 1883.6708 moveto 124 (HomeFrequencyMessage) alignedtext
+grestore
+% Node5->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 185.2421 1896.0179 moveto
+257.7382 1897.6064 353.4174 1894.2534 380 1867.6708 curveto
+444.0323 1803.6382 453.0225 1099.7013 453.9154 1009.2255 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 185.2615 1892.5174 moveto
+175.176 1895.7629 lineto
+185.0841 1899.5152 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 185.2615 1892.5174 moveto
+175.176 1895.7629 lineto
+185.0841 1899.5152 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+213 1909.6708 moveto 167 ( dongleRFSupressHomeFrequency) alignedtext
+0 0 0 edgecolor
+10 /Helvetica set_font
+274.5 1898.6708 moveto 44 (Message) alignedtext
+grestore
+% Node6
+gsave
+[ /Rect [ 35 1837.6708 160 1857.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00196.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 35 1838.1708 moveto
+35 1857.1708 lineto
+160 1857.1708 lineto
+160 1838.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+43 1845.1708 moveto 109 (freespace_BodyFrame) alignedtext
+grestore
+% Node6->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 170.315 1852.1372 moveto
+243.8818 1855.0131 351.4096 1853.9384 380 1825.6708 curveto
+441.1742 1765.1873 452.6229 1097.6984 453.8737 1009.3143 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 170.3108 1848.634 moveto
+160.1716 1851.7076 lineto
+170.0145 1855.6277 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 170.3108 1848.634 moveto
+160.1716 1851.7076 lineto
+170.0145 1855.6277 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+267.5 1855.6708 moveto 58 ( bodyFrame) alignedtext
+grestore
+% Node7
+gsave
+[ /Rect [ 31.5 1799.6708 163.5 1819.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00192.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 31.5 1800.1708 moveto
+31.5 1819.1708 lineto
+163.5 1819.1708 lineto
+163.5 1800.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+39.5 1807.1708 moveto 116 (freespace_BatteryLevel) alignedtext
+grestore
+% Node7->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 173.914 1813.1049 moveto
+247.3764 1814.6836 351.964 1811.6506 380 1783.6708 curveto
+437.699 1726.0875 452.1172 1095.3219 453.8188 1009.3535 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 173.8496 1809.6024 moveto
+163.766 1812.8537 lineto
+173.6763 1816.6002 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 173.8496 1809.6024 moveto
+163.766 1812.8537 lineto
+173.6763 1816.6002 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+264 1815.6708 moveto 65 ( batteryLevel) alignedtext
+grestore
+% Node8
+gsave
+[ /Rect [ 24 1750.1708 171 1781.1708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00176.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 24 1750.6708 moveto
+24 1780.6708 lineto
+171 1780.6708 lineto
+171 1750.6708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+32 1768.6708 moveto 131 (freespace_FRSEFlashWrite) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+73.5 1757.6708 moveto 48 (Response) alignedtext
+grestore
+% Node8->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 181.1473 1769.2093 moveto
+254.0441 1770.4009 352.8012 1766.6645 380 1739.6708 curveto
+434.5267 1685.5552 451.6274 1092.4648 453.7626 1009.329 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 181.11 1765.7079 moveto
+171.043 1769.0103 lineto
+180.9721 1772.7066 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 181.11 1765.7079 moveto
+171.043 1769.0103 lineto
+180.9721 1772.7066 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+233.5 1771.6708 moveto 126 ( fRSEFlashWriteResponse) alignedtext
+grestore
+% Node9
+gsave
+[ /Rect [ 1 1711.6708 194 1731.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00172.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 1 1712.1708 moveto
+1 1731.1708 lineto
+194 1731.1708 lineto
+194 1712.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+9 1719.1708 moveto 177 (freespace_FRSEFlashReadResponse) alignedtext
+grestore
+% Node9->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 204.286 1725.3536 moveto
+273.5159 1725.3182 355.5204 1719.8143 380 1695.6708 curveto
+431.3685 1645.0074 451.1155 1089.3073 453.7013 1009.2559 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 204.1842 1721.8534 moveto
+194.1729 1725.3207 lineto
+204.1614 1728.8533 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 204.1842 1721.8534 moveto
+194.1729 1725.3207 lineto
+204.1614 1728.8533 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+234.5 1727.6708 moveto 124 ( fRSEFlashReadResponse) alignedtext
+grestore
+% Node10
+gsave
+[ /Rect [ 35 1673.6708 160 1693.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00240.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 35 1674.1708 moveto
+35 1693.1708 lineto
+160 1693.1708 lineto
+160 1674.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+43 1681.1708 moveto 109 (freespace_PerRequest) alignedtext
+grestore
+% Node10->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 170.5678 1682.7245 moveto
+248.9826 1680.9694 365.2258 1675.9606 380 1661.6708 curveto
+429.2519 1614.0335 450.7341 1087.2187 453.6515 1009.282 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 170.1713 1679.232 moveto
+160.2472 1682.9418 lineto
+170.3187 1686.2304 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 170.1713 1679.232 moveto
+160.2472 1682.9418 lineto
+170.3187 1686.2304 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+267 1683.6708 moveto 59 ( perRequest) alignedtext
+grestore
+% Node11
+gsave
+[ /Rect [ 16.5 1635.6708 178.5 1655.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00204.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 16.5 1636.1708 moveto
+16.5 1655.1708 lineto
+178.5 1655.1708 lineto
+178.5 1636.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+24.5 1643.1708 moveto 146 (freespace_DataMotionControl) alignedtext
+grestore
+% Node11->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 189.2454 1649.1922 moveto
+261.0772 1649.8836 353.5641 1645.4103 380 1619.6708 curveto
+425.8244 1575.0534 450.0492 1085.7901 453.5547 1009.6151 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 188.8528 1645.6868 moveto
+178.8075 1649.0546 lineto
+188.7604 1652.6862 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 188.8528 1645.6868 moveto
+178.8075 1649.0546 lineto
+188.7604 1652.6862 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+249.5 1651.6708 moveto 94 ( dataMotionControl) alignedtext
+grestore
+% Node12
+gsave
+[ /Rect [ 22.5 1586.1708 172.5 1617.1708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00128.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 22.5 1586.6708 moveto
+22.5 1616.6708 lineto
+172.5 1616.6708 lineto
+172.5 1586.6708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+30.5 1604.6708 moveto 134 (freespace_DongleRFEnable) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+75.5 1593.6708 moveto 44 (Message) alignedtext
+grestore
+% Node12->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 182.6491 1605.0573 moveto
+255.255 1606.0409 352.6354 1602.0762 380 1575.6708 curveto
+422.715 1534.4529 449.464 1081.6259 453.4742 1009.3671 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 182.636 1601.5566 moveto
+172.5784 1604.8874 lineto
+182.5179 1608.5556 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 182.636 1601.5566 moveto
+172.5784 1604.8874 lineto
+182.5179 1608.5556 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+233.5 1607.6708 moveto 126 ( dongleRFEnableMessage) alignedtext
+grestore
+% Node13
+gsave
+[ /Rect [ 15 1547.6708 180 1567.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00064.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 15 1548.1708 moveto
+15 1567.1708 lineto
+180 1567.1708 lineto
+180 1548.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+23 1555.1708 moveto 149 (freespace_LinkQualityRequest) alignedtext
+grestore
+% Node13->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 190.4854 1561.0714 moveto
+262.0414 1561.6126 353.4846 1556.9909 380 1531.6708 curveto
+458.7368 1456.4833 455.4043 1075.8603 454.2103 1009.5347 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 190.1206 1557.5672 moveto
+180.0824 1560.9559 lineto
+190.0429 1564.5668 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 190.1206 1557.5672 moveto
+180.0824 1560.9559 lineto
+190.0429 1564.5668 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+248 1563.6708 moveto 97 ( linkQualityRequest) alignedtext
+grestore
+% Node14
+gsave
+[ /Rect [ 22 1509.6708 173 1529.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00140.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 22 1510.1708 moveto
+22 1529.1708 lineto
+173 1529.1708 lineto
+173 1510.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+30 1517.1708 moveto 135 (freespace_PairingResponse) alignedtext
+grestore
+% Node14->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 183.5261 1518.2987 moveto
+261.1028 1516.205 365.7844 1510.9309 380 1497.6708 curveto
+454.4635 1428.2121 454.6806 1072.6545 454.1186 1009.3259 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 183.1586 1514.8069 moveto
+173.2516 1518.5619 lineto
+183.338 1521.8046 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 183.1586 1514.8069 moveto
+173.2516 1518.5619 lineto
+183.338 1521.8046 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+254 1519.6708 moveto 85 ( pairingResponse) alignedtext
+grestore
+% Node15
+gsave
+[ /Rect [ 12.5 1471.6708 182.5 1491.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00124.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 12.5 1472.1708 moveto
+12.5 1491.1708 lineto
+182.5 1491.1708 lineto
+182.5 1472.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.5 1479.1708 moveto 154 (freespace_FRSEFlashWriteData) alignedtext
+grestore
+% Node15->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 193.015 1486.3685 moveto
+264.0199 1487.7424 353.4166 1484.1711 380 1459.6708 curveto
+448.9959 1396.0813 453.7121 1069.9548 453.99 1009.3649 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 192.7595 1482.8618 moveto
+182.6819 1486.1318 lineto
+192.5991 1489.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 192.7595 1482.8618 moveto
+182.6819 1486.1318 lineto
+192.5991 1489.86 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+245.5 1488.6708 moveto 102 ( fRSEFlashWriteData) alignedtext
+grestore
+% Node16
+gsave
+[ /Rect [ 11 1433.6708 184 1453.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00112.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 11 1434.1708 moveto
+11 1453.1708 lineto
+184 1453.1708 lineto
+184 1434.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+19 1441.1708 moveto 157 (freespace_FRSDongleWriteData) alignedtext
+grestore
+% Node16->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 194.3656 1446.8304 moveto
+265.1287 1447.013 353.537 1442.0208 380 1417.6708 curveto
+442.6384 1360.0337 452.4866 1066.0678 453.8128 1009.2022 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 194.0838 1443.3288 moveto
+184.0626 1446.7676 lineto
+194.0411 1450.3286 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 194.0838 1443.3288 moveto
+184.0626 1446.7676 lineto
+194.0411 1450.3286 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+244.5 1449.6708 moveto 104 ( fRSDongleWriteData) alignedtext
+grestore
+% Node17
+gsave
+[ /Rect [ 23 1384.1708 172 1415.1708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00108.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 23 1384.6708 moveto
+23 1414.6708 lineto
+172 1414.6708 lineto
+172 1384.6708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+31 1402.6708 moveto 133 (freespace_FRSDongleWrite) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+77.5 1391.6708 moveto 40 (Request) alignedtext
+grestore
+% Node17->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 182.2259 1402.9389 moveto
+254.5401 1403.893 351.7298 1400.0861 380 1374.6708 curveto
+436.6278 1323.7614 451.1964 1062.7493 453.6057 1009.2572 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 182.2529 1399.439 moveto
+172.1969 1402.7745 lineto
+182.1381 1406.4381 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 182.2529 1399.439 moveto
+172.1969 1402.7745 lineto
+182.1381 1406.4381 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+236 1405.6708 moveto 121 ( fRSDongleWriteRequest) alignedtext
+grestore
+% Node18
+gsave
+[ /Rect [ 32 1345.6708 163 1365.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00288.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 32 1346.1708 moveto
+32 1365.1708 lineto
+163 1365.1708 lineto
+163 1346.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+40 1353.1708 moveto 115 (freespace_DceOutV4T0) alignedtext
+grestore
+% Node18->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 173.1658 1359.5077 moveto
+246.0263 1361.5924 350.1371 1359.6193 380 1333.6708 curveto
+431.1085 1289.2614 449.8777 1059.0231 453.3721 1009.1898 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 173.2092 1356.0075 moveto
+163.1032 1359.1887 lineto
+172.9873 1363.0039 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 173.2092 1356.0075 moveto
+163.1032 1359.1887 lineto
+172.9873 1363.0039 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+265 1362.6708 moveto 63 ( dceOutV4T0) alignedtext
+grestore
+% Node19
+gsave
+[ /Rect [ 5 1307.6708 190 1327.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00116.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 5 1308.1708 moveto
+5 1327.1708 lineto
+190 1327.1708 lineto
+190 1308.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+13 1315.1708 moveto 169 (freespace_FRSEFlashReadRequest) alignedtext
+grestore
+% Node19->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 200.1599 1319.0953 moveto
+269.5571 1317.8998 353.5309 1311.4858 380 1288.6708 curveto
+424.2321 1250.5448 447.9573 1055.3471 452.9827 1009.3764 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 199.986 1315.5973 moveto
+190.0354 1319.2352 lineto
+200.0828 1322.5966 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 199.986 1315.5973 moveto
+190.0354 1319.2352 lineto
+200.0828 1322.5966 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+238 1321.6708 moveto 117 ( fRSEFlashReadRequest) alignedtext
+grestore
+% Node20
+gsave
+[ /Rect [ 17.5 1258.1708 177.5 1289.1708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00092.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 17.5 1258.6708 moveto
+17.5 1288.6708 lineto
+177.5 1288.6708 lineto
+177.5 1258.6708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+25.5 1276.6708 moveto 144 (freespace_FRSHandheldRead) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+77.5 1265.6708 moveto 40 (Request) alignedtext
+grestore
+% Node20->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 187.8694 1274.6 moveto
+259.1087 1273.48 351.4879 1267.2629 380 1243.6708 curveto
+454.8604 1181.7279 455.7497 1046.6253 454.4814 1009.3592 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 187.4775 1271.1045 moveto
+177.5222 1274.7297 lineto
+187.5653 1278.104 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 187.4775 1271.1045 moveto
+177.5222 1274.7297 lineto
+187.5653 1278.104 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+231 1276.6708 moveto 131 ( fRSHandheldReadRequest) alignedtext
+grestore
+% Node21
+gsave
+[ /Rect [ 32 1219.6708 163 1239.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00292.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 32 1220.1708 moveto
+32 1239.1708 lineto
+163 1239.1708 lineto
+163 1220.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+40 1227.1708 moveto 115 (freespace_DceOutV4T1) alignedtext
+grestore
+% Node21->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 173.6634 1230.3752 moveto
+245.9969 1229.5423 348.8531 1223.9086 380 1199.6708 curveto
+443.1115 1150.5586 452.404 1041.9404 453.7671 1009.1962 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 173.1944 1226.879 moveto
+163.2249 1230.4649 lineto
+173.2546 1233.8787 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 173.1944 1226.879 moveto
+163.2249 1230.4649 lineto
+173.2546 1233.8787 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+265 1231.6708 moveto 63 ( dceOutV4T1) alignedtext
+grestore
+% Node22
+gsave
+[ /Rect [ 20 1170.1708 175 1201.1708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00248.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 20 1170.6708 moveto
+20 1200.6708 lineto
+175 1200.6708 lineto
+175 1170.6708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+28 1188.6708 moveto 139 (freespace_DataModeControl) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+71 1177.6708 moveto 53 (V2Request) alignedtext
+grestore
+% Node22->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 185.3452 1185.8838 moveto
+256.2716 1184.4177 349.5779 1178.229 380 1156.6708 curveto
+431.6299 1120.0839 448.35 1037.8751 452.6918 1009.5126 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 184.9892 1182.3895 moveto
+175.0532 1186.0672 lineto
+185.114 1189.3884 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 184.9892 1182.3895 moveto
+175.0532 1186.0672 lineto
+185.114 1189.3884 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+226.5 1187.6708 moveto 140 ( dataModeControlV2Request) alignedtext
+grestore
+% Node23
+gsave
+[ /Rect [ 23 1121.1708 172 1152.1708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00184.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 23 1121.6708 moveto
+23 1151.6708 lineto
+172 1151.6708 lineto
+172 1121.6708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+31 1139.6708 moveto 133 (freespace_ButtonTestMode) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+73.5 1128.6708 moveto 48 (Response) alignedtext
+grestore
+% Node23->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 182.1688 1143.2101 moveto
+241.3176 1143.9731 320.3712 1136.8838 380 1101.6708 curveto
+417.488 1079.5327 441.4094 1030.1775 450.2033 1009.2966 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 182.1809 1139.7097 moveto
+172.1108 1143.0028 lineto
+182.0365 1146.7082 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 182.1809 1139.7097 moveto
+172.1108 1143.0028 lineto
+182.0365 1146.7082 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+232 1144.6708 moveto 129 ( buttonTestModeResponse) alignedtext
+grestore
+% Node24
+gsave
+[ /Rect [ 21 1082.6708 174 1102.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00236.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 21 1083.1708 moveto
+21 1102.1708 lineto
+174 1102.1708 lineto
+174 1083.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+29 1090.1708 moveto 137 (freespace_FRSReadRequest) alignedtext
+grestore
+% Node24->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 184.172 1089.9451 moveto
+241.3356 1085.7283 317.2346 1075.4328 380 1050.6708 curveto
+404.9643 1040.8219 429.7876 1021.1852 443.3901 1009.3591 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 183.8204 1086.4609 moveto
+174.0849 1090.6407 lineto
+184.3021 1093.4443 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 183.8204 1086.4609 moveto
+174.0849 1090.6407 lineto
+184.3021 1093.4443 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+254 1089.6708 moveto 85 ( fRSReadRequest) alignedtext
+grestore
+% Node25
+gsave
+[ /Rect [ 23 1033.1708 172 1064.1708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00168.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 23 1033.6708 moveto
+23 1063.6708 lineto
+172 1063.6708 lineto
+172 1033.6708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+31 1051.6708 moveto 133 (freespace_FRSDongleWrite) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+73.5 1040.6708 moveto 48 (Response) alignedtext
+grestore
+% Node25->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 182.4642 1040.3019 moveto
+238.555 1034.2762 313.8917 1025.3458 380 1014.6708 curveto
+389.7057 1013.1035 400.0759 1011.1671 409.8882 1009.2124 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 181.7943 1036.8534 moveto
+172.2213 1041.393 lineto
+182.5358 1043.814 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 181.7943 1036.8534 moveto
+172.2213 1041.393 lineto
+182.5358 1043.814 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+232.5 1038.6708 moveto 128 ( fRSDongleWriteResponse) alignedtext
+grestore
+% Node26
+gsave
+[ /Rect [ 20.5 984.1708 174.5 1015.1708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00080.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 20.5 984.6708 moveto
+20.5 1014.6708 lineto
+174.5 1014.6708 lineto
+174.5 984.6708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+28.5 1002.6708 moveto 138 (freespace_DongleRFDisable) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+75.5 991.6708 moveto 44 (Message) alignedtext
+grestore
+% Node26->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 184.7806 999.6708 moveto
+251.0704 999.6708 340.6904 999.6708 397.9327 999.6708 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 184.7637 996.1709 moveto
+174.7637 999.6708 lineto
+184.7636 1003.1709 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 184.7637 996.1709 moveto
+174.7637 999.6708 lineto
+184.7636 1003.1709 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+231.5 1002.6708 moveto 130 ( dongleRFDisableMessage) alignedtext
+grestore
+% Node27
+gsave
+[ /Rect [ 16.5 945.6708 178.5 965.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00208.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 16.5 946.1708 moveto
+16.5 965.1708 lineto
+178.5 965.1708 lineto
+178.5 946.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+24.5 953.1708 moveto 146 (freespace_FRSWriteResponse) alignedtext
+grestore
+% Node27->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 188.6794 962.7114 moveto
+244.0535 967.5919 316.3309 974.9618 380 984.6708 curveto
+389.9782 986.1923 400.6486 988.1556 410.6921 990.1573 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 188.8083 959.2094 moveto
+178.5424 961.829 lineto
+188.2012 966.1831 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 188.8083 959.2094 moveto
+178.5424 961.829 lineto
+188.2012 966.1831 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+249.5 987.6708 moveto 94 ( fRSWriteResponse) alignedtext
+grestore
+% Node28
+gsave
+[ /Rect [ 16.5 907.6708 178.5 927.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00084.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 16.5 908.1708 moveto
+16.5 927.1708 lineto
+178.5 927.1708 lineto
+178.5 908.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+24.5 915.1708 moveto 146 (freespace_TxDisableMessage) alignedtext
+grestore
+% Node28->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 189.1412 917.0664 moveto
+245.5984 919.3179 318.8612 927.0965 380 949.6708 curveto
+405.0176 958.908 429.8226 978.3035 443.4073 990.0373 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 188.917 913.5566 moveto
+178.8017 916.708 lineto
+188.6744 920.5524 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 188.917 913.5566 moveto
+178.8017 916.708 lineto
+188.6744 920.5524 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+249.5 952.6708 moveto 94 ( txDisableMessage) alignedtext
+grestore
+% Node29
+gsave
+[ /Rect [ 8 869.6708 187 889.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00268.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 8 870.1708 moveto
+8 889.1708 lineto
+187 889.1708 lineto
+187 870.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+16 877.1708 moveto 163 (freespace_FRSReadResponseBLE) alignedtext
+grestore
+% Node29->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 179.274 869.4595 moveto
+238.4064 865.8225 318.6877 869.1509 380 902.6708 curveto
+416.7986 922.7888 440.9416 969.8127 449.9925 990.0877 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 178.9652 865.9725 moveto
+169.2314 870.1562 lineto
+179.4497 872.9557 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 178.9652 865.9725 moveto
+169.2314 870.1562 lineto
+179.4497 872.9557 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+241.5 905.6708 moveto 110 ( fRSReadResponseBLE) alignedtext
+grestore
+% Node30
+gsave
+[ /Rect [ 17 831.6708 178 851.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00220.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 17 832.1708 moveto
+17 851.1708 lineto
+178 851.1708 lineto
+178 832.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+25 839.1708 moveto 145 (freespace_FRSReadResponse) alignedtext
+grestore
+% Node30->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 188.2958 835.521 moveto
+258.5358 832.4605 349.2752 832.9014 380 852.6708 curveto
+430.2184 884.9829 447.762 962.5137 452.5111 989.8929 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 187.9173 832.0347 moveto
+178.0909 835.996 lineto
+188.2429 839.0271 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 187.9173 832.0347 moveto
+178.0909 835.996 lineto
+188.2429 839.0271 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+250.5 855.6708 moveto 92 ( fRSReadResponse) alignedtext
+grestore
+% Node31
+gsave
+[ /Rect [ 14.5 793.6708 180.5 813.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00152.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 14.5 794.1708 moveto
+14.5 813.1708 lineto
+180.5 813.1708 lineto
+180.5 794.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+22.5 801.1708 moveto 150 (freespace_AlwaysOnResponse) alignedtext
+grestore
+% Node31->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 190.8082 798.2225 moveto
+261.0416 795.9537 350.4871 797.6918 380 818.6708 curveto
+439.2138 860.7623 451.1401 958.9633 453.4596 990.0526 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 190.4644 794.7324 moveto
+180.5947 798.5845 lineto
+190.7124 801.728 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 190.4644 794.7324 moveto
+180.5947 798.5845 lineto
+190.7124 801.728 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+247 821.6708 moveto 99 ( alwaysOnResponse) alignedtext
+grestore
+% Node32
+gsave
+[ /Rect [ 11 755.6708 184 775.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00256.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 11 756.1708 moveto
+11 775.1708 lineto
+184 775.1708 lineto
+184 756.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+19 763.1708 moveto 157 (freespace_SensorPeriodRequest) alignedtext
+grestore
+% Node32->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 194.2488 760.006 moveto
+264.2027 757.8833 351.5899 760.0659 380 781.6708 curveto
+449.0367 834.1706 454.2052 954.3044 454.1777 989.6892 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 193.94 756.5143 moveto
+184.0633 760.3486 lineto
+194.1754 763.5103 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 193.94 756.5143 moveto
+184.0633 760.3486 lineto
+194.1754 763.5103 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+243.5 784.6708 moveto 106 ( sensorPeriodRequest) alignedtext
+grestore
+% Node33
+gsave
+[ /Rect [ 31 717.6708 164 737.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00224.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 31 718.1708 moveto
+31 737.1708 lineto
+164 737.1708 lineto
+164 718.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+39 725.1708 moveto 117 (freespace_PerResponse) alignedtext
+grestore
+% Node33->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 174.0362 722.4624 moveto
+246.4945 719.1106 349.2939 719.1889 380 743.6708 curveto
+420.4242 775.9009 446.6676 946.9802 452.6794 989.8988 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 173.8396 718.9678 moveto
+164.0241 722.956 lineto
+174.1843 725.9593 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 173.8396 718.9678 moveto
+164.0241 722.956 lineto
+174.1843 725.9593 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+263 746.6708 moveto 67 ( perResponse) alignedtext
+grestore
+% Node34
+gsave
+[ /Rect [ 14 679.6708 181 699.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00180.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 14 680.1708 moveto
+14 699.1708 lineto
+181 699.1708 lineto
+181 680.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+22 687.1708 moveto 151 (freespace_DataModeResponse) alignedtext
+grestore
+% Node34->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 191.3174 683.5037 moveto
+262.0966 680.8517 352.0346 682.5665 380 705.6708 curveto
+425.8518 743.5523 448.419 943.6805 453.0785 990.0653 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 190.8718 680.0189 moveto
+181.0232 683.9246 lineto
+191.1579 687.013 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 190.8718 680.0189 moveto
+181.0232 683.9246 lineto
+191.1579 687.013 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+246.5 708.6708 moveto 100 ( dataModeResponse) alignedtext
+grestore
+% Node35
+gsave
+[ /Rect [ 25.5 641.6708 169.5 661.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00060.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 25.5 642.1708 moveto
+25.5 661.1708 lineto
+169.5 661.1708 lineto
+169.5 642.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+33.5 649.1708 moveto 128 (freespace_LEDSetRequest) alignedtext
+grestore
+% Node35->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 179.5901 645.5002 moveto
+251.9123 641.8259 350.7509 641.9002 380 666.6708 curveto
+431.5207 710.3028 449.9679 940.3552 453.3869 990.1572 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 179.3678 642.007 moveto
+169.5711 646.0413 lineto
+179.7454 648.9968 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 179.3678 642.007 moveto
+169.5711 646.0413 lineto
+179.7454 648.9968 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+258.5 669.6708 moveto 76 ( lEDSetRequest) alignedtext
+grestore
+% Node36
+gsave
+[ /Rect [ 23.5 603.6708 171.5 623.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00272.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 23.5 604.1708 moveto
+23.5 623.1708 lineto
+171.5 623.1708 lineto
+171.5 604.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+31.5 611.1708 moveto 132 (freespace_BodyUserFrame) alignedtext
+grestore
+% Node36->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 181.7063 607.2541 moveto
+253.9265 603.5818 351.2876 603.8124 380 628.6708 curveto
+436.9786 678.0011 451.269 937.0505 453.617 990.1533 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 181.4886 603.7607 moveto
+171.6924 607.7961 lineto
+181.8669 610.7505 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 181.4886 603.7607 moveto
+171.6924 607.7961 lineto
+181.8669 610.7505 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+256 631.6708 moveto 81 ( bodyUserFrame) alignedtext
+grestore
+% Node37
+gsave
+[ /Rect [ 20 565.6708 175 585.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00228.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 20 566.1708 moveto
+20 585.1708 lineto
+175 585.1708 lineto
+175 566.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+28 573.1708 moveto 139 (freespace_FRSWriteRequest) alignedtext
+grestore
+% Node37->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 185.148 568.6318 moveto
+257.0564 564.7869 351.9159 564.9913 380 589.6708 curveto
+442.6184 644.698 452.4668 933.0216 453.8075 989.915 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 184.9485 565.1374 moveto
+175.1631 569.1991 lineto
+185.3456 572.1261 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 184.9485 565.1374 moveto
+175.1631 569.1991 lineto
+185.3456 572.1261 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+253.5 592.6708 moveto 86 ( fRSWriteRequest) alignedtext
+grestore
+% Node38
+gsave
+[ /Rect [ 20 516.1708 175 547.1708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00212.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 20 516.6708 moveto
+20 546.6708 lineto
+175 546.6708 lineto
+175 516.6708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+28 534.6708 moveto 139 (freespace_DataModeControl) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+67 523.6708 moveto 61 (V2Response) alignedtext
+grestore
+% Node38->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 168.0532 514.8567 moveto
+231.4403 504.0198 323.5396 500.2195 380 551.6708 curveto
+447.4443 613.1314 453.423 929.788 453.9496 989.8351 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 167.3544 511.4262 moveto
+158.1364 516.6489 lineto
+168.5994 518.3146 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 167.3544 511.4262 moveto
+158.1364 516.6489 lineto
+168.5994 518.3146 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+222.5 554.6708 moveto 148 ( dataModeControlV2Response) alignedtext
+grestore
+% Node39
+gsave
+[ /Rect [ 17.5 467.1708 177.5 498.1708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00156.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 17.5 467.6708 moveto
+17.5 497.6708 lineto
+177.5 497.6708 lineto
+177.5 467.6708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+25.5 485.6708 moveto 144 (freespace_FRSHandheldRead) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+73.5 474.6708 moveto 48 (Response) alignedtext
+grestore
+% Node39->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 188.0842 473.8855 moveto
+259.7133 468.9766 352.5347 468.0576 380 492.6708 curveto
+457.1756 561.832 455.1679 925.0891 454.1842 989.8036 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 187.4023 470.4255 moveto
+177.6801 474.6362 lineto
+187.9061 477.4074 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 187.4023 470.4255 moveto
+177.6801 474.6362 lineto
+187.9061 477.4074 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+227 495.6708 moveto 139 ( fRSHandheldReadResponse) alignedtext
+grestore
+% Node40
+gsave
+[ /Rect [ 17.5 428.6708 177.5 448.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00132.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 17.5 429.1708 moveto
+17.5 448.1708 lineto
+177.5 448.1708 lineto
+177.5 429.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+25.5 436.1708 moveto 144 (freespace_DataModeRequest) alignedtext
+grestore
+% Node40->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 187.9453 432.2201 moveto
+259.7458 429.1309 352.8889 430.5174 380 455.6708 curveto
+421.0504 493.7568 449.0922 920.3299 453.4165 990.0583 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 187.3433 428.7443 moveto
+177.5171 432.7061 lineto
+187.6692 435.7367 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 187.3433 428.7443 moveto
+177.5171 432.7061 lineto
+187.6692 435.7367 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+250.5 458.6708 moveto 92 ( dataModeRequest) alignedtext
+grestore
+% Node41
+gsave
+[ /Rect [ 19 390.6708 176 410.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00056.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 19 391.1708 moveto
+19 410.1708 lineto
+176 410.1708 lineto
+176 391.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+27 398.1708 moveto 141 (freespace_ProductIDRequest) alignedtext
+grestore
+% Node41->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 186.1651 393.5714 moveto
+258.212 389.8028 352.6993 390.2887 380 415.6708 curveto
+424.0669 456.6407 449.6806 916.446 453.5002 989.824 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 185.9469 390.0781 moveto
+176.1572 394.1293 lineto
+186.3365 397.0672 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 185.9469 390.0781 moveto
+176.1572 394.1293 lineto
+186.3365 397.0672 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+251 418.6708 moveto 91 ( productIDRequest) alignedtext
+grestore
+% Node42
+gsave
+[ /Rect [ 12.5 352.6708 182.5 372.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00276.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 12.5 353.1708 moveto
+12.5 372.1708 lineto
+182.5 372.1708 lineto
+182.5 353.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+20.5 360.1708 moveto 154 (freespace_MotionEngineOutput) alignedtext
+grestore
+% Node42->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 193.1267 354.8112 moveto
+264.1956 351.1468 353.6239 352.0431 380 376.6708 curveto
+427.0703 420.6209 450.3268 915.0709 453.5967 990.1422 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 192.5756 351.3363 moveto
+182.784 355.3827 lineto
+192.9619 358.3256 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 192.5756 351.3363 moveto
+182.784 355.3827 lineto
+192.9619 358.3256 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+244.5 379.6708 moveto 104 ( motionEngineOutput) alignedtext
+grestore
+% Node43
+gsave
+[ /Rect [ 11 303.1708 184 334.1708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00244.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 11 303.6708 moveto
+11 333.6708 lineto
+184 333.6708 lineto
+184 303.6708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+19 321.6708 moveto 157 (freespace_ActivityClassification) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+68.5 310.6708 moveto 58 (Notification) alignedtext
+grestore
+% Node43->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 164.6041 301.6467 moveto
+228.4926 289.551 323.6507 283.7439 380 337.6708 curveto
+429.5037 385.0463 450.7715 912.084 453.6557 990.0552 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 163.7531 298.2474 moveto
+154.6297 303.6338 lineto
+165.1208 305.1125 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 163.7531 298.2474 moveto
+154.6297 303.6338 lineto
+165.1208 305.1125 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+215 340.6708 moveto 163 ( activityClassificationNotification) alignedtext
+grestore
+% Node44
+gsave
+[ /Rect [ 36 264.6708 159 284.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00200.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 36 265.1708 moveto
+36 284.1708 lineto
+159 284.1708 lineto
+159 265.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+44 272.1708 moveto 107 (freespace_UserFrame) alignedtext
+grestore
+% Node44->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 169.2812 265.1639 moveto
+242.5235 257.0639 350.3028 250.5731 380 277.6708 curveto
+435.3238 328.1517 451.7133 907.5961 453.7689 989.9557 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 168.7267 261.7044 moveto
+159.1874 266.3142 lineto
+169.5194 268.6594 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 168.7267 261.7044 moveto
+159.1874 266.3142 lineto
+169.5194 268.6594 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+269 280.6708 moveto 55 ( userFrame) alignedtext
+grestore
+% Node45
+gsave
+[ /Rect [ 11 226.6708 184 246.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00072.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 11 227.1708 moveto
+11 246.1708 lineto
+184 246.1708 lineto
+184 227.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+19 234.1708 moveto 157 (freespace_FrequencyFixRequest) alignedtext
+grestore
+% Node45->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 187.518 226.2579 moveto
+259.3863 220.0184 352.8609 217.523 380 242.6708 curveto
+437.6919 296.1295 452.0943 905.7486 453.8141 990.0287 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 187.1739 222.7747 moveto
+177.5296 227.1607 lineto
+187.8041 229.7463 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 187.1739 222.7747 moveto
+177.5296 227.1607 lineto
+187.8041 229.7463 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+243.5 245.6708 moveto 106 ( frequencyFixRequest) alignedtext
+grestore
+% Node46
+gsave
+[ /Rect [ 18.5 188.6708 176.5 208.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00068.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 18.5 189.1708 moveto
+18.5 208.1708 lineto
+176.5 208.1708 lineto
+176.5 189.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+26.5 196.1708 moveto 142 (freespace_AlwaysOnRequest) alignedtext
+grestore
+% Node46->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 186.5689 188.9882 moveto
+258.6146 183.2061 352.8734 181.2432 380 206.6708 curveto
+440.2134 263.1128 452.478 904.0086 453.8575 990.1231 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 186.2324 185.5041 moveto
+176.5596 189.827 lineto
+186.817 192.4796 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 186.2324 185.5041 moveto
+176.5596 189.827 lineto
+186.817 192.4796 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+251 209.6708 moveto 91 ( alwaysOnRequest) alignedtext
+grestore
+% Node47
+gsave
+[ /Rect [ 0 150.6708 195 170.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00164.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 0 151.1708 moveto
+0 170.1708 lineto
+195 170.1708 lineto
+195 151.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+8 158.1708 moveto 179 (freespace_FRSDongleReadResponse) alignedtext
+grestore
+% Node47->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 198.7642 150.4182 moveto
+268.915 145.6693 354.4634 145.5488 380 169.6708 curveto
+442.8378 229.0275 452.8438 900.9798 453.8957 989.9617 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 198.2594 146.9453 moveto
+188.5347 151.1501 lineto
+198.759 153.9274 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 198.2594 146.9453 moveto
+188.5347 151.1501 lineto
+198.759 153.9274 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+233 172.6708 moveto 127 ( fRSDongleReadResponse) alignedtext
+grestore
+% Node48
+gsave
+[ /Rect [ 17 101.1708 178 132.1708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00160.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 17 101.6708 moveto
+17 131.6708 lineto
+178 131.6708 lineto
+178 101.6708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+25 119.6708 moveto 145 (freespace_FRSHandheldWrite) alignedtext
+0 0 0 nodecolor
+10 /Helvetica set_font
+73.5 108.6708 moveto 48 (Response) alignedtext
+grestore
+% Node48->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 160.5535 99.4002 moveto
+224.5598 85.7552 322.8593 77.1285 380 132.6708 curveto
+444.86 195.7164 453.1292 899.6377 453.9257 990.1157 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 159.5845 96.0303 moveto
+150.5868 101.6242 lineto
+161.1091 102.8622 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 159.5845 96.0303 moveto
+150.5868 101.6242 lineto
+161.1091 102.8622 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+226.5 135.6708 moveto 140 ( fRSHandheldWriteResponse) alignedtext
+grestore
+% Node49
+gsave
+[ /Rect [ 37 62.6708 158 82.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00148.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 37 63.1708 moveto
+37 82.1708 lineto
+158 82.1708 lineto
+158 63.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+45 70.1708 moveto 105 (freespace_LinkStatus) alignedtext
+grestore
+% Node49->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 168.4058 62.6086 moveto
+241.7326 53.794 350.3838 46.2293 380 73.6708 curveto
+450.9802 139.4389 453.9116 895.759 454.0007 990.0421 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 167.8005 59.1567 moveto
+158.3054 63.8572 lineto
+168.6593 66.1038 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 167.8005 59.1567 moveto
+158.3054 63.8572 lineto
+168.6593 66.1038 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+270.5 76.6708 moveto 52 ( linkStatus) alignedtext
+grestore
+% Node50
+gsave
+[ /Rect [ 5 24.6708 190 44.6708 ]
+  /Border [ 0 0 0 ]
+  /Action << /Subtype /URI /URI ($a00100.html) >>
+  /Subtype /Link
+/ANN pdfmark
+1 setlinewidth
+0 0 0 nodecolor
+newpath 5 25.1708 moveto
+5 44.1708 lineto
+190 44.1708 lineto
+190 25.1708 lineto
+closepath stroke
+0 0 0 nodecolor
+10 /Helvetica set_font
+13 32.1708 moveto 169 (freespace_FRSHandheldWriteData) alignedtext
+grestore
+% Node50->Node1
+gsave
+1 setlinewidth
+dashed
+0.77647 0.75294 0.80392 edgecolor
+newpath 134.1657 21.9529 moveto
+193.7198 3.2561 313.4227 -23.0792 380 39.6708 curveto
+453.0633 108.5339 454.1648 893.6529 454.0238 989.9987 curveto
+stroke
+0.77647 0.75294 0.80392 edgecolor
+newpath 132.888 18.6878 moveto
+124.4558 25.1024 lineto
+135.0478 25.3463 lineto
+closepath fill
+1 setlinewidth
+solid
+0.77647 0.75294 0.80392 edgecolor
+newpath 132.888 18.6878 moveto
+124.4558 25.1024 lineto
+135.0478 25.3463 lineto
+closepath stroke
+0 0 0 edgecolor
+10 /Helvetica set_font
+238.5 42.6708 moveto 116 ( fRSHandheldWriteData) alignedtext
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 36 36 556 2102
+end
+restore
+%%EOF
