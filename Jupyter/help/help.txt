@@ -1,0 +1,6 @@
+source /opt/ros/galactic/setup.bash
+ros2 launch ur_bringup ur_control.launch.py ur_type:=ur10e robot_ip:=192.168.20.35 launch_rviz:=true tool_tcp_port:=50002
+ros2 launch ur_bringup test_scaled_joint_trajectory_controller.launch.py
+ros2 topic echo /joint_states --field position --csv > ~/Desktop/test.csv
+ros2 run tf2_ros tf2_echo base_link wrist_3_link 500 > ~/Desktop/test.csv
+
