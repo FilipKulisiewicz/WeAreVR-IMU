@@ -52,7 +52,7 @@
 #include <time.h>
 
 // The sensor period to set the sensors to
-#define SENSOR_PERIOD 10000
+#define SENSOR_PERIOD 2000 //10000
 // The interval we use to calculate average sample period
 #define MOTION_INTERVAL 2
 // Number of average sample period measurements we will take
@@ -153,6 +153,20 @@ int sendMotionRequestMessage(FreespaceDeviceId device) {
     message.dataModeControlV2Request.mode = 4; // Set full motion - always on
 	message.dataModeControlV2Request.formatSelect = 1;
     
+	/* User code begin 2 */
+    message.dataModeControlV2Request.ff1 = 1;          // Acceleration fields
+    message.dataModeControlV2Request.ff6 = 0;          // Angular (orientation) fields
+    //gyro
+    //message.dataModeControlV2Request.ff0 = 1;         // Pointer fields
+    message.dataModeControlV2Request.ff3 = 1;           // Angular velocity fields 
+    //mag
+    message.dataModeControlV2Request.ff4 = 1;           // Magnetometer fields 
+    //Power Managment
+    message.dataModeControlV2Request.ff7 = 0;          // ActClass/PowerMgmt
+    
+	/* User code end 2 */
+    
+
     return freespace_sendMessage(device, &message);
 }
 
@@ -298,7 +312,7 @@ int main(int argc, char* argv[]) {
 		return 1;
 	}
 
-	// Set all sensors to 20ms
+	// Set all sensors to SENSOR_PERIOD [um]
 	printf("\nChanging sensor periods to %d...\n", SENSOR_PERIOD);
 	for (i = 0;i < 7;i++) {
 		if (i == 6) {	// If we are on last sensor we need to commit

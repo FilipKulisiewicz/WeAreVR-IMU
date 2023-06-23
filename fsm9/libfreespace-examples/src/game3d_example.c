@@ -55,6 +55,18 @@
 #include <unistd.h>
 #include <pthread.h>
 #endif
+/* */
+// The sensor period to set the sensors to
+#define SENSOR_PERIOD 2000 //10000
+const char * const SENSOR_NAMES[] = {	
+					"Accelerometer", 
+					"Gyroscope", 
+					"Magnetometer", 
+					"Ambient Light Sensor",
+					"Pressure Sensor",
+					"Proximity Sensor",
+					"Sensor Fusion"         };
+/* */
 
 // Cross platform sleep macro
 #ifdef _WIN32
@@ -62,6 +74,7 @@
 #else
 #define SLEEP    sleep(1)
 #endif
+#define Sleep(x) usleep((x)*1000)
 
 #define RADIANS_TO_DEGREES(rad) ((float) rad * (float) (180.0 / M_PI))
 #define DEGREES_TO_RADIANS(deg) ((float) deg * (float) (M_PI / 180.0))
@@ -102,23 +115,20 @@ int main(int argc, char* argv[]) {
     struct freespace_MotionEngineOutput meOut;
     struct Vec3f eulerAngles;
     struct MultiAxisSensor accel;
-    int rc;
+    int rc; // Return code
+    
     // Flag to indicate that the application should quit
     // Set by the control signal handler
     int quit = 0;
 
     /* User code 1 start */
+
     struct MultiAxisSensor angVel;
     struct MultiAxisSensor mag;
     int PrintMachineFriendly = 1;
-    if(PrintMachineFriendly == 1){
-        printf("sequenceNumber; roll; pitch; yaw; (accel:) x; y; z; (gyro:) X; Y; Z; (mag:) X; Y; Z \n");
-    }
     
     //printVersionInfo(argv[0]); //---- commented
-
     /* User code 1 end */
-
     
     addControlHandler(&quit);
 
@@ -128,13 +138,20 @@ int main(int argc, char* argv[]) {
         printf("Initialization error. rc=%d\n", rc);
         exit(1);
     }
-
+    
     // Setup the input loop thread
     memset(&inputLoop, 0, sizeof(struct InputLoopState));                      // Clear the state info for the thread
     pthread_mutex_init(&inputLoop.lock_, NULL);                                // Initialize the mutex
     pthread_create(&inputLoop.thread_, NULL, inputThreadFunction, &inputLoop); // Start the input thread
-
-
+    
+    // Give the device time to commit changes
+	Sleep(1);
+    /* */
+    if(PrintMachineFriendly == 1){
+        printf("sequenceNumber; roll; pitch; yaw; (accel:) x; y; z; (gyro:) X; Y; Z; (mag:) X; Y; Z \n");
+    }
+    /* */
+    
     // Run the game loop
     while (!quit) {
         // Get input.
@@ -148,7 +165,7 @@ int main(int argc, char* argv[]) {
             /*  User code 3 start */
             freespace_util_getAngularVelocity(&meOut, &angVel);
             freespace_util_getMagnetometer(&meOut, &mag);
-            // Render.
+            // print
             if(PrintMachineFriendly == 1){
                 printf("%d; %0.4f; %0.4f; %0.4f; %0.4f; %0.4f; %0.4f; % 6.2f; % 6.2f; % 6.2f; % 6.2f; % 6.2f; % 6.2f \n",
                    meOut.sequenceNumber,
@@ -254,6 +271,128 @@ static void getEulerAnglesFromMotion(const struct freespace_MotionEngineOutput* 
     q_toEulerAngles(eulerAngles, &q);
 }
 
+/**
+ * sendSetSensorPeriodMessage
+ * Sends a message to change the sample rate
+ * of a sensor on a Freespace device.
+ * device - The Freespace Device ID of the device
+ * sensor - The sensor index - see the HCOMM document
+ * for more information
+ * period - The desired period of the sensor in us.
+ * commit - 0 to write without commit, 1 to commit changes
+ * return - The return code of the message
+ */
+int sendSetSensorPeriodMessage(FreespaceDeviceId device, int sensor, int period, int commit) {
+	struct freespace_message message;
+
+	// Send the sensor period message with the user parameters
+	memset(&message, 0, sizeof(message)); // Make sure all the message fields are initialized to 0.
+
+	message.messageType = FREESPACE_MESSAGE_SENSORPERIODREQUEST;
+	message.sensorPeriodRequest.commit = commit;	// Need to commit change in order to work
+	message.sensorPeriodRequest.get = 0;  // We are setting, not getting
+	message.sensorPeriodRequest.sensor = sensor; // Sensor index - see the HCOMM doc for more info
+	message.sensorPeriodRequest.period = period; // Period in us
+
+	return freespace_sendMessage(device, &message);
+}
+
+/**
+ * sendGetSensorPeriodMessage
+ * Sends a message to read the sample rate
+ * of a sensor on a Freespace device.
+ * device - The Freespace Device ID of the device
+ * sensor - The sensor index - see the HCOMM document
+ * for more information
+ * return - The return code of the message
+ */
+int sendGetSensorPeriodMessage(FreespaceDeviceId device, int sensor) {
+	struct freespace_message message;
+
+	// Send the sensor period message with the user parameters
+	memset(&message, 0, sizeof(message)); // Make sure all the message fields are initialized to 0.
+
+	message.messageType = FREESPACE_MESSAGE_SENSORPERIODREQUEST;
+	message.sensorPeriodRequest.get = 1;  // We are getting, not setting
+	message.sensorPeriodRequest.sensor = sensor; // Sensor index - see HCOMM doc for more info
+
+	return freespace_sendMessage(device, &message);
+}
+
+/**
+ * waitForPeriodResponse
+ * Waits on a freespace message response to a
+ * sensor period message. Waits up to MAX_WAIT_SECS
+ * before giving up.
+ * device - The Freespace Device ID of the device
+ * sensorValue - Pointer where the sensor index is stored
+ * periodValue - Pointer where the period value is stored
+ * return - FREESPACE_SUCCESS if successful, or a FREESPACE_ERROR otherwise
+ */
+int waitForPeriodResponse(FreespaceDeviceId device, int* sensorValue, int* periodValue) {
+	int rc = 0;
+	struct freespace_message message;
+
+	// Keep looping if we get FREESPACE_SUCCESS but no SensorPeriodResponse
+	while (rc == FREESPACE_SUCCESS) {
+		rc = freespace_readMessage(device, &message, 200);
+		if (rc != FREESPACE_SUCCESS) {
+			return rc;
+		}
+		// Check if the sensor has given us a Sensor Period response
+		if (message.messageType == FREESPACE_MESSAGE_SENSORPERIODRESPONSE) {
+			if (sensorValue != NULL)
+				*sensorValue = message.sensorPeriodResponse.sensor;
+			if (periodValue != NULL)
+				*periodValue = message.sensorPeriodResponse.period;
+			return FREESPACE_SUCCESS;
+		}
+	}
+	return 0;
+}
+
+/**
+ * printSensorInfo
+ * Prints the sensor period information for a device's sensors.
+ * It sends a getSensorPeriod message for every sensor, then waits
+ * for the responses, each containing the period for a sensor.
+ * device - The Freespace Device ID of the device
+ * return - FREESPACE_SUCCESS if successful, or a FREESPACE_ERROR otherwise
+ */
+int printSensorInfo(FreespaceDeviceId device) {
+	int rc;
+	int index;
+	int sensor;
+	int period;
+
+	// Update sensor information
+	printf("\nSensors:\n");
+	for (index = 0;index < 7;index++) {
+		// Request the sensor period information
+		rc = sendGetSensorPeriodMessage(device, index);
+		if (rc != FREESPACE_SUCCESS) {
+			return rc;
+		}
+
+		// Wait for a response
+		rc = waitForPeriodResponse(device, &sensor, &period);
+
+		if (rc == FREESPACE_ERROR_TIMEOUT) { // Indicates timeout
+			printf("     %d. %s TIMED OUT.\n", index, SENSOR_NAMES[index]);
+		} else if (rc == FREESPACE_SUCCESS) {
+			printf("     %d. %s", sensor, SENSOR_NAMES[index]);
+			if (period != 0)
+				printf(" @ %d us.\n", period);
+			else
+				printf(" disabled.\n");
+		} else {
+			return rc;
+		}
+	}
+	return FREESPACE_SUCCESS;
+	printf("\n");
+}
+
 // ============================================================================
 // Thread functions
 // ============================================================================
@@ -267,7 +406,12 @@ static void* inputThreadFunction(void* arg) {
     FreespaceDeviceId device;
     int numIds;
     int rc;
-
+    /* */
+    int i = 0;
+    int period = 0; // Holds the period of the sensor
+    int sensor = 0;	// Holds the sensor number
+    /* */
+    
     /** --- START EXAMPLE INITIALIZATION OF DEVICE -- **/
     // This example requires that the freespace device already be connected
     // to the system before launching the example.
@@ -289,20 +433,58 @@ static void* inputThreadFunction(void* arg) {
         exit(1);
     }
 
+    /* User code 2 end */
+    // Set all sensors to SENSOR_PERIOD [um]
+	for (i = 0;i < 7;i++) {
+		if (i == 6) {	// If we are on last sensor we need to commit
+			rc = sendSetSensorPeriodMessage(device, i, SENSOR_PERIOD, 1);
+		} else {
+			rc = sendSetSensorPeriodMessage(device, i, SENSOR_PERIOD, 0);
+		}
+		if (rc != FREESPACE_SUCCESS) {
+			printf("Could not send message: %d.\n", rc);
+            exit(1);
+		}
+		
+		// Wait for a response to the change
+		rc = waitForPeriodResponse(device, &sensor, &period);
+		if (rc == FREESPACE_ERROR_TIMEOUT) {
+			printf("%s timed out.\n", SENSOR_NAMES[i]);
+		} else if (rc != FREESPACE_SUCCESS) {
+			printf("Failed with error code: %d.\n", rc);
+            exit(1);
+		}
+	}
+	
+    // Give the device time to commit changes
+	Sleep(1);
+
+    // Print out the new sensor info
+	rc = printSensorInfo(device);
+	if (rc != FREESPACE_SUCCESS) {
+		printf("Error getting sensor info: %d\n", rc);
+        exit(1);
+	}
+
+	printf("\n");
+    /* User code 2 end */
+
     // Put the device in the right operating mode
     memset(&message, 0, sizeof(message));
     message.messageType = FREESPACE_MESSAGE_DATAMODECONTROLV2REQUEST;
     message.dataModeControlV2Request.packetSelect = 8; // MEOut
-    message.dataModeControlV2Request.mode = 0;         // Set full motion
+    message.dataModeControlV2Request.mode = 4;         //changed from 0;         // Set full motion on (always on?)
     message.dataModeControlV2Request.formatSelect = 0; // MEOut format 0
     message.dataModeControlV2Request.ff1 = 1;          // Acceleration fields
     message.dataModeControlV2Request.ff6 = 1;          // Angular (orientation) fields
     /* User code begin 4 */
     //gyro
-    //message.dataModeControlV2Request.ff0 = 1;           // Pointer fields
+    //message.dataModeControlV2Request.ff0 = 1;         // Pointer fields
     message.dataModeControlV2Request.ff3 = 1;           // Angular velocity fields 
     //mag
     message.dataModeControlV2Request.ff4 = 1;           // Magnetometer fields 
+    //Power Managment
+    message.dataModeControlV2Request.ff7 = 0;          // ActClass/PowerMgmt
     
     /* User code end 4 */
     

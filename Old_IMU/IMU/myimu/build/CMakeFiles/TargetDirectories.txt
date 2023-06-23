@@ -1,0 +1,3 @@
+/home/pi/IMU/myimu/build/CMakeFiles/rebuild_cache.dir
+/home/pi/IMU/myimu/build/CMakeFiles/myimu_exec.dir
+/home/pi/IMU/myimu/build/CMakeFiles/edit_cache.dir

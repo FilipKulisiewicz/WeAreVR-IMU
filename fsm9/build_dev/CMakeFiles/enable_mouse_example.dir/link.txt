@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/enable_mouse_example.dir/src/enable_mouse_example.c.o CMakeFiles/enable_mouse_example.dir/src/appControlHandler.c.o  -o enable_mouse_example  libfreespace/libfreespace.a -lm -lpthread -lusb-1.0 
