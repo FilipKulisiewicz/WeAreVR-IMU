@@ -143,12 +143,12 @@ int main(int argc, char* argv[]) {
     memset(&inputLoop, 0, sizeof(struct InputLoopState));                      // Clear the state info for the thread
     pthread_mutex_init(&inputLoop.lock_, NULL);                                // Initialize the mutex
     pthread_create(&inputLoop.thread_, NULL, inputThreadFunction, &inputLoop); // Start the input thread
-    
-    // Give the device time to commit changes
-	Sleep(1);
+
     /* */
     if(PrintMachineFriendly == 1){
-        printf("sequenceNumber; roll; pitch; yaw; (accel:) x; y; z; (gyro:) X; Y; Z; (mag:) X; Y; Z \n");
+        //printf("sequenceNumber; (accel:) x; y; z; (gyro:) X; Y; Z; (mag:) X; Y; Z; roll; pitch; yaw \n");
+        printf("sequenceNumber;(accel:) x; y; z; (gyro:) X; Y; Z; (mag:) X; Y; Z \n");
+
     }
     /* */
     
@@ -159,19 +159,17 @@ int main(int argc, char* argv[]) {
         
         // If new motion was available, use it
         if (rc) {
-            // Run game logic.
-            getEulerAnglesFromMotion(&meOut, &eulerAngles);
-            freespace_util_getAcceleration(&meOut, &accel);
             /*  User code 3 start */
+            // Run game logic.
+            //getEulerAnglesFromMotion(&meOut, &eulerAngles);
+            freespace_util_getAcceleration(&meOut, &accel);
             freespace_util_getAngularVelocity(&meOut, &angVel);
             freespace_util_getMagnetometer(&meOut, &mag);
             // print
             if(PrintMachineFriendly == 1){
-                printf("%d; %0.4f; %0.4f; %0.4f; %0.4f; %0.4f; %0.4f; % 6.2f; % 6.2f; % 6.2f; % 6.2f; % 6.2f; % 6.2f \n",
+                //printf("%d; %0.4f; %0.4f; %0.4f; % 6.2f; % 6.2f; % 6.2f; % 6.2f; % 6.2f; % 6.2f; %0.4f; %0.4f; %0.4f \n",
+                printf("%d; %0.4f; %0.4f; %0.4f; % 6.2f; % 6.2f; % 6.2f; % 6.2f; % 6.2f; % 6.2f \n",
                    meOut.sequenceNumber,
-                   RADIANS_TO_DEGREES(eulerAngles.x),
-                   RADIANS_TO_DEGREES(eulerAngles.y),
-                   RADIANS_TO_DEGREES(eulerAngles.z),
                    accel.x,
                    accel.y,
                    accel.z,
@@ -180,16 +178,21 @@ int main(int argc, char* argv[]) {
                    angVel.z, 
                    mag.x,
                    mag.y,
-                   mag.z);
+                   mag.z
+                   //,
+                   //RADIANS_TO_DEGREES(eulerAngles.x),
+                   //RADIANS_TO_DEGREES(eulerAngles.y),
+                   //RADIANS_TO_DEGREES(eulerAngles.z)
+                   );
             }
             else{
                 printf("%d: roll: %0.4f, pitch: %0.4f, yaw: %0.4f\taccel\tx: %0.4f, y: %0.4f, z: %0.4f \t"
                    "gyro\t X: % 6.2f, Y: % 6.2f, Z: % 6.2f \t"
                    "mag\t X: % 6.2f, Y: % 6.2f, Z: % 6.2f \n",
                    meOut.sequenceNumber,
-                   RADIANS_TO_DEGREES(eulerAngles.x),
-                   RADIANS_TO_DEGREES(eulerAngles.y),
-                   RADIANS_TO_DEGREES(eulerAngles.z),
+                   //RADIANS_TO_DEGREES(eulerAngles.x),
+                   //RADIANS_TO_DEGREES(eulerAngles.y),
+                   //RADIANS_TO_DEGREES(eulerAngles.z),
                    accel.x,
                    accel.y,
                    accel.z,
@@ -473,18 +476,18 @@ static void* inputThreadFunction(void* arg) {
     memset(&message, 0, sizeof(message));
     message.messageType = FREESPACE_MESSAGE_DATAMODECONTROLV2REQUEST;
     message.dataModeControlV2Request.packetSelect = 8; // MEOut
-    message.dataModeControlV2Request.mode = 4;         //changed from 0;         // Set full motion on (always on?)
+    message.dataModeControlV2Request.mode = 4;         // changed from 0; // Set full motion on (always on?)
     message.dataModeControlV2Request.formatSelect = 0; // MEOut format 0
-    message.dataModeControlV2Request.ff1 = 1;          // Acceleration fields
-    message.dataModeControlV2Request.ff6 = 1;          // Angular (orientation) fields
     /* User code begin 4 */
-    //gyro
-    //message.dataModeControlV2Request.ff0 = 1;         // Pointer fields
-    message.dataModeControlV2Request.ff3 = 1;           // Angular velocity fields 
-    //mag
-    message.dataModeControlV2Request.ff4 = 1;           // Magnetometer fields 
-    //Power Managment
-    message.dataModeControlV2Request.ff7 = 0;          // ActClass/PowerMgmt
+    message.dataModeControlV2Request.ff0 = 0;          // Pointer fields
+    message.dataModeControlV2Request.ff1 = 1;          // Acceleration fields
+    message.dataModeControlV2Request.ff2 = 0;          // Acceleration fields
+    message.dataModeControlV2Request.ff3 = 1;          // Angular velocity fields (gyro) 
+    message.dataModeControlV2Request.ff4 = 1;          // Magnetometer fields 
+    message.dataModeControlV2Request.ff5 = 0;          //    
+    message.dataModeControlV2Request.ff6 = 0;          // Angular (orientation) fields (sensor fusion)
+    message.dataModeControlV2Request.ff7 = 0;          // ActClass/PowerMgmt     //Power Managment - off
+
     
     /* User code end 4 */
     
