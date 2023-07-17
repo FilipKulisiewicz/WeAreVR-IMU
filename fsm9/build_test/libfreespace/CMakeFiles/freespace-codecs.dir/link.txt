@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libfreespace-codecs.so -o libfreespace-codecs.so CMakeFiles/freespace-codecs.dir/gen_src/freespace_codecs.c.o CMakeFiles/freespace-codecs.dir/gen_src/freespace_printers.c.o 

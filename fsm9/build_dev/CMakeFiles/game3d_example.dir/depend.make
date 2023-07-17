@@ -8,21 +8,21 @@ CMakeFiles/game3d_example.dir/src/appControlHandler.c.o: /home/kuli/Desktop/WeAr
 CMakeFiles/game3d_example.dir/src/appControlHandler.c.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace_common.h
 CMakeFiles/game3d_example.dir/src/appControlHandler.c.o: libfreespace/include/freespace/freespace_codecs.h
 
-CMakeFiles/game3d_example.dir/src/game3d_example.c.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/appControlHandler.h
-CMakeFiles/game3d_example.dir/src/game3d_example.c.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/game3d_example.c
-CMakeFiles/game3d_example.dir/src/game3d_example.c.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/math/quaternion.h
-CMakeFiles/game3d_example.dir/src/game3d_example.c.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/math/vec3.h
-CMakeFiles/game3d_example.dir/src/game3d_example.c.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/win32/pthread_win32.h
-CMakeFiles/game3d_example.dir/src/game3d_example.c.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/win32/sched_win32.h
-CMakeFiles/game3d_example.dir/src/game3d_example.c.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace.h
-CMakeFiles/game3d_example.dir/src/game3d_example.c.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace_common.h
-CMakeFiles/game3d_example.dir/src/game3d_example.c.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace_util.h
-CMakeFiles/game3d_example.dir/src/game3d_example.c.o: libfreespace/include/freespace/freespace_codecs.h
-
 CMakeFiles/game3d_example.dir/src/math/quaternion.c.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/math/quaternion.c
 CMakeFiles/game3d_example.dir/src/math/quaternion.c.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/math/quaternion.h
 CMakeFiles/game3d_example.dir/src/math/quaternion.c.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/math/vec3.h
 CMakeFiles/game3d_example.dir/src/math/quaternion.c.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace.h
 CMakeFiles/game3d_example.dir/src/math/quaternion.c.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace_common.h
 CMakeFiles/game3d_example.dir/src/math/quaternion.c.o: libfreespace/include/freespace/freespace_codecs.h
+
+CMakeFiles/game3d_example.dir/src/game3d_example.cpp.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/appControlHandler.h
+CMakeFiles/game3d_example.dir/src/game3d_example.cpp.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/game3d_example.cpp
+CMakeFiles/game3d_example.dir/src/game3d_example.cpp.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/math/quaternion.h
+CMakeFiles/game3d_example.dir/src/game3d_example.cpp.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/math/vec3.h
+CMakeFiles/game3d_example.dir/src/game3d_example.cpp.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/win32/pthread_win32.h
+CMakeFiles/game3d_example.dir/src/game3d_example.cpp.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/win32/sched_win32.h
+CMakeFiles/game3d_example.dir/src/game3d_example.cpp.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace.h
+CMakeFiles/game3d_example.dir/src/game3d_example.cpp.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace_common.h
+CMakeFiles/game3d_example.dir/src/game3d_example.cpp.o: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace_util.h
+CMakeFiles/game3d_example.dir/src/game3d_example.cpp.o: libfreespace/include/freespace/freespace_codecs.h
 

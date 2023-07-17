@@ -7,6 +7,10 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "/home/kuli/Desktop/WeAreVR/Old_IMU/IMU/libfreespace/CMake/Findlibusb-1.0.cmake"
+  "/home/kuli/Desktop/WeAreVR/Old_IMU/IMU/libfreespace/CMake/freespace_config.h.in"
+  "/home/kuli/Desktop/WeAreVR/Old_IMU/IMU/libfreespace/CMakeLists.txt"
+  "/home/kuli/Desktop/WeAreVR/Old_IMU/IMU/libfreespace/doc/CMakeLists.txt"
   "../CMakeLists.txt"
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
@@ -21,15 +25,22 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/usr/share/cmake-3.16/Modules/CPack.cmake"
+  "/usr/share/cmake-3.16/Modules/CPackComponent.cmake"
   "/usr/share/cmake-3.16/Modules/CheckCSourceCompiles.cmake"
   "/usr/share/cmake-3.16/Modules/CheckIncludeFile.cmake"
+  "/usr/share/cmake-3.16/Modules/CheckIncludeFileCXX.cmake"
+  "/usr/share/cmake-3.16/Modules/CheckIncludeFiles.cmake"
   "/usr/share/cmake-3.16/Modules/CheckLibraryExists.cmake"
+  "/usr/share/cmake-3.16/Modules/CheckTypeSize.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/GNU.cmake"
+  "/usr/share/cmake-3.16/Modules/FindDoxygen.cmake"
   "/usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.16/Modules/FindPackageMessage.cmake"
+  "/usr/share/cmake-3.16/Modules/FindPythonInterp.cmake"
   "/usr/share/cmake-3.16/Modules/FindThreads.cmake"
   "/usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake"
@@ -37,6 +48,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake"
   "/usr/share/cmake-3.16/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake"
+  "/usr/share/cmake-3.16/Modules/TestBigEndian.cmake"
+  "/usr/share/cmake-3.16/Templates/CPackConfig.cmake.in"
   )
 
 # The corresponding makefile is:
@@ -48,9 +61,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libfreespace/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libfreespace/doc/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/myimu_exec.dir/DependInfo.cmake"
+  "libfreespace/CMakeFiles/freespace.dir/DependInfo.cmake"
   )

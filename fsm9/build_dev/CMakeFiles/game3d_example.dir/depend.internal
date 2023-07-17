@@ -8,9 +8,16 @@ CMakeFiles/game3d_example.dir/src/appControlHandler.c.o
  /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace.h
  /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace_common.h
  libfreespace/include/freespace/freespace_codecs.h
-CMakeFiles/game3d_example.dir/src/game3d_example.c.o
+CMakeFiles/game3d_example.dir/src/math/quaternion.c.o
+ /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/math/quaternion.c
+ /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/math/quaternion.h
+ /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/math/vec3.h
+ /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace.h
+ /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace_common.h
+ libfreespace/include/freespace/freespace_codecs.h
+CMakeFiles/game3d_example.dir/src/game3d_example.cpp.o
  /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/appControlHandler.h
- /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/game3d_example.c
+ /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/game3d_example.cpp
  /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/math/quaternion.h
  /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/math/vec3.h
  /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/win32/pthread_win32.h
@@ -18,11 +25,4 @@ CMakeFiles/game3d_example.dir/src/game3d_example.c.o
  /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace.h
  /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace_common.h
  /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace_util.h
- libfreespace/include/freespace/freespace_codecs.h
-CMakeFiles/game3d_example.dir/src/math/quaternion.c.o
- /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/math/quaternion.c
- /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/math/quaternion.h
- /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/math/vec3.h
- /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace.h
- /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace_common.h
  libfreespace/include/freespace/freespace_codecs.h

@@ -1,17 +1,27 @@
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
   "C"
+  "CXX"
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/appControlHandler.c" "/home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles/game3d_example.dir/src/appControlHandler.c.o"
-  "/home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/game3d_example.c" "/home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles/game3d_example.dir/src/game3d_example.c.o"
   "/home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/math/quaternion.c" "/home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles/game3d_example.dir/src/math/quaternion.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
+  "/home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include"
+  "libfreespace/include"
+  )
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/game3d_example.cpp" "/home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles/game3d_example.dir/src/game3d_example.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
+
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include"
   "libfreespace/include"
   )

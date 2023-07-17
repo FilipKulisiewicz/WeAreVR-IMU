@@ -6,5 +6,5 @@ CXX_FLAGS =   -pthread
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/kuli/Desktop/WeAreVR/Old_IMU/IMU/libfreespace/include -I/home/kuli/Desktop/WeAreVR/Old_IMU/IMU/myimu/build/libfreespace/include 
 

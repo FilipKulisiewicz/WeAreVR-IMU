@@ -56,12 +56,12 @@ CMAKE_BINARY_DIR = /home/kuli/Desktop/WeAreVR/fsm9/build_dev
 all: CMakeFiles/frs_prop_example.dir/all
 all: CMakeFiles/motion_example_async.dir/all
 all: CMakeFiles/communication_example.dir/all
-all: CMakeFiles/game3d_example.dir/all
 all: CMakeFiles/firmware_version_example.dir/all
 all: CMakeFiles/data_rate_example.dir/all
 all: CMakeFiles/motion_example.dir/all
 all: CMakeFiles/power_mgmt_example.dir/all
 all: CMakeFiles/enable_mouse_example.dir/all
+all: CMakeFiles/game3d_example.dir/all
 all: libfreespace/all
 
 .PHONY : all
@@ -75,12 +75,12 @@ preinstall: libfreespace/preinstall
 clean: CMakeFiles/frs_prop_example.dir/clean
 clean: CMakeFiles/motion_example_async.dir/clean
 clean: CMakeFiles/communication_example.dir/clean
-clean: CMakeFiles/game3d_example.dir/clean
 clean: CMakeFiles/firmware_version_example.dir/clean
 clean: CMakeFiles/data_rate_example.dir/clean
 clean: CMakeFiles/motion_example.dir/clean
 clean: CMakeFiles/power_mgmt_example.dir/clean
 clean: CMakeFiles/enable_mouse_example.dir/clean
+clean: CMakeFiles/game3d_example.dir/clean
 clean: libfreespace/clean
 
 .PHONY : clean
@@ -203,33 +203,6 @@ communication_example: CMakeFiles/communication_example.dir/rule
 CMakeFiles/communication_example.dir/clean:
 	$(MAKE) -f CMakeFiles/communication_example.dir/build.make CMakeFiles/communication_example.dir/clean
 .PHONY : CMakeFiles/communication_example.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/game3d_example.dir
-
-# All Build rule for target.
-CMakeFiles/game3d_example.dir/all: libfreespace/CMakeFiles/freespace.dir/all
-	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/depend
-	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles --progress-num=24,25,26,27 "Built target game3d_example"
-.PHONY : CMakeFiles/game3d_example.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/game3d_example.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles 12
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/game3d_example.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles 0
-.PHONY : CMakeFiles/game3d_example.dir/rule
-
-# Convenience name for target.
-game3d_example: CMakeFiles/game3d_example.dir/rule
-
-.PHONY : game3d_example
-
-# clean rule for target.
-CMakeFiles/game3d_example.dir/clean:
-	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/clean
-.PHONY : CMakeFiles/game3d_example.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/firmware_version_example.dir
@@ -365,6 +338,33 @@ enable_mouse_example: CMakeFiles/enable_mouse_example.dir/rule
 CMakeFiles/enable_mouse_example.dir/clean:
 	$(MAKE) -f CMakeFiles/enable_mouse_example.dir/build.make CMakeFiles/enable_mouse_example.dir/clean
 .PHONY : CMakeFiles/enable_mouse_example.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/game3d_example.dir
+
+# All Build rule for target.
+CMakeFiles/game3d_example.dir/all: libfreespace/CMakeFiles/freespace.dir/all
+	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/depend
+	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles --progress-num=24,25,26,27 "Built target game3d_example"
+.PHONY : CMakeFiles/game3d_example.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/game3d_example.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles 12
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/game3d_example.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles 0
+.PHONY : CMakeFiles/game3d_example.dir/rule
+
+# Convenience name for target.
+game3d_example: CMakeFiles/game3d_example.dir/rule
+
+.PHONY : game3d_example
+
+# clean rule for target.
+CMakeFiles/game3d_example.dir/clean:
+	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/clean
+.PHONY : CMakeFiles/game3d_example.dir/clean
 
 #=============================================================================
 # Target rules for target libfreespace/CMakeFiles/freespace.dir

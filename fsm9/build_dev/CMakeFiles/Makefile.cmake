@@ -66,11 +66,11 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/frs_prop_example.dir/DependInfo.cmake"
   "CMakeFiles/motion_example_async.dir/DependInfo.cmake"
   "CMakeFiles/communication_example.dir/DependInfo.cmake"
-  "CMakeFiles/game3d_example.dir/DependInfo.cmake"
   "CMakeFiles/firmware_version_example.dir/DependInfo.cmake"
   "CMakeFiles/data_rate_example.dir/DependInfo.cmake"
   "CMakeFiles/motion_example.dir/DependInfo.cmake"
   "CMakeFiles/power_mgmt_example.dir/DependInfo.cmake"
   "CMakeFiles/enable_mouse_example.dir/DependInfo.cmake"
+  "CMakeFiles/game3d_example.dir/DependInfo.cmake"
   "libfreespace/CMakeFiles/freespace.dir/DependInfo.cmake"
   )

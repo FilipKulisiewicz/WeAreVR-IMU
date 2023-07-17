@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/fsm_imu_node.dir/src/fsm_imu_node.cpp.o  -o fsm_imu_node  -Wl,-rpath,/home/kuli/Desktop/WeAreVR/fsm9/build_test/libfreespace libfreespace/libfreespace-codecs.so -lm -lpthread 

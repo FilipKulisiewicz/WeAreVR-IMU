@@ -60,7 +60,7 @@ include libfreespace/CMakeFiles/freespace.dir/flags.make
 libfreespace/gen_src/freespace_codecs.c: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/common/messageCodeGenerator.py
 libfreespace/gen_src/freespace_codecs.c: /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/common/setupMessages.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating libfreespace message code"
-	cd /home/kuli/Desktop/WeAreVR/fsm9/build_dev/libfreespace && /home/kuli/miniconda3/envs/py27/bin/python /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/common/messageCodeGenerator.py -I /home/kuli/Desktop/WeAreVR/fsm9/build_dev/libfreespace/include/ -s /home/kuli/Desktop/WeAreVR/fsm9/build_dev/libfreespace/gen_src/ /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/common/setupMessages.py 
+	cd /home/kuli/Desktop/WeAreVR/fsm9/build_dev/libfreespace && /home/kuli/miniconda3/envs/py27/bin/python2.7 /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/common/messageCodeGenerator.py -I /home/kuli/Desktop/WeAreVR/fsm9/build_dev/libfreespace/include/ -s /home/kuli/Desktop/WeAreVR/fsm9/build_dev/libfreespace/gen_src/ /home/kuli/Desktop/WeAreVR/fsm9/libfreespace/common/setupMessages.py 
 
 libfreespace/gen_src/freespace_printers.c: libfreespace/gen_src/freespace_codecs.c
 	@$(CMAKE_COMMAND) -E touch_nocreate libfreespace/gen_src/freespace_printers.c

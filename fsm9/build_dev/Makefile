@@ -218,19 +218,6 @@ communication_example/fast:
 .PHONY : communication_example/fast
 
 #=============================================================================
-# Target rules for targets named game3d_example
-
-# Build rule for target.
-game3d_example: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 game3d_example
-.PHONY : game3d_example
-
-# fast build rule for target.
-game3d_example/fast:
-	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/build
-.PHONY : game3d_example/fast
-
-#=============================================================================
 # Target rules for targets named firmware_version_example
 
 # Build rule for target.
@@ -296,6 +283,19 @@ enable_mouse_example/fast:
 .PHONY : enable_mouse_example/fast
 
 #=============================================================================
+# Target rules for targets named game3d_example
+
+# Build rule for target.
+game3d_example: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 game3d_example
+.PHONY : game3d_example
+
+# fast build rule for target.
+game3d_example/fast:
+	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/build
+.PHONY : game3d_example/fast
+
+#=============================================================================
 # Target rules for targets named freespace
 
 # Build rule for target.
@@ -317,12 +317,12 @@ src/appControlHandler.c.o:
 	$(MAKE) -f CMakeFiles/frs_prop_example.dir/build.make CMakeFiles/frs_prop_example.dir/src/appControlHandler.c.o
 	$(MAKE) -f CMakeFiles/motion_example_async.dir/build.make CMakeFiles/motion_example_async.dir/src/appControlHandler.c.o
 	$(MAKE) -f CMakeFiles/communication_example.dir/build.make CMakeFiles/communication_example.dir/src/appControlHandler.c.o
-	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/src/appControlHandler.c.o
 	$(MAKE) -f CMakeFiles/firmware_version_example.dir/build.make CMakeFiles/firmware_version_example.dir/src/appControlHandler.c.o
 	$(MAKE) -f CMakeFiles/data_rate_example.dir/build.make CMakeFiles/data_rate_example.dir/src/appControlHandler.c.o
 	$(MAKE) -f CMakeFiles/motion_example.dir/build.make CMakeFiles/motion_example.dir/src/appControlHandler.c.o
 	$(MAKE) -f CMakeFiles/power_mgmt_example.dir/build.make CMakeFiles/power_mgmt_example.dir/src/appControlHandler.c.o
 	$(MAKE) -f CMakeFiles/enable_mouse_example.dir/build.make CMakeFiles/enable_mouse_example.dir/src/appControlHandler.c.o
+	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/src/appControlHandler.c.o
 .PHONY : src/appControlHandler.c.o
 
 src/appControlHandler.i: src/appControlHandler.c.i
@@ -334,12 +334,12 @@ src/appControlHandler.c.i:
 	$(MAKE) -f CMakeFiles/frs_prop_example.dir/build.make CMakeFiles/frs_prop_example.dir/src/appControlHandler.c.i
 	$(MAKE) -f CMakeFiles/motion_example_async.dir/build.make CMakeFiles/motion_example_async.dir/src/appControlHandler.c.i
 	$(MAKE) -f CMakeFiles/communication_example.dir/build.make CMakeFiles/communication_example.dir/src/appControlHandler.c.i
-	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/src/appControlHandler.c.i
 	$(MAKE) -f CMakeFiles/firmware_version_example.dir/build.make CMakeFiles/firmware_version_example.dir/src/appControlHandler.c.i
 	$(MAKE) -f CMakeFiles/data_rate_example.dir/build.make CMakeFiles/data_rate_example.dir/src/appControlHandler.c.i
 	$(MAKE) -f CMakeFiles/motion_example.dir/build.make CMakeFiles/motion_example.dir/src/appControlHandler.c.i
 	$(MAKE) -f CMakeFiles/power_mgmt_example.dir/build.make CMakeFiles/power_mgmt_example.dir/src/appControlHandler.c.i
 	$(MAKE) -f CMakeFiles/enable_mouse_example.dir/build.make CMakeFiles/enable_mouse_example.dir/src/appControlHandler.c.i
+	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/src/appControlHandler.c.i
 .PHONY : src/appControlHandler.c.i
 
 src/appControlHandler.s: src/appControlHandler.c.s
@@ -351,12 +351,12 @@ src/appControlHandler.c.s:
 	$(MAKE) -f CMakeFiles/frs_prop_example.dir/build.make CMakeFiles/frs_prop_example.dir/src/appControlHandler.c.s
 	$(MAKE) -f CMakeFiles/motion_example_async.dir/build.make CMakeFiles/motion_example_async.dir/src/appControlHandler.c.s
 	$(MAKE) -f CMakeFiles/communication_example.dir/build.make CMakeFiles/communication_example.dir/src/appControlHandler.c.s
-	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/src/appControlHandler.c.s
 	$(MAKE) -f CMakeFiles/firmware_version_example.dir/build.make CMakeFiles/firmware_version_example.dir/src/appControlHandler.c.s
 	$(MAKE) -f CMakeFiles/data_rate_example.dir/build.make CMakeFiles/data_rate_example.dir/src/appControlHandler.c.s
 	$(MAKE) -f CMakeFiles/motion_example.dir/build.make CMakeFiles/motion_example.dir/src/appControlHandler.c.s
 	$(MAKE) -f CMakeFiles/power_mgmt_example.dir/build.make CMakeFiles/power_mgmt_example.dir/src/appControlHandler.c.s
 	$(MAKE) -f CMakeFiles/enable_mouse_example.dir/build.make CMakeFiles/enable_mouse_example.dir/src/appControlHandler.c.s
+	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/src/appControlHandler.c.s
 .PHONY : src/appControlHandler.c.s
 
 src/communication_example.o: src/communication_example.c.o
@@ -494,32 +494,32 @@ src/frs_prop_example.c.s:
 	$(MAKE) -f CMakeFiles/frs_prop_example.dir/build.make CMakeFiles/frs_prop_example.dir/src/frs_prop_example.c.s
 .PHONY : src/frs_prop_example.c.s
 
-src/game3d_example.o: src/game3d_example.c.o
+src/game3d_example.o: src/game3d_example.cpp.o
 
 .PHONY : src/game3d_example.o
 
 # target to build an object file
-src/game3d_example.c.o:
-	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/src/game3d_example.c.o
-.PHONY : src/game3d_example.c.o
+src/game3d_example.cpp.o:
+	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/src/game3d_example.cpp.o
+.PHONY : src/game3d_example.cpp.o
 
-src/game3d_example.i: src/game3d_example.c.i
+src/game3d_example.i: src/game3d_example.cpp.i
 
 .PHONY : src/game3d_example.i
 
 # target to preprocess a source file
-src/game3d_example.c.i:
-	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/src/game3d_example.c.i
-.PHONY : src/game3d_example.c.i
+src/game3d_example.cpp.i:
+	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/src/game3d_example.cpp.i
+.PHONY : src/game3d_example.cpp.i
 
-src/game3d_example.s: src/game3d_example.c.s
+src/game3d_example.s: src/game3d_example.cpp.s
 
 .PHONY : src/game3d_example.s
 
 # target to generate assembly for a file
-src/game3d_example.c.s:
-	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/src/game3d_example.c.s
-.PHONY : src/game3d_example.c.s
+src/game3d_example.cpp.s:
+	$(MAKE) -f CMakeFiles/game3d_example.dir/build.make CMakeFiles/game3d_example.dir/src/game3d_example.cpp.s
+.PHONY : src/game3d_example.cpp.s
 
 src/math/quaternion.o: src/math/quaternion.c.o
 
@@ -642,12 +642,12 @@ help:
 	@echo "... frs_prop_example"
 	@echo "... motion_example_async"
 	@echo "... communication_example"
-	@echo "... game3d_example"
 	@echo "... firmware_version_example"
 	@echo "... data_rate_example"
 	@echo "... motion_example"
 	@echo "... power_mgmt_example"
 	@echo "... enable_mouse_example"
+	@echo "... game3d_example"
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"

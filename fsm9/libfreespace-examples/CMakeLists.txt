@@ -1,10 +1,9 @@
-cmake_minimum_required (VERSION 2.8)
-project (libfreespace-examples C)
+cmake_minimum_required (VERSION 3.8)
+project (libfreespace-examples CXX C)
 
 set (PROJECT_VERSION_MAJOR 0)
 set (PROJECT_VERSION_MINOR 7)
 set (PROJECT_VERSION_PATCH 0)
-
 
 add_subdirectory(../libfreespace libfreespace)
 
@@ -26,7 +25,10 @@ elseif (WIN32)
 	FILE(COPY ${DLL_LIST} DESTINATION ${DLL_DIR})
 endif()
 
-include_directories(${LIBFREESPACE_INCLUDE_DIRS})
+include_directories(
+	${LIBFREESPACE_INCLUDE_DIRS}
+
+)
 
 set(APP_CTRL_SRCS src/appControlHandler.c src/appControlHandler.h)
 set(MATH_SRCS src/math/quaternion.c src/math/quaternion.h src/math/vec3.h)
@@ -40,15 +42,6 @@ target_link_libraries(motion_example_async ${LIBFREESPACE_LIBRARIES})
 add_executable(communication_example src/communication_example.c ${APP_CTRL_SRCS})
 target_link_libraries(communication_example ${LIBFREESPACE_LIBRARIES})
 
-add_executable(game3d_example src/game3d_example.c ${APP_CTRL_SRCS} ${MATH_SRCS})
-target_link_libraries(game3d_example ${LIBFREESPACE_LIBRARIES} ${pthread_lib_name})
-# Add this post-build command so that the exe can find the dll
-if (WIN32)
-add_custom_command(TARGET game3d_example
-				POST_BUILD
-				COMMAND copy $(ProjectDir)dll\\pthreadVSE2.dll $(TargetDir)
-				COMMENT "copying pthreadVSE2.dll to $(TargetDir)")
-endif()
 
 add_executable(firmware_version_example src/firmware_version_example.c ${APP_CTRL_SRCS})
 target_link_libraries(firmware_version_example ${LIBFREESPACE_LIBRARIES})
@@ -64,6 +57,21 @@ target_link_libraries(data_rate_example ${LIBFREESPACE_LIBRARIES})
 
 add_executable(frs_prop_example src/frs_prop_example.c ${APP_CTRL_SRCS})
 target_link_libraries(frs_prop_example ${LIBFREESPACE_LIBRARIES})
+
+set( ENV{PYTHON_EXECUTABLE} /usr/bin/python3)
+
+find_package(rclcpp REQUIRED)
+#find_package(sensor_msgs REQUIRED)
+
+add_executable(game3d_example src/game3d_example.cpp ${APP_CTRL_SRCS} ${MATH_SRCS})
+target_link_libraries(game3d_example ${LIBFREESPACE_LIBRARIES} ${pthread_lib_name})
+# Add this post-build command so that the exe can find the dll
+if (WIN32)
+add_custom_command(TARGET game3d_example
+				POST_BUILD
+				COMMAND copy $(ProjectDir)dll\\pthreadVSE2.dll $(TargetDir)
+				COMMENT "copying pthreadVSE2.dll to $(TargetDir)")
+endif()
 
 if (CMAKE_COMPILER_IS_GNUCC)
 	add_definitions(-Wall) # TODO  should really set cflags

@@ -6,6 +6,22 @@
 
 #IncludeRegexTransform: 
 
+/home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/appControlHandler.c
+win32/stdafx.h
+/home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/win32/stdafx.h
+windows.h
+-
+stdio.h
+-
+stdlib.h
+-
+signal.h
+-
+stdio.h
+-
+appControlHandler.h
+/home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/appControlHandler.h
+
 /home/kuli/Desktop/WeAreVR/fsm9/libfreespace-examples/src/appControlHandler.h
 freespace/freespace.h
 -

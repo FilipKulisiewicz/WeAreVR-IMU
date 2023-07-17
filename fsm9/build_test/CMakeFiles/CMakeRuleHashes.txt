@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+129d773d4d5bcca6941f62a904538fb9 libfreespace/gen_src/freespace_codecs.c

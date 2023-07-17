@@ -1,1 +1,1 @@
-/usr/bin/c++     CMakeFiles/myimu_exec.dir/src/myimu.cpp.o  -o myimu_exec  -Wl,-rpath,/usr/local/lib /usr/local/lib/libfreespace.so -pthread 
+/usr/bin/c++     CMakeFiles/myimu_exec.dir/src/myimu.cpp.o  -o myimu_exec  libfreespace/libfreespace.a -lm -lpthread -lsrc/appControlHandler.c -lsrc/appControlHandler.h -lsrc/math/quaternion.c -lsrc/math/quaternion.h -lsrc/math/vec3.h /usr/lib/x86_64-linux-gnu/libusb-1.0.so -pthread 

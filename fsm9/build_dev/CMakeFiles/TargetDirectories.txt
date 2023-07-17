@@ -5,12 +5,12 @@
 /home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles/frs_prop_example.dir
 /home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles/motion_example_async.dir
 /home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles/communication_example.dir
-/home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles/game3d_example.dir
 /home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles/firmware_version_example.dir
 /home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles/data_rate_example.dir
 /home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles/motion_example.dir
 /home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles/power_mgmt_example.dir
 /home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles/enable_mouse_example.dir
+/home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles/game3d_example.dir
 /home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles/package.dir
 /home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles/package_source.dir
 /home/kuli/Desktop/WeAreVR/fsm9/build_dev/CMakeFiles/rebuild_cache.dir

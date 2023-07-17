@@ -1,1 +1,1 @@
-/usr/bin/cc   -rdynamic CMakeFiles/communication_example.dir/src/communication_example.c.o CMakeFiles/communication_example.dir/src/appControlHandler.c.o  -o communication_example  libfreespace/libfreespace.a -lm -lpthread -lusb-1.0 
+/usr/bin/cc    CMakeFiles/communication_example.dir/src/communication_example.c.o CMakeFiles/communication_example.dir/src/appControlHandler.c.o  -o communication_example  libfreespace/libfreespace.a -lm -lpthread /usr/lib/x86_64-linux-gnu/libusb-1.0.so 

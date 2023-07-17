@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kuli/Desktop/WeAreVR/fsm9/build_test/libfreespace/gen_src/freespace_codecs.c
+freespace/freespace_codecs.h
+/home/kuli/Desktop/WeAreVR/fsm9/build_test/libfreespace/gen_src/freespace/freespace_codecs.h
+string.h
+-
+stdio.h
+-
+math.h
+-
+
+/home/kuli/Desktop/WeAreVR/fsm9/build_test/libfreespace/gen_src/freespace_printers.c
+freespace/freespace_printers.h
+/home/kuli/Desktop/WeAreVR/fsm9/build_test/libfreespace/gen_src/freespace/freespace_printers.h
+string.h
+-
+
+/home/kuli/Desktop/WeAreVR/fsm9/libfreespace/include/freespace/freespace_common.h
+stdint.h
+-
+stdint.h
+-
+
+libfreespace/include/freespace/freespace_codecs.h
+freespace/freespace_common.h
+libfreespace/include/freespace/freespace/freespace_common.h
+
+libfreespace/include/freespace/freespace_printers.h
+freespace/freespace_common.h
+libfreespace/include/freespace/freespace/freespace_common.h
+freespace_codecs.h
+libfreespace/include/freespace/freespace_codecs.h
+stdio.h
+-
+
