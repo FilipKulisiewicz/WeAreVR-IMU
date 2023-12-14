@@ -22,7 +22,7 @@ class TfListener(Node):
         self._tf_buffer = Buffer()
         self._tf_listener = TransformListener(self._tf_buffer, self)
         self.cmd_ = TransformStamped()
-        self.publisher_ = self.create_publisher(TransformStamped, "{}".format(self.first_name_),10)
+        self.publisher_ = self.create_publisher(TransformStamped, "{}".format(self.second_name_),10)
         self.timer = self.create_timer(0.002, self.timer_callback) #500 Hz = 0.002s
 
     def timer_callback(self):

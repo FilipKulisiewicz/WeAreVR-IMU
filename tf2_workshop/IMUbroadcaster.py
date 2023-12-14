@@ -25,7 +25,7 @@ class DynamicBroadcaster(Node):
         self.tfb_ = TransformBroadcaster(self)
         self.pub_transform = self.create_publisher(TransformStamped, given_name, 10)
 
-        self.CalibrationQuatDiffValueThreshold = 0.00001
+        self.CalibrationQuatDiffValueThreshold = 0.00002
         self.SensorDataFrequency = 500
         self.CalibrationTimeThresholdSeconds = 0.5
         self.CalibrationTimeThresholdInCycles = self.CalibrationTimeThresholdSeconds * self.SensorDataFrequency
@@ -66,26 +66,41 @@ class DynamicBroadcaster(Node):
                 # q_4 = float(data[13])
                 timeDeltaInSeconds = (self.time[0] - self.time[1]) / 1000.0 # from miliseconds to seconds
 
-                accel_data = np.array([accel_x, accel_y, accel_z])
+                accel_data = np.array([accel_x, accel_y, accel_z]).reshape(3,1)
+                gyro_data = np.array([gyro_x, gyro_y, gyro_z]).reshape(3,1)
                 #mag_data = np.array([mag_x, mag_y, mag_z])
-                #quaternion = Mahony(gyr=gyro_data, acc=accel_data, frequency = 500).Q\
+
+                #Acc Calibration correction
+                a = np.array([[ 0.98200578, 0.03031919, -0.00180864], [-0.02499362, 0.99994621, 0.00318627], [0.00802986,  0.00428184, 1.00266212]])
+                b = np.array([ 0.01507779, -0.011765  , -0.00597272]).reshape(3,1)
+                accel_data = (np.matmul(a, accel_data) + b).ravel()
+                #Gyro Calibration correction
+                a = np.array([[1.01284611, 0.0202367, 0.00203724], [-0.02300336, 0.98376085, -0.01937286], [-0.00339458, 0.01617729, 0.99807192]])
+                b = np.array([-0.00249166, 0.00553142, -0.00051446]).reshape(3,1)
+                gyro_data = (np.matmul(a, gyro_data) + b).ravel()
                 
-                #print(timeDeltaInSeconds)
-                #print(accel_x, accel_y, accel_z)
-                print(gyro_x, gyro_y, gyro_z)
+                #Acc Calibration correction
+                # a = np.array([[ 0.9813075, 0.04244318, -0.01216444], [-0.03717048, 0.99962564, 0.03350584], [0.01926684,  0.02555855, 1.00015883]])
+                # b = np.array([ 0.02206801, -0.02715399  , -0.00464662]).reshape(3,1)
+                # accel_data = (np.matmul(a, accel_data) + b).ravel()
+                # # #Gyro Calibration correction
+                # a = np.array([[1.01058705, 0.0379745, -0.01416165], [-0.04473507, 0.98536418, 0.02325682], [0.01174236, -0.02686885, 0.99883812]])
+                # b = np.array([-0.00308075, 0.00979748, -0.00001606]).reshape(3,1)
+                # gyro_data = (np.matmul(a, gyro_data) + b).ravel()
+                
+                
+                print(gyro_data[0], gyro_data[1], gyro_data[2])
                 print(sum(abs(self.quaternions[1] - self.quaternions[0])))
                 self.diff = sum(abs(self.quaternions[1] - self.quaternions[0])) * self.alpha + self.diff * (1.0 - self.alpha)
-                if(abs(gyro_x) + abs(gyro_y) + abs(gyro_z) < self.CalibrationValueThreshold and self.diff < self.CalibrationQuatDiffValueThreshold and self.CalibrationCyclesCounter > 0):
+                if(abs(gyro_data[0]) + abs(gyro_data[1]) + abs(gyro_data[2]) < self.CalibrationValueThreshold and self.diff < self.CalibrationQuatDiffValueThreshold and self.CalibrationCyclesCounter > 0):
                     self.CalibrationCyclesCounter = self.CalibrationCyclesCounter - 1
-                elif(abs(gyro_x) + abs(gyro_y) + abs(gyro_z) < self.CalibrationValueThreshold and self.CalibrationCyclesCounter == 0):
-                    gyro_x = 0
-                    gyro_y = 0
-                    gyro_z = 0 
+                elif(abs(gyro_data[0]) + abs(gyro_data[1]) + abs(gyro_data[2]) < self.CalibrationValueThreshold and self.CalibrationCyclesCounter == 0):
+                    gyro_data[0] = 0
+                    gyro_data[1] = 0
+                    gyro_data[2] = 0 
                 else:
                     self.CalibrationCyclesCounter = self.CalibrationTimeThresholdInCycles
-                
-                gyro_data = np.array([gyro_x, gyro_y, gyro_z])
-                
+                #
                 self.quaternions[1] = self.quaternions[0]
                 self.quaternions[0] = self.orientation.updateIMU(self.quaternions[0], gyr=gyro_data, acc=accel_data, dt = timeDeltaInSeconds)
                 #self.quaternions[0] = self.orientation.updateMARG(self.quaternions[0], gyr=gyro_data, acc=accel_data, mag = mag_data, dt = timeDeltaInSeconds)
